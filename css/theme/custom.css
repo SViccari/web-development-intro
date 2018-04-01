@@ -1,0 +1,76 @@
+/**
+ * A custom theme for this presentation.
+ *
+ */
+@font-face {
+  font-family: "Gotham-Round";
+  src: local("Gotham-Round"), url("fonts/gothamrounded-light.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Gotham Round Bold";
+  src: local("Gotham-Round-Bold"), url("fonts/gothamrounded-bold.otf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+body {
+  color: #4c4b4b;
+  background-color: #f9f9f9;
+  text-align: left; }
+
+::selection {
+  color: #4c4b4b;
+  background: #f9f9f9;
+  text-shadow: none; }
+
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  color: #63BFD0;
+  letter-spacing: 0.02em;
+  line-height: 0.9em;
+  margin-bottom: 40px; }
+
+.reveal h1 {
+  font-size: 2em; }
+
+.reveal h2 {
+  font-size: 1.5em; }
+
+.reveal p {
+  margin: 20px 0; }
+
+.reveal .bold {
+  font-family: "Gotham-Round-Bold", sans-serif; }
+
+.reveal {
+  font-family: "Gotham-Round", sans-serif;
+  font-weight: normal;
+  font-size: 30px;
+  color: #4c4b4b; }
+
+.reveal .slides {
+  text-align: left; }
+
+.reveal .slides ul {
+  text-align: left;
+  list-style-position: inside; }
+
+.reveal .highlight {
+  color: #F39E39;
+  font-weight: bold; }
+
+.reveal section img {
+  max-height: 400px;
+  max-width: 100%; }
+
+.reveal .footnote {
+  margin: 0;
+  font-size: 12px; }
+
+.center {
+  text-align: center; }

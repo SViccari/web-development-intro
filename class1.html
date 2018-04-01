@@ -1,0 +1,657 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,
+          initial-scale=1.0,
+          maximum-scale=1.0,
+          user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/custom.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ?
+        'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h1>Welcome!</h1>
+          <p>Let's get to know each other.</p>
+          <ul>
+            <li>Your Name</li>
+            <li>What you hope to learn in this class</li>
+            <li>Fun fact or favorite activity</li>
+          </ul>
+
+          <aside class="notes">
+            <p>
+              Let's start class by doing a round of introductions.
+              I'll start, followed by Rachel, Candace, and then everyone else.
+            </p>
+
+            <p>
+              My name is Stephanie. I signed up to teach this class because I
+              want to be help others learn a skill that has enhanced my life.
+              My favorite activity, lately, has been snowboarding.
+            </p>
+
+            <p>Rachel, would go next?</p>
+          </aside>
+
+        </section>
+
+        <section>
+          <h2>A few guidelines:</h2>
+          <ul>
+            <li>We are here for you!</li>
+            <li>Every question is important</li>
+            <li>Help each other</li>
+            <li>Have fun</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>About this class</h2>
+
+          <ul>
+            <li>How websites are created</li>
+            <li>HTML fundamentals</li>
+            <li>CSS fundamentals</li>
+            <li>Develop and publish a website</li>
+          </ul>
+
+          <p>Slides are available at: TODO - INSERT LINK</p>
+
+          <aside class="notes">
+            Web development is a very broad topic as there are many ways to
+            build a website and each website varies in complexity.
+
+            In this class, we'll learn a bit about how the web works and how
+            to build a website!
+            We'll learn how to build a website by creating two websites. The
+            first website is a fun site that will help us learn HTML and CSS.
+            The second website will be a more personal website, one that you can
+            share with friends and continue to update after this class.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Today</h2>
+          <li>What is the World Wide Web?</li>
+          <li>How does the Web work?</li>
+          <li>Web safety tips</li>
+          <li>Anatomy of a Website</li>
+          <li>HTML</li>
+        </section>
+
+        <section>
+          <p><span class="highlight">1957</span></p>
+          <p>The first satellite is launched into orbit.</p>
+
+          <img src="images/sputnik.png" alt="sputnik satellite">
+
+          <aside class="notes">
+            In 1957, Russia launches the very first satellite into space.
+            This set off the "race for space" as Americans realized that while
+            we had been focused on building biggers cars and TVs, other
+            countries were exploring opportunities in space.
+          </aside>
+        </section>
+
+        <section>
+          <ul>
+            <li>
+              <span class="highlight">1957</span>
+              - First satellite in space
+            </li>
+            <li>
+              <span class="highlight">1958</span>
+              - ARPA is formed
+            </li>
+            <li class="fragment">
+              <span class="highlight">1969</span>
+              - ARPAnet sends it's first message
+            </li>
+            <li class="fragment">
+              <span class="highlight">1991</span>
+              - The World Wide Web is created
+            </li>
+          </ul>
+
+          <aside class="notes">
+            Not wanting to be left behind, the U.S. government created a
+            division called ARPA (Advanced Research Projects Agency). This
+            agency focused on creating space-age technologies like rockets,
+            weapons and computers.
+
+            In the 1960s - ARPA began creating a network of computers that could
+            talk to each other, known as ARPAnet.
+
+            In 1960 - ARPAnet sent it's very first message, "LOGIN". This was
+            the beginnings of what we now call the Internet.
+
+            In 1991 - Tim Berners-Lee, a computer programmer in Switzerland,
+            had the idea "computers are now able to send information, but what
+            if they could also request information?" With this idea, Tim
+            published the first website.
+          </aside>
+        </section>
+
+        <section>
+          <h2>The Web's First Website</h2>
+          <img src="images/first-website.png"
+               alt="First website by Tim Berners-Lee">
+
+          <p>
+            You can visit this site at:
+            <a href="http://info.cern.ch">info.cern.ch</a>
+          </p>
+
+          <aside class="notes">
+            So how does the web work? Why are we able to see websites?
+          </aside>
+        </section>
+
+        <section>
+          <h2>Browsers</h2>
+          <img src="images/browser-logos.png" alt="Browser logos">
+
+          <aside class="notes">
+            In addition to creating the World Wide Web, Tim also created the
+            first browser. For us to view a website, we need access to the web
+            and a browser to show us the webpage.
+
+            There are several browsers we can choose from, the more popular ones
+            are Chrome, Firefox and Safari.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Browsing the Web Safely...</h2>
+          <p class="fragment">
+            Never save your password on a shared computer.
+          </p>
+          <p class="fragment">
+            Closing a tab does not sign you out of a website.
+          </p>
+        </section>
+
+        <section>
+          <h2>Requesting a website</h2>
+          <p>To request a website, we use the brower's Address Bar.</p>
+          <img src="images/chrome-address-bar.png" alt="Chrome address bar">
+
+          <aside class="notes">
+            To request a website with our brower, we use the Address Bar to type
+            in the name of website. You can also type in something you would
+            like to search for as browers understand when your searching for
+            content vs requesting a website.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Requesting a Website - Activity</h2>
+          <ul>Actors:
+            <li>Internet Service Provider</li>
+            <li>Domain Name System</li>
+            <li>Router</li>
+            <li>Router</li>
+            <li>Google</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Requesting a website</h2>
+          <p>Browser -> ISP with DNS Access -> Router -> Google</p>
+          <p>Google -> Router -> ISP -> Browser</p>
+
+          <aside class="notes">
+            Materials:
+              - Browser Material
+                - Piece of paper that reads:
+                  From: 65.30.200.101 (user)
+                  To: www.google.com
+                  Message: Homepage
+
+              - DNS Material
+                - DNS List
+                  www.boston.gov - 107.154.103.58
+                  www.google.com - 172.217.11.46
+
+              - ISP sends paper to DNS, DNS adds IP Address, back to Browser
+                - Piece of paper that reads:
+                  From: 74.125.19.104 (www.google.com)
+                  To: 65.30.200.101 (user)
+                  Message: Homepage
+
+              - Google Server
+                - Envelope
+                - Paper that says "html"
+                - Paper that says "css"
+
+            Steps:
+              - Browser passes paper to ISP
+              - ISP passes paper to DNS
+              - DNS adds the IP Address
+              - DNS passes back to ISP
+              - ISP passes off to the router
+              - Router sends paper to Google server
+              - Google server creates an envelope with To and From address
+              - Google server adds HTML and CSS files to envelope
+              - Google server passes envelope to router
+              - Router sends envelope to ISP
+              - ISP passes the envelope to the browser
+              - Browser renders the html and css files
+
+            When I enter an website's address in the browser's address bar and
+            press enter, my computer is going to send a request to the computer's
+            Internet Service Provider.
+
+            My request includes three pieces of information, my IP address, the name
+            of the website I'm requesting and any additional information about
+            my request.
+
+            The Internet Service Provider is going to look at the website name
+            and using something called DNS to translate the website name to an
+            IP address. Just like my computer has an IP address, all other
+            computers have an IP address. The reason we type in a website's name
+            instead of an IP address is because they're very hard to remember.
+
+            For example, I can go to Gooogle by typing in their IP address
+            (demo: ping google.com and copy IP address).
+
+            This is similar to how we store someone's name when adding them to
+            our contacts. We don't want to rememeber their phone number because
+            it's easier for us to remember their name.
+
+            So the Internet Service Provider knows the website's name but the
+            internet communicates with IP Addresses, not by website names. So
+            before the ISP can send the request, they need to know the website's
+            IP Address.
+
+            To do this, the ISP can ask the DNS system for help. The DNS system
+            will look up the website name and find the IP address.
+
+
+            The Internet Service Provider will then use their access to the
+            internet to pass on the request.
+
+            The Internet will use information that's in the request to identify
+            where the information lives and return a response.
+
+            That response will include two files, an html file and a CSS file.
+
+            Internet connections are established by delivering electronic
+            pulses, lightwaves in fiber optic cables and radiowaves.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Building a Website</h2>
+          <p>The browser expects to receive two important files, an HTML file
+          and a CSS file.</p>
+          <img src="images/html-css-browser.png"
+               alt="Laptop with HTML and CSS logos">
+          <p class="footnote">Image from codercv.com</p>
+
+          <aside class="notes">
+            The HTML file contains all the content for our site.
+            The CSS file is used to make our website beautiful.
+            CSS is how we add color to our page and place each picture or link
+            in a specific place.
+
+            We will talk about CSS later on in class. First, let's talk about
+            HTML.
+          </aside>
+        </section>
+
+        <section>
+          <h2>What is HTML?</h2>
+          <p>HTML stands for: <span class="bold">Hypertext Markup Language</p>
+          <p><span class="bold">Hypertext</span> - refers to links on a webpage</p>
+          <p><span class="bold">Markup</span> - informs the browser how to present text</p>
+          <p><span class="bold">Language</span> - set of rules so others can understand</p>
+
+          <aside class="notes">
+            HTML is called a "markup" language because we use it to inform the
+            browser of how to treat text differently.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Why do we use HTML?</h2>
+          <p>HTML allows us to tell the browser important information about our
+          content.</p>
+
+          <div class="fragment">
+            <img src="images/markup-report.png"
+                 alt="Report with markup">
+            <p class="footnote">Image from Markup by ShowMe</p>
+          </div>
+
+          <aside class="notes">
+            Similar to how a teacher markups a student's report to give
+            information to the student, we want to "markup" our text so the
+            browser knows how to show our content
+          </aside>
+        </section>
+
+
+        <section>
+          <h2>How do we write HTML?</h2>
+          <img src="images/html-element.png" alt="Anatomy of an HTML element">
+          <p class="footnote">Image from internetingishard.com</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+            </code>
+          </pre>
+
+          <aside class="notes">
+            We write HTML by using something called "tags". To "markup" our
+            content with HTML, we create an opening tag, add our content, and
+            then add a closing tag.
+
+            You can think of HTML tags as bookends. You need both bookends to
+            tell the browser where to start and where to end.
+
+            Once we have an opening tag with content and a closing tag, we've
+            created what's called an HTML element.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Let's Write Some HTML!</h2>
+          <img src="images/ide-and-browser.png" alt="IDE and browser">
+          <p class="footnote">Image from internetingishard.com</p>
+
+          <aside class="notes">
+            To write HTML, we'll want two things:
+            A Text Editor and a Browser
+          </aside>
+        </section>
+
+        <!-- Open Text Editor -->
+        <section>
+          <h2>Open Your Text Editor (Atom)</h2>
+          <p>Steps to create our first HTML file</p>
+          <p>File -> New File -> Save As -> index.html</p>
+
+          <aside class="notes">
+            To write HTML, we'll want to open an application called Atom. Atom
+            is a text editor that helps us write HTML and CSS. Each of you have
+            Atom installed but we'll come around and help everyone get started.
+
+            Once you have Atom open, let's create a file.
+            File -> New File -> Save As -> index.html
+
+            Why the name index?
+            It's a common practice for the homepage to be saved as the index
+            page. The concept probably came from the idea that the index page
+            or the website's homepage, acts as a reference to all the other pages
+            a user can visit.
+          </aside>
+        </section>
+
+        <!-- Basic HTML Page -->
+        <section>
+          <h2>Basic Structure of an HTML page</h2>
+          <pre>
+            <code data-trim contenteditable>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                &lt;head&gt;
+                &lt;/head&gt;
+
+                &lt;body&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre>
+        </section>
+
+        <!-- !DOCTYPE html -->
+        <section>
+          <h2>&lt;!DOCTYPE html&gt;</h2>
+          <pre>
+            <code data-trim contenteditable data-noescape>
+              <mark>&lt;!DOCTYPE html&gt;</mark>
+              &lt;html&gt;
+                &lt;head&gt;
+                &lt;/head&gt;
+
+                &lt;body&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre>
+
+          <p>This line tells our browser which version of markup language our
+          page is using. In this class, we are using HTML5.</p>
+
+          <aside class="notes">
+            This is just a special line that our browser look for when it
+            attempts to display a webpage.
+          </aside>
+        </section>
+
+        <!-- html tag -->
+        <section>
+          <h2>&lt;html&gt;&lt;/html&gt;</h2>
+          <pre>
+            <code data-trim contenteditable data-noescape>
+              &lt;!DOCTYPE html&gt;
+              <mark>&lt;html&gt;</mark>
+                &lt;head&gt;
+                &lt;/head&gt;
+
+                &lt;body&gt;
+                &lt;/body&gt;
+              <mark>&lt;/html&gt;</mark>
+            </code>
+          </pre>
+
+          <p>
+            After the &lt;!DOCTYPE html&gt; the &lt;html&gt; tag is used to
+            define the beginning and end of our HTML file. Everything we write
+            will live between these two tags.
+          </p>
+        </section>
+
+        <!-- head tag -->
+        <section>
+          <h2>&lt;head&gt;&lt;/head&gt;</h2>
+          <pre>
+            <code data-trim contenteditable data-noescape>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                <mark>&lt;head&gt;</mark>
+                <mark>&lt;/head&gt;</mark>
+
+                &lt;body&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre>
+
+          <p>
+            The head contains information that is for the browser. This
+            information is not visible to the user.
+          </p>
+
+          <aside class="notes">
+            There's certain information that we'll want to tell the browser but
+            we don't want the user to see it. We'll see an example of this later
+            when we add CSS to our site.
+          </aside>
+        </section>
+
+        <!-- body tag -->
+        <section>
+          <h2>&lt;body&gt;&lt;/body&gt;</h2>
+          <pre>
+            <code data-trim contenteditable data-noescape>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                &lt;head&gt;
+                &lt;/head&gt;
+
+                <mark>&lt;body&gt;</mark>
+                <mark>&lt;/body&gt;</mark>
+              &lt;/html&gt;
+            </code>
+          </pre>
+
+          <p>
+            The body contains the content we want the user to see. Everything
+            in the body is visible to the user.
+          </p>
+        </section>
+
+        <!-- Let's code a basic html page-->
+        <section>
+          <h2>Let's Code</h2>
+          <pre>
+            <code data-trim contenteditable data-noescape>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                &lt;head&gt;
+                &lt;/head&gt;
+
+                &lt;body&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre>
+
+          <aside class="notes">
+            So to start our website, let's add this information to our page.
+            When adding this to your page, you may notice that I have certain
+            tags indented. This indentation is for us. The browser doesn't care
+            if everything is squished together and written on one line but it
+            makes it very difficult for us to read. The indentation also helps
+            us identify mistakes.
+          </aside>
+        </section>
+
+        <section>
+          <h2>View your website in a browser</h2>
+          <p>Open Chrome</p>
+          <p>File -> Open File -> index.html -> Open</p>
+        </section>
+
+        <section>
+          <h2>So... where is it?</h2>
+          <img src="images/where-is-it.gif"
+               alt="Woman searching with hand above her eyes">
+
+          <aside class="notes">
+            Our page is empty because we haven't added any content. The body
+            tags are still empty. So let's add some content.
+          </aside>
+        </section>
+
+        <section>
+          <h2>&lt;p&gt; is for Paragraph</h2>
+          <p>Let's add a paragraph to our website.</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              &lt;p&gt;This is a paragraph&lt;/p&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Headings</h2>
+          <p>There are 6 heading tags that we can use. The number next to each
+          heading tags indicates it's importance.</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <h1>Heading 1</h1>
+              <h2>Heading 2</h2>
+              <h3>Heading 3</h3>
+              <h4>Heading 4</h4>
+              <h5>Heading 5</h5>
+              <h6>Heading 6</h6>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>&lt;em&gt; is for Emphasized</h2>
+          <p>Let's add emphasis to a word in our pargraph</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              Let's add &lt;em&gt;emphasis&lt;/em&gt; to a word.
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>&lt;strong&gt; is for the bold</h2>
+          <p>Let's add strong to a word in our pargraph</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              Let's add &lt;strong&gt;emphasis&lt;/strong&gt; to a word.
+            </code>
+          </pre>
+        </section>
+
+
+        <section>
+          <h2>Add a Link</h2>
+          <p>Introduce attributes</p>
+          <p>the a tag surrounds our text to turn it into a link</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+            <a href="http://www.girldevelopit.com">Girl Develop It</a>
+            </code>
+          </pre>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        width: 800,
+        slideNumber: true,
+        // use 'z' to jump to a particular slide
+        keyboard: {
+          90: function() { Reveal.slide( 23 ) },
+        },
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
