@@ -1,0 +1,98 @@
+body {
+  background-color: #F1F1F1;
+  /* https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Web_safe_fonts */
+  font-family: Helvetica, Arial, sans-serif;
+  margin: auto;
+  margin-top: 0;
+}
+
+/* Nav Bar */
+
+nav {
+  background-color: #C8DCDE; /* or maybe #b0d7d8 */
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.nav-list {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0px 50px;
+  width: 100%;
+}
+
+.nav-item {
+  float: left;
+  padding-right: 40px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Intro */
+
+.intro-section {
+  height: 200px;
+  text-align: center;
+}
+
+.intro {
+  padding-top: 60px;
+}
+
+.intro p {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.intro h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+/* Hero */
+
+.hero {
+  background-image: url("../images/final-project/watermelon.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: 1px solid #d6d6d6;
+  height: 700px;
+  position: relative; /* helps the image respond to window size*/
+}
+
+/* Articles */
+
+.article {
+  background-color: white;
+  margin: auto;
+  margin-top: 40px;
+  width: 50%;
+}
+
+.article-content {
+  padding: 20px;
+}
+
+.article-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.article img {
+  width: 100%;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 800px) {
+  .hero {
+    height: 300px;
+  }
+
+  .article {
+    width: 80%;
+  }
+}
