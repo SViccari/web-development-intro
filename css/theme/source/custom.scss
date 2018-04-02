@@ -1,0 +1,102 @@
+/**
+ * Custom theme for reveal.js.
+ */
+
+// Default mixins and settings -----------------
+@import "../template/mixins";
+@import "../template/settings";
+// ---------------------------------------------
+
+/* Colors */
+$grey: #4c4b4b;
+$off-white: #f9f9f9;
+$teal: #63BFD0;
+
+/* Fonts */
+@import url(https://fonts.googleapis.com/css?family=Rubik);
+@import url(https://fonts.googleapis.com/css?family=Rubik:700);
+
+/* Override theme settings.scss */
+$mainFont: 'Rubik', 'Arial', sans-serif;
+$mainFontSize: 30px;
+$mainColor: $grey;
+
+/* Vertical spacing between blocks of text */
+$blockMargin: 20px;
+
+/* Headings */
+$headingMargin: 0 0 $blockMargin 0;
+$headingFont: 'Rubik', 'Arial', sans-serif;
+$headingColor: $teal;
+$headingLineHeight: 1.2;
+$headingLetterSpacing: normal;
+$headingTextTransform: none;
+$headingTextShadow: none;
+$headingFontWeight: normal;
+$heading1TextShadow: $headingTextShadow;
+
+$heading1Size: 2.5em;
+$heading2Size: 2em;
+$heading3Size: 1.5em;
+$heading4Size: 1em;
+
+/* Links and actions */
+$linkColor: $teal;
+$linkColorHover: lighten( $linkColor, 20% );
+
+/* Text selection */
+$selectionBackgroundColor: #FF5E99;
+$selectionColor: #fff;
+
+$backgroundColor: $off-white;
+
+// Theme template ------------------------------
+@import "../template/theme";
+// ---------------------------------------------
+
+
+/* Overriding Code Examples */
+.reveal pre {
+  box-shadow: none;
+  font-size: 30px;
+}
+
+.reveal .hljs-meta {
+  color: #efef8f;
+}
+.reveal pre mark {
+  background-color: #FF5E99;
+}
+
+.reveal pre mark .hljs-tag,
+.reveal pre mark .hljs-name,
+.reveal pre mark .hljs-meta {
+  color: white;
+}
+
+
+/* Custom Classes */
+.reveal .bold {
+  font-weight: bold;
+}
+
+.reveal .underline {
+  text-decoration: underline;
+}
+
+.reveal .preview-image {
+  max-height: 200px;
+  max-width: 100%;
+}
+
+.reveal .footnote {
+  font-size: 12px;
+  margin-top: 0;
+}
+
+.reveal section img {
+  margin-bottom: 0;
+  max-height: 400px;
+  max-width: 100%;
+}
+

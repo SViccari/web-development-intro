@@ -33,9 +33,9 @@
           <h1>Welcome!</h1>
           <p>Let's get to know each other.</p>
           <ul>
-            <li>Your Name</li>
-            <li>What you hope to learn in this class</li>
-            <li>Fun fact or favorite activity</li>
+            <li>Who are you?</li>
+            <li>What you want to learn in this class?</li>
+            <li>What's an activity you enjoy doing?</li>
           </ul>
 
           <aside class="notes">
@@ -45,8 +45,8 @@
             </p>
 
             <p>
-              My name is Stephanie. I signed up to teach this class because I
-              want to be help others learn a skill that has enhanced my life.
+              My name is Stephanie. I want to learn what drives others to learn
+              web development and how they want to use these skills.
               My favorite activity, lately, has been snowboarding.
             </p>
 
@@ -61,7 +61,7 @@
             <li>We are here for you!</li>
             <li>Every question is important</li>
             <li>Help each other</li>
-            <li>Have fun</li>
+            <li>Have fun &#x1F388</li>
           </ul>
         </section>
 
@@ -75,7 +75,14 @@
             <li>Develop and publish a website</li>
           </ul>
 
-          <p>Slides are available at: TODO - INSERT LINK</p>
+          </br>
+          </br>
+          <p>
+            Slides are available at:</br>
+            <a href="http://sviccari.github.io/web-development-intro">
+              http://sviccari.github.io/web-development-intro
+            </a>
+          </p>
 
           <aside class="notes">
             Web development is a very broad topic as there are many ways to
@@ -92,15 +99,16 @@
 
         <section>
           <h2>Today</h2>
-          <li>What is the World Wide Web?</li>
-          <li>How does the Web work?</li>
-          <li>Web safety tips</li>
-          <li>Anatomy of a Website</li>
-          <li>HTML</li>
+          <ul>
+            <li>Brief history of the Web</li>
+            <li>What happens when we request a website</li>
+            <li>Anatomy of a Website</li>
+            <li>Write some HTML!</li>
+          </ul>
         </section>
 
         <section>
-          <p><span class="highlight">1957</span></p>
+          <h3>1957</h3>
           <p>The first satellite is launched into orbit.</p>
 
           <img src="images/sputnik.png" alt="sputnik satellite">
@@ -116,20 +124,16 @@
         <section>
           <ul>
             <li>
-              <span class="highlight">1957</span>
-              - First satellite in space
+              1957 - First satellite in space
             </li>
             <li>
-              <span class="highlight">1958</span>
-              - ARPA is formed
+              1958 - ARPA is formed
             </li>
             <li class="fragment">
-              <span class="highlight">1969</span>
-              - ARPAnet sends it's first message
+              1969 - ARPAnet sends it's first message
             </li>
             <li class="fragment">
-              <span class="highlight">1991</span>
-              - The World Wide Web is created
+              1991 - The World Wide Web is created
             </li>
           </ul>
 
@@ -205,8 +209,12 @@
         </section>
 
         <section>
-          <h2>Requesting a Website - Activity</h2>
-          <ul>Actors:
+          <h2>Requesting a Website</h2>
+          <p>Let's act out requesting a website</p>
+
+          </br>
+          <p>Players Needed:</p>
+          <ul>
             <li>Internet Service Provider</li>
             <li>Domain Name System</li>
             <li>Router</li>
@@ -410,7 +418,7 @@
 
         <!-- Basic HTML Page -->
         <section>
-          <h2>Basic Structure of an HTML page</h2>
+          <h2>Basic HTML Page</h2>
           <pre>
             <code data-trim contenteditable>
               &lt;!DOCTYPE html&gt;
@@ -441,8 +449,10 @@
             </code>
           </pre>
 
-          <p>This line tells our browser which version of markup language our
-          page is using. In this class, we are using HTML5.</p>
+          <p>
+            This line tells our browser which version of markup language to
+            use. In this class, we are using HTML5.
+          </p>
 
           <aside class="notes">
             This is just a special line that our browser look for when it
@@ -568,6 +578,12 @@
 
         <section>
           <h2>&lt;p&gt; is for Paragraph</h2>
+          <p>Paragraphs help us format our content in a readable fashion.</p>
+          <img src="images/paragraphs.png" alt="Example of HTML paragraphs">
+        </section>
+
+        <section>
+          <h2>&lt;p&gt; is for Paragraph</h2>
           <p>Let's add a paragraph to our website.</p>
 
           <pre>
@@ -578,9 +594,17 @@
         </section>
 
         <section>
-          <h2>Headings</h2>
-          <p>There are 6 heading tags that we can use. The number next to each
-          heading tags indicates it's importance.</p>
+          <h2>&lt;h&gt; is for Heading</h2>
+          <p>
+            There are 6 heading tags that we can use. The number next to each
+            heading tags indicates it's importance.
+          </p>
+          <img src="images/headers.png" alt="Example of HTML headers">
+        </section>
+
+        <section>
+          <h2>&lt;h&gt; is for Heading</h2>
+          <p>Let's add each heading to our page.</p>
 
           <pre>
             <code class="html" data-trim contenteditable>
@@ -595,39 +619,253 @@
         </section>
 
         <section>
-          <h2>&lt;em&gt; is for Emphasized</h2>
-          <p>Let's add emphasis to a word in our pargraph</p>
+          <h2>&lt;em&gt; is for Emphasis</h2>
+          <p>Empahsis makes the word <em>italicized</em>.</p>
+          <p>
+            Let's add a paragraph and add &lt;em&gt;&lt;/em&gt; tags to one
+            word.
+          </p>
 
           <pre>
             <code class="html" data-trim contenteditable>
-              Let's add &lt;em&gt;emphasis&lt;/em&gt; to a word.
+              &lt;p&gt;This &lt;em&gt;word&lt;/em&gt; has emphasis.&lt;p&gt;
             </code>
           </pre>
         </section>
 
         <section>
-          <h2>&lt;strong&gt; is for the bold</h2>
-          <p>Let's add strong to a word in our pargraph</p>
+          <h2>Nesting HTML Tags</h2>
+          <p>All elements "nest" inside one another.</p>
+          <p>
+            Nesting is when you place HTML tags inside other HTML tags. It's
+            important that whichever tag opens <span class="underline">first</span>
+            closes <span class="underline">last</span>.
+          </p>
+          <img src="images/nesting.png" alt="Owl nesting set">
+
+          <aside class="notes">
+            Hop into CodePen and run through a correct example.
+            Run through what happens when we forget to close a tag.
+          </aside>
+        </section>
+
+        <section>
+          <h2>&lt;strong&gt; is for the Bold</h2>
+          <p>Strong makes the word <strong>bold</strong>.</p>
+          <p>
+            Let's add a paragraph and add &lt;strong&gt;&lt;/strong&gt; tags to
+            one word.
+          </p>
 
           <pre>
             <code class="html" data-trim contenteditable>
-              Let's add &lt;strong&gt;emphasis&lt;/strong&gt; to a word.
+              &lt;p&gt;&lt;strong&gt;Bold&lt;/strong&gt; and daring.&lt;/p&gt;
             </code>
           </pre>
         </section>
 
 
         <section>
-          <h2>Add a Link</h2>
-          <p>Introduce attributes</p>
-          <p>the a tag surrounds our text to turn it into a link</p>
-
+          <h2>&lt;a&gt; is for Adventure!</h2>
+          <p>Okay, I made that one up...</p>
+          <p>But links do help us venture to other websites.</p>
+          <p>Example of an HTML link:</p>
           <pre>
             <code class="html" data-trim contenteditable>
-            <a href="https://www.bostongov.com">Boston</a>
+              <a href="http://www.google.com">Google</a>
+            </code>
+          </pre>
+
+          <aside class="notes">
+            Breakdown the meaning of each part.
+            a - anchor
+            href - hypertext reference
+
+            Breakdown the HTML tag, the attribute, the visible text, and the
+            closing tag.
+          </aside>
+        </section>
+
+        <section>
+          <h2>&lt;a&gt; is for Anchor! &#x2693</h2>
+          <p>Let's add a link to our page.</p>
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <a href="http://www.bostongov.com">Boston</a>
             </code>
           </pre>
         </section>
+
+        <section>
+          <h2>&lt;a&gt; is for Anchor!</h2>
+          <p>Open the link in a new tab using "target".</p>
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <a href="url" target="_blank">Boston</a>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>&lt;img&gt; is for Image!</h2>
+          <p>The image tag is used to add images to our site.</p>
+          <p>Supported image formats include:</p>
+          <ul>
+            <li>jpeg/jpg</li>
+            <li>png</li>
+            <li>gif</li>
+            <li>svg</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>&lt;img&gt; is for Image!</h2>
+          <p>The image tag is a "self-closing" element.</p>
+          <p>Example image tag:</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <img src="image.png" alt="Image description">
+            </code>
+          </pre>
+
+          <aside class="notes">
+            Notice that similar to the link tag, we've used attributes to
+            provide required information about what image we want to show.
+
+            src - source
+            alt - Alternative text for when an image fails to download. This is
+            also used by screenreaders, a tool that can be used for those
+            visually impaired. Instead of seeing the image, the screenreader
+            will read the alt text, making this value very important.
+
+            Also, as you read more HTML or follow tutorials, you may notice that
+            other img tags include a forward slash at the end. This isn't
+            necessary in HTML5. It doesn't hurt to add it, but we can leave it
+            off and save ourselves a character.
+          </aside>
+        </section>
+
+        <section>
+          <h2>&lt;img&gt; is for Image!</h2>
+          <p>Let's add an image to our page.</p>
+
+          <img src="https://images.unsplash.com/photo-1459789034005-ba29c5783491"
+               alt="Waffle with berries, taken by Joseph Gonzalez"
+               class="preview-image">
+          <p class="footnote">Image from Unsplash</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <img src="https://images.unsplash.com/photo-1459789034005-ba29c5783491"
+                   alt="Waffle with berries, taken by Joseph Gonzalez">
+            </code>
+          </pre>
+
+          <aside class="notes">
+            Open up CodePen and walk through finding an image, copying the image
+            address, and adding it to the CodePen.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Clickable Image</h2>
+          <p>
+            To turn an image into a link, <br>
+            we'll use nesting to place our
+            image inside a link tag.
+          </p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <a href="destination-url">
+                <img src="image.png" alt="Image description">
+              </a>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>&lt;br&gt; is for Line Break</h2>
+          <p>The line break tag creates a line break in text.</p>
+          <p>Line breaks are useful when writing an address or poem.</p>
+
+          <p>
+            Roxbury Innovation Center<br>
+            2300 Washington St<br>
+            Boston, MA 02119<br>
+          </p>
+        </section>
+
+        <section>
+          <h2>&lt;br&gt; is for Line Break</h2>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <p>
+                Roxbury Innovation Center<br>
+                2300 Washington St<br>
+                Boston, MA 02119<br>
+              </p>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Lists</h2>
+          <p>Lists can be used to organize any lists of items.</p>
+          <img src="images/lists.png" alt="Example of multiple lists">
+          <p class="footnote">Image from Girl Develop It course</p>
+        </section>
+
+        <section>
+          <h2>&lt;ol&gt; is for Ordered List</h2>
+          <p>Creates a list of items, shown as a numbered list.</p>
+          <ol>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>&lt;ol&gt; is for Ordered List</h2>
+          <p>Let's add an ordered list to our page.</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <ol>
+                <li>List item one</li>
+                <li>List item two</li>
+              </ol>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>&lt;ul&gt; is for Unordered List</h2>
+          <p>Creates a list of items, shown as a bullet-point list.</p>
+          <ul>
+            <li>First item</li>
+            <li>Second item</li>
+            <li>Third item</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>&lt;ol&gt; is for Unordered List</h2>
+          <p>Let's add an unordered list to our page.</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <ul>
+                <li>List item one</li>
+                <li>List item two</li>
+              </ul>
+            </code>
+          </pre>
+        </section>
+
       </div>
     </div>
 
@@ -639,11 +877,11 @@
       // - https://github.com/hakimel/reveal.js#configuration
       // - https://github.com/hakimel/reveal.js#dependencies
       Reveal.initialize({
-        width: 800,
+        width: 950,
         slideNumber: true,
         // use 'z' to jump to a particular slide
         keyboard: {
-          90: function() { Reveal.slide( 23 ) },
+          90: function() { Reveal.slide( 48 ) },
         },
         dependencies: [
           { src: 'plugin/markdown/marked.js' },
