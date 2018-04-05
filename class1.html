@@ -29,30 +29,32 @@
   <body>
     <div class="reveal">
       <div class="slides">
+        <section class="center">
+          <h1>Intro to Web Development</h1>
+        </section>
+
         <section>
           <h1>Welcome!</h1>
           <p>Let's get to know each other.</p>
           <ul>
             <li>Who are you?</li>
-            <li>What you want to learn in this class?</li>
-            <li>What's an activity you enjoy doing?</li>
+            <li>What do you want to learn in this class?</li>
+            <li>Do you have a favorite activity or fun fact?</li>
           </ul>
 
           <aside class="notes">
-            <p>
               Let's start class by doing a round of introductions.
               I'll start, followed by Rachel, Candace, and then everyone else.
-            </p>
 
-            <p>
-              My name is Stephanie. I want to learn what drives others to learn
-              web development and how they want to use these skills.
-              My favorite activity, lately, has been snowboarding.
-            </p>
+              My name is Stephanie. I am a web developer here in Boston.
+              I started coding 4 years ago. I love it so much that I'm here
+              to teach about it.
 
-            <p>Rachel, would go next?</p>
+              I want to learn what's driving you to learn web development.
+
+              Favorite activity - hiking! I love the outdoors. Preferably when
+              it's warm.
           </aside>
-
         </section>
 
         <section>
@@ -63,16 +65,38 @@
             <li>Help each other</li>
             <li>Have fun &#x1F388</li>
           </ul>
+
+          <aside class="notes">
+            We, myself, Candace and Rachel are here to support you in your goal
+            to learn web development. Please ask LOTS of questions. Please feel
+            free at any point to raise your hand and say "I don't get it". If
+            you're confused, I promise others are too.
+
+            Also help each other! This is a great way to get to know each other
+            and share what you know.
+
+            Last, certainly not least, let's have fun tonight.
+          </aside>
+        </section>
+
+        <section>
+          <h2>A few safety tips...</h2>
+          <p class="fragment">
+            Never save your password on a shared computer.
+          </p>
+          <p class="fragment">
+            Closing a tab does not sign you out of a website.
+          </p>
         </section>
 
         <section>
           <h2>About this class</h2>
 
           <ul>
-            <li>How websites are created</li>
+            <li>Discover how websites are created</li>
             <li>HTML fundamentals</li>
             <li>CSS fundamentals</li>
-            <li>Develop and publish a website</li>
+            <li>Create and publish a website</li>
           </ul>
 
           </br>
@@ -80,20 +104,18 @@
           <p>
             Slides are available at:</br>
             <a href="http://sviccari.github.io/web-development-intro">
-              http://sviccari.github.io/web-development-intro
+              sviccari.github.io/web-development-intro
             </a>
           </p>
 
           <aside class="notes">
-            Web development is a very broad topic as there are many ways to
-            build a website and each website varies in complexity.
+            I'll mention this first so you have time to write it down or type it
+            into your browser. If you'd like to have the slides on your
+            computer, you can visit this URL.
 
-            In this class, we'll learn a bit about how the web works and how
-            to build a website!
-            We'll learn how to build a website by creating two websites. The
-            first website is a fun site that will help us learn HTML and CSS.
-            The second website will be a more personal website, one that you can
-            share with friends and continue to update after this class.
+            In this class we're going to learn how websites are created.
+            We'll learn how to write HTML and CSS.
+            We'll create and publish a website so everyone on the web can see it!
           </aside>
         </section>
 
@@ -109,39 +131,38 @@
 
         <section>
           <h3>History of the Internet</h3>
-          <p>In 1957, the first satellite was launched into orbit.</p>
-
-          <img src="images/sputnik.png" alt="sputnik satellite">
-
-          <aside class="notes">
-            In 1957, Russia launches the very first satellite into space.
-            This set off the "race for space" as Americans realized that while
-            we had been focused on building biggers cars and TVs, other
-            countries were exploring opportunities in space.
-          </aside>
-        </section>
-
-        <section>
           <ul>
             <li>
               <span class="bold">1957</span>
               - First satellite in space
             </li>
-            <li>
+            <li class="fragment">
               <span class="bold">1958</span>
               - ARPA is formed
+              <ul>
+                <li class="fragment">(Advanced Research Projects Agency)</li>
+              </ul>
             </li>
             <li class="fragment">
               <span class="bold">1969</span>
-              - ARPAnet sends it's first message
+              - ARPAnet sends the first computer-to-computer message
+              <ul>
+                <li class="fragment">"lo"</li>
+                <li class="fragment">"login"</li>
+              </ul>
             </li>
             <li class="fragment">
               <span class="bold">1991</span>
-              - The World Wide Web is created
+              - Tim Berners-Lee creates the World Wide Web
             </li>
           </ul>
 
           <aside class="notes">
+            In 1957, Russia launched the very first satellite into orbit. This
+            set of what was called the "race for space" as America realized that
+            while we had been focused on building bigger cars and TVs, other
+            countries were exploring opportunities in space.
+
             Not wanting to be left behind, the U.S. government created a
             division called ARPA (Advanced Research Projects Agency). This
             agency focused on creating space-age technologies like rockets,
@@ -190,16 +211,6 @@
         </section>
 
         <section>
-          <h2>Browsing the Web Safely...</h2>
-          <p class="fragment">
-            Never save your password on a shared computer.
-          </p>
-          <p class="fragment">
-            Closing a tab does not sign you out of a website.
-          </p>
-        </section>
-
-        <section>
           <h2>Requesting a website</h2>
           <p>To request a website, we use the brower's Address Bar.</p>
           <img src="images/chrome-address-bar.png" alt="Chrome address bar">
@@ -214,14 +225,14 @@
 
         <section>
           <h2>Requesting a Website</h2>
-          <p>Let's act out requesting a website</p>
+          <p>Let's act out requesting a website.</p>
 
           </br>
           <p>Players Needed:</p>
           <ul>
+            <li>Browser</li>
             <li>Internet Service Provider</li>
             <li>Domain Name System</li>
-            <li>Router</li>
             <li>Router</li>
             <li>Google</li>
           </ul>
@@ -245,7 +256,7 @@
                   www.boston.gov - 107.154.103.58
                   www.google.com - 172.217.11.46
 
-              - ISP sends paper to DNS, DNS adds IP Address, back to Browser
+              - ISP sends paper to DNS, DNS adds IP Address, back to ISP
                 - Piece of paper that reads:
                   From: 74.125.19.104 (www.google.com)
                   To: 65.30.200.101 (user)
@@ -258,17 +269,17 @@
 
             Steps:
               - Browser passes paper to ISP
-              - ISP passes paper to DNS
+              - ISP asks the DNS to add the IP address
               - DNS adds the IP Address
               - DNS passes back to ISP
               - ISP passes off to the router
               - Router sends paper to Google server
-              - Google server creates an envelope with To and From address
-              - Google server adds HTML and CSS files to envelope
+              - Google server adds HTML and CSS files to blank envelope
+              - Google server adds the user's IP address to the "To" field
               - Google server passes envelope to router
               - Router sends envelope to ISP
               - ISP passes the envelope to the browser
-              - Browser renders the html and css files
+              - Browser opens the enveloper and renders the html and css files
 
             When I enter an website's address in the browser's address bar and
             press enter, my computer is going to send a request to the computer's
@@ -632,7 +643,7 @@
 
           <pre>
             <code class="html" data-trim contenteditable>
-              &lt;p&gt;This &lt;em&gt;word&lt;/em&gt; has emphasis.&lt;p&gt;
+              &lt;p&gt;This &lt;em&gt;word&lt;/em&gt; has emphasis.&lt;/p&gt;
             </code>
           </pre>
         </section>
@@ -672,6 +683,7 @@
         <section>
           <h2>&lt;a&gt; is for Adventure!</h2>
           <p>Okay, I made that one up...</p>
+          <p>'a' is for Anchor &#x2693</p>
           <p>But links do help us venture to other websites.</p>
           <p>Example of an HTML link:</p>
           <pre>
