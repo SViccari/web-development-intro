@@ -1,0 +1,412 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1.0,
+                   maximum-scale=1.0,
+                   user-scalable=no">
+
+    <title>Intro to Web Development</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/custom.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Font Awesome Icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
+      integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+      crossorigin="anonymous">
+    </script>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ?
+        'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Intro to Web Development</h2>
+        </section>
+
+        <section>
+          <h2>Correspondence</h2>
+          <a href="https://goo.gl/forms/CzPBZMvDwLlLeZjz2" target="_blank">
+            Add my email address
+          </a>
+        </section>
+
+        <section>
+          <h2>Addressing Questions & Concerns</h2>
+          <a href="https://www.sli.do" target="_blank">
+            Ask Questions with Sli.do
+          </a>
+        </section>
+
+        <section>
+          <h2>Today</h2>
+          <ul>
+            <li>Review</li>
+            <li>Inline vs Block HTML Elements</li>
+            <li>Styling content with CSS</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Let's Review...</h2>
+        </section>
+
+        <section>
+          <h2>Basic structure of an HTML page</h2>
+          <pre>
+            <code data-trim contenteditable data-noescape>
+              <mark>&lt;!DOCTYPE html&gt;</mark>
+              &lt;html&gt;
+                &lt;head&gt;
+                &lt;/head&gt;
+
+                &lt;body&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre>
+
+          <p>
+            All HTML files start with a doctype.<br>
+            This doctype states HTML5 is being used.
+          </p>
+        </section>
+
+        <section>
+          <h2>html tags</h2>
+          <pre>
+            <code data-trim contenteditable data-noescape>
+              &lt;!DOCTYPE html&gt;
+              <mark>&lt;html&gt;</mark>
+                &lt;head&gt;
+                &lt;/head&gt;
+
+                &lt;body&gt;
+                &lt;/body&gt;
+              <mark>&lt;/html&gt;</mark>
+            </code>
+          </pre>
+
+          <p>
+            The html tags tell the browser where to begin and end.
+          </p>
+        </section>
+
+        <section>
+          <h2>head tags</h2>
+          <pre>
+            <code data-trim contenteditable data-noescape>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                <mark>&lt;head&gt;</mark>
+                <mark>&lt;/head&gt;</mark>
+
+                &lt;body&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre>
+
+          <p>
+            Content placed within the head tags is not displayed.
+          </p>
+          <p>
+            Head tags store metadata. (Ex: A link
+            to stylesheets or a description of the site for search engines.)
+          </p>
+        </section>
+
+        <section>
+          <h2>body tags</h2>
+          <pre>
+            <code data-trim contenteditable data-noescape>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                &lt;head&gt;
+                &lt;/head&gt;
+
+                <mark>&lt;body&gt;</mark>
+                <mark>&lt;/body&gt;</mark>
+              &lt;/html&gt;
+            </code>
+          </pre>
+
+          <p>Content that will be displayed in the browser.</p>
+        </section>
+
+        <section>
+          <h2>HTML Elements</h2>
+          <p>Empty Element</p>
+          <p>Container Element</p>
+          <p>Self-Closing Element</p>
+        </section>
+
+        <section>
+          <h2>Empty HTML Element</h2>
+          <p>&lt;tagname&gt;</p>
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <br>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Container HTML Element</h2>
+          <p>&lt;tagname&gt;Hello World&lt;/tagname&gt;</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <p>Paragraph</p>
+            </code>
+          </pre>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <h1>Heading</h1>
+            </code>
+          </pre>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <a href="http://www.google.com">Google</a>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Self-Closing HTML Element</h2>
+          <p>&lt;tagname attribute="value" attribute="value"&gt;</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <img src="image.png" alt="image description">
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Resource for HTML Elements</h2>
+          <p>W3Schools:</p>
+          <a href="https://www.w3schools.com/tags" target="_blank">
+            https://www.w3schools.com/tags
+          </a>
+
+          <br>
+          <p>Mozilla Developer Network:</p>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" target="_blank">
+            https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+          </a>
+        </section>
+
+        <section>
+          <h2>Reminders</h2>
+          <ul>
+            <li class="fragment">Save html files with the '.html' extension.</li>
+            <li class="fragment">White space is for humans only.</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Block vs Inline HTML Elements</h2>
+          <img src="images/block-vs-inline-element.jpeg"
+               alt="Example of block and inline html elements">
+          <p class="footnote">Image from https://codeburst.io</p>
+
+          <aside class="notes">
+            A block-level element always starts on a new line and takes up the
+            full width of a page, from left to right. A block-level element can
+            take up one line or multiple lines and has a line break before and
+            after the element.
+
+            An inline element does not cause a line break (start on a new line)
+            and does not take up the full width of a page, only the space
+            bounded by its opening and closing tag. It is usually used within
+            other HTML elements.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Block Elements</h2>
+          <p>
+            Block element tags include:
+            &lt;p&gt;&lt;/p&gt;,
+            &lt;li&gt;&lt;/li&gt;,
+            &lt;h1&gt;&lt;/h1&gt;
+          </p>
+          <br>
+
+          <p>Example:</p>
+          <p style="background-color:lightblue;">
+            Paragraph with a background color.
+          </p>
+        </section>
+
+        <section>
+          <h2>Inline Elements</h2>
+          <p>
+            Inline element tags include:
+            &lt;a&gt;&lt;/a&gt;,
+            &lt;em&gt;&lt;/em&gt;,
+            &lt;img&gt;
+          </p>
+          <br>
+
+          <p>Examples:</p>
+          <p>
+            This paragraph uses the inline &lt;em&gt; tag to italicize text.
+            <em>See how it fits right in with the flow of the text?</em>
+          </p>
+
+          <a href="#">First Link</a>
+          <a href="#">Second Link</a>
+        </section>
+
+        <section>
+          <h2>Switching from HTML to CSS</h2>
+          <img src="images/html-css-browser.png"
+               alt="Laptop with HTML and CSS logos">
+          <p class="footnote">Image from codercv.com</p>
+        </section>
+
+        <section>
+          <h2>HTML vs CSS</h2>
+          <p>Structure vs Presentation</p>
+          <img src="images/html-vs-css.png"
+               alt="Two houses that demonstrate the difference between html and
+               css">
+        </section>
+
+        <section>
+          <h2>What is CSS?</h2>
+          <p>CSS stands for: <span class="bold">Cascading Style Sheets</p>
+          <p>
+            <span class="bold">Cascading</span>
+            - rules cascade down from multiple sources.<br>
+            Each rule can override a previous rule.
+          </p>
+          <p>
+            <span class="bold">Style Sheets</span>
+            - refers to "style sheet language".<br>
+            This language is used to describe the presentation of a document.
+          </p>
+        </section>
+
+        <section>
+          <h2>What can CSS do?</h2>
+          <p>CSS can change colors, fonts, and position of content.</p>
+          <a href="https://www.w3schools.com/css/css_intro.asp" target="_blank">
+            Example of how CSS can change the appearance of content.
+          </a>
+        </section>
+
+        <section>
+          <h2>What does CSS look like?</h2>
+          <img src="images/css-structure-example.png" alt="Example of CSS">
+        </section>
+
+        <section>
+          <h2>Defining a CSS Rule</h2>
+          <img src="images/css-rule.png" alt="Diagram of defining a CSS rule">
+          <p class="footnote">Image from internetingishard.com</p>
+        </section>
+
+        <section>
+          <h2>Connecting CSS with HTML</h2>
+          <p>Three ways to add CSS:<p>
+          <ul>
+            <li>Inline</li>
+            <li>Embedded</li>
+            <li>External</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Connecting CSS: Inline</h2>
+          <p>Use the HTML attribute "style"</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <p style="background-color:lightblue;">
+                A paragraph with a background color.
+              </p>
+            </code>
+          </pre>
+
+          <p style="background-color:lightblue;">
+            A paragraph with a background color.
+          </p>
+
+          <p>This approach is not preferred as it is difficult to manage.</p>
+        </section>
+
+        <section>
+          <h2>Connecting CSS: Embed</h2>
+          <p>Use the &lt;style&gt; tag inside the &lt;head&gt; tags.</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                &lt;head&gt;
+                  <style type="text/css">
+                    p {
+                      color: blue;
+                    }
+                  </style>
+                &lt;/head&gt;
+
+                &lt;body&gt;
+                  <p>This text will be blue.</p>
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Connecting CSS: External</h2>
+        </section>
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        width: 950,
+        slideNumber: true,
+        // use 'z' to jump to a particular slide
+        keyboard: {
+          90: function() { Reveal.slide( 23 ) },
+        },
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
