@@ -42,7 +42,7 @@
         <section>
           <h2>Correspondence</h2>
           <a href="https://goo.gl/forms/CzPBZMvDwLlLeZjz2" target="_blank">
-            Add my email address
+            Add email address
           </a>
         </section>
 
@@ -151,19 +151,8 @@
 
         <section>
           <h2>HTML Elements</h2>
-          <p>Empty Element</p>
-          <p>Container Element</p>
-          <p>Self-Closing Element</p>
-        </section>
-
-        <section>
-          <h2>Empty HTML Element</h2>
-          <p>&lt;tagname&gt;</p>
-          <pre>
-            <code class="html" data-trim contenteditable>
-              <br>
-            </code>
-          </pre>
+          <p>Container HTML Element</p>
+          <p>Self-Closing HTML Element</p>
         </section>
 
         <section>
@@ -196,6 +185,7 @@
           <pre>
             <code class="html" data-trim contenteditable>
               <img src="image.png" alt="image description">
+              <br>
             </code>
           </pre>
         </section>
@@ -321,12 +311,6 @@
         </section>
 
         <section>
-          <h2>Defining a CSS Rule</h2>
-          <img src="images/css-rule.png" alt="Diagram of defining a CSS rule">
-          <p class="footnote">Image from internetingishard.com</p>
-        </section>
-
-        <section>
           <h2>Connecting CSS with HTML</h2>
           <p>Three ways to add CSS:<p>
           <ul>
@@ -338,7 +322,7 @@
 
         <section>
           <h2>Connecting CSS: Inline</h2>
-          <p>Use the HTML attribute "style"</p>
+          <p>Use the HTML "style" attribute.</p>
 
           <pre>
             <code class="html" data-trim contenteditable>
@@ -351,8 +335,18 @@
           <p style="background-color:lightblue;">
             A paragraph with a background color.
           </p>
+        </section>
 
-          <p>This approach is not preferred as it is difficult to manage.</p>
+        <section>
+          <h2>Connecting CSS: Inline</h2>
+          <p>Inlining CSS is not ideal because it...</p>
+          <ul>
+            <li>encourages duplication &#10060;</li>
+            <li>is hard to manage in a larger project &#10060;</li>
+            <li>
+              prevents styles from being shared with other HTML files &#10060;
+            </li>
+          </ul>
         </section>
 
         <section>
@@ -380,9 +374,186 @@
         </section>
 
         <section>
-          <h2>Connecting CSS: External</h2>
+          <h2>Connecting CSS: Embed</h2>
+          <p>Embedding CSS is not ideal because it...</p>
+
+          <ul>
+            <li>encourages duplication &#10060;</li>
+            <li>is hard to manage in a larger project &#10060;</li>
+            <li>
+              prevents styles from being shared with other HTML files &#10060;
+            </li>
+          </ul>
         </section>
 
+        <section>
+          <h2>Connecting CSS: External</h2>
+          <p>Use the &lt;link&gt; tag inside the &lt;head&gt; tags.</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                &lt;head&gt;
+                  <link rel="stylesheet" type="text/css" href="style.css">
+                &lt;/head&gt;
+
+                &lt;body&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Connecting CSS: External</h2>
+          <p>External CSS <em>is ideal</em> because it...</p>
+
+          <ul>
+            <li>reduces duplication &#9989;</li>
+            <li>is easier to manage in a larger project &#9989;</li>
+            <li>allows styles to be shared with other HTML files &#9989;</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Let's Write Some CSS</h2>
+          <img src="images/ide-and-browser.png" alt="IDE and browser">
+          <p class="footnote">Image from internetingishard.com</p>
+        </section>
+
+        <section>
+          <h2>Create a Project Folder</h2>
+          <img src="images/folder-with-two-files.png"
+               alt="folder with two files">
+          <br>
+          <br>
+          <ol>
+            <li>On your desktop, create a folder called: website</li>
+            <li>Open Atom</li>
+            <li>
+              Select File &#x2192; Save As &#x2192; index.html in the website
+              folder.
+            </li>
+            <li>
+              Select File &#x2192; Save As &#x2192; styles.css in the website
+              folder.
+            </li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Create an HTML document</h2>
+          <p>Open the index.html file in the website folder.</p>
+          <p>Add the following HTML.</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                &lt;head&gt;
+                  <title>Hello, CSS</title>
+                &lt;/head&gt;
+
+                &lt;body&gt;
+                  <h1>Hello, CSS</h1>
+                  <p>CSS lets us style HTML elements.</p>
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>View your website in a browser</h2>
+          <p>Open Chrome</p>
+          <p>File &#x2192; Open File &#x2192; index.html &#x2192; Open</p>
+        </section>
+
+        <section>
+          <h2>How to Write CSS</h2>
+
+          <table>
+            <tr>
+              <td>HTML</td>
+              <td>uses tags</td>
+              <td>&lt; &gt;</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td>creates rules</td>
+              <td>{ }</td>
+            </tr>
+          </table>
+
+          <img src="images/css-rule.png" alt="Diagram of defining a CSS rule">
+          <p class="footnote">Image from internetingishard.com</p>
+        </section>
+
+        <section>
+          <h2>Let's add a CSS Rule</h2>
+          <pre>
+            <code class="css" data-trim contenteditable>
+              body {
+                background-color: azure;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Link the Stylesheet to HTML</h2>
+          <p>
+            Use the &lt;link&gt; tag to tell the HTML file to load a CSS file.
+          </p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              &lt;head&gt;
+                <link rel="stylesheet" type="text/css" href="styles.css">
+                <title>Hello, CSS</title>
+              &lt;/head&gt;
+            </code>
+          </pre>
+
+          <ul>
+            <li>"rel" - states the purpose (relationship) of the file</li>
+            <li>"type" - specifies the type of content in the file</li>
+            <li>"href" - provides the location of the file</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>So what is Cascading...?</h2>
+          <p>provide example of cascading</p>
+        </section>
+
+        <section>
+          <h2>Let's talk about Colors!</h2>
+          <p>Approximately 147 colors supported by all browsers</p>
+          <p>http://www.colors.commutercreative.com/grid</p>
+          <p>Color name vs Hex value</p>
+        </section>
+
+        <section>
+          <h2>Text Color</h2>
+        </section>
+
+        <section>
+          <h2>Font Size</h2>
+          <p>discuss pixels only</p>
+        </section>
+
+        <section>
+          <h2>Font Families</h2>
+          <p>available font families</p>
+          <p>how to add a specific font</p>
+        </section>
+
+        <section>
+          <h2>Specify Image Size</h2>
+          <p>Practice adding an image</p>
+        </section>
       </div>
     </div>
 
@@ -398,7 +569,7 @@
         slideNumber: true,
         // use 'z' to jump to a particular slide
         keyboard: {
-          90: function() { Reveal.slide( 23 ) },
+          90: function() { Reveal.slide( 35 ) },
         },
         dependencies: [
           { src: 'plugin/markdown/marked.js' },
