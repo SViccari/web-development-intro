@@ -206,10 +206,43 @@
 
         <section>
           <h2>Reminders</h2>
+
           <ul>
+            <li class="fragment">
+              All HTML files start with the HTML version: &lt;!DOCTYPE html&gt;
+            </li>
+
+            <li class="fragment">
+              All HTML files use a basic structure that includes the &lt;html&gt;,
+              &lt;head&gt;, and &lt;body&gt; tags.
+            </li>
+
             <li class="fragment">Save html files with the '.html' extension.</li>
-            <li class="fragment">White space is for humans only.</li>
           </ul>
+        </section>
+
+        <section>
+          <h2>Reminders</h2>
+          <p>
+            Indenting nested tags is important because it helps us identify
+            where a tag begins and ends. Browsers ignore these extra spaces.
+          </p>
+
+          <p>How we see our code:</p>
+          <pre>
+            <code class="html" data-trim contenteditable>
+              &lt;body&gt;
+                <p>Indented paragraph tag</p>
+              &lt;/body&gt;
+            </code>
+          </pre>
+
+          <p>How the browser reads our code:</p>
+          <pre>
+            <code class="html" data-trim contenteditable>
+              &lt;body&gt;<p>Indented paragraph tag</p>&lt;/body&gt;
+            </code>
+          </pre>
         </section>
 
         <section>
@@ -234,14 +267,14 @@
         <section>
           <h2>Block Elements</h2>
           <p>
-            Block element tags include:
+            HTML tags that are Block elements:
             &lt;p&gt;&lt;/p&gt;,
             &lt;li&gt;&lt;/li&gt;,
             &lt;h1&gt;&lt;/h1&gt;
           </p>
           <br>
 
-          <p>Example:</p>
+          <p>Example: &lt;p&gt; tag</p>
           <p style="background-color:lightblue;">
             Paragraph with a background color.
           </p>
@@ -250,25 +283,26 @@
         <section>
           <h2>Inline Elements</h2>
           <p>
-            Inline element tags include:
+            HTML tags that are Inline elements:
             &lt;a&gt;&lt;/a&gt;,
             &lt;em&gt;&lt;/em&gt;,
             &lt;img&gt;
           </p>
           <br>
 
-          <p>Examples:</p>
+          <p>Example: &lt;em&gt; tag</p>
           <p>
             This paragraph uses the inline &lt;em&gt; tag to italicize text.
             <em>See how it fits right in with the flow of the text?</em>
           </p>
 
+          <p>Example: &lt;a&gt; tag</p>
           <a href="#">First Link</a>
           <a href="#">Second Link</a>
         </section>
 
         <section>
-          <h2>Switching from HTML to CSS</h2>
+          <h2>Adding CSS to HTML</h2>
           <img src="images/html-css-browser.png"
                alt="Laptop with HTML and CSS logos">
           <p class="footnote">Image from codercv.com</p>
@@ -287,8 +321,9 @@
           <p>CSS stands for: <span class="bold">Cascading Style Sheets</p>
           <p>
             <span class="bold">Cascading</span>
-            - rules cascade down from multiple sources.<br>
-            Each rule can override a previous rule.
+            - CSS is written by defining "rules" and these rules can override
+            each other. The "cascade" is responsible for determining which rule
+            is applied to the HTML.
           </p>
           <p>
             <span class="bold">Style Sheets</span>
@@ -299,7 +334,7 @@
 
         <section>
           <h2>What can CSS do?</h2>
-          <p>CSS can change colors, fonts, and position of content.</p>
+          <p>CSS can change colors, fonts, and the position of content.</p>
           <a href="https://www.w3schools.com/css/css_intro.asp" target="_blank">
             Example of how CSS can change the appearance of content.
           </a>
@@ -312,7 +347,7 @@
 
         <section>
           <h2>Connecting CSS with HTML</h2>
-          <p>Three ways to add CSS:<p>
+          <p>Three ways to add CSS to HTML:<p>
           <ul>
             <li>Inline</li>
             <li>Embedded</li>
@@ -321,7 +356,7 @@
         </section>
 
         <section>
-          <h2>Connecting CSS: Inline</h2>
+          <h2>Inline CSS</h2>
           <p>Use the HTML "style" attribute.</p>
 
           <pre>
@@ -338,19 +373,24 @@
         </section>
 
         <section>
-          <h2>Connecting CSS: Inline</h2>
-          <p>Inlining CSS is not ideal because it...</p>
+          <h2>Inline CSS</h2>
+          <p>
+            The "cascade" considers inline styles to be the highest priority.
+            Inline styles are always applied over any other competing style.
+          </p>
+
+          <p>However, Inline CSS styles:</p>
           <ul>
-            <li>encourages duplication &#10060;</li>
-            <li>is hard to manage in a larger project &#10060;</li>
-            <li>
-              prevents styles from being shared with other HTML files &#10060;
-            </li>
+            <li>encourage duplication</li>
+            <li>are a nightmare to manage in a larger project</li>
+            <li>prevent styles from being shared with other HTML files </li>
           </ul>
+
+          <p class="fragment">Inline CSS styles - not recommended &#10060;</p>
         </section>
 
         <section>
-          <h2>Connecting CSS: Embed</h2>
+          <h2>Embedded CSS</h2>
           <p>Use the &lt;style&gt; tag inside the &lt;head&gt; tags.</p>
 
           <pre>
@@ -374,20 +414,21 @@
         </section>
 
         <section>
-          <h2>Connecting CSS: Embed</h2>
-          <p>Embedding CSS is not ideal because it...</p>
+          <h2>Embedded CSS</h2>
+          <p>Allows CSS to be defined in the same file as the HTML file.</p>
 
+          <p>However, Embedded CSS styles:</p>
           <ul>
-            <li>encourages duplication &#10060;</li>
-            <li>is hard to manage in a larger project &#10060;</li>
-            <li>
-              prevents styles from being shared with other HTML files &#10060;
-            </li>
+            <li>encourage duplication</li>
+            <li>are tough to manage in a larger project</li>
+            <li>prevent styles from being shared with other HTML files</li>
           </ul>
+
+          <p class="fragment">Embedded CSS styles - not recommended &#10060;</p>
         </section>
 
         <section>
-          <h2>Connecting CSS: External</h2>
+          <h2>External CSS</h2>
           <p>Use the &lt;link&gt; tag inside the &lt;head&gt; tags.</p>
 
           <pre>
@@ -406,14 +447,19 @@
         </section>
 
         <section>
-          <h2>Connecting CSS: External</h2>
-          <p>External CSS <em>is ideal</em> because it...</p>
+          <h2>External CSS</h2>
+          <p>
+            Separates the HTML from the CSS by writing CSS in a separate file.
+          </p>
 
+          <p>External CSS styles:</p>
           <ul>
-            <li>reduces duplication &#9989;</li>
-            <li>is easier to manage in a larger project &#9989;</li>
-            <li>allows styles to be shared with other HTML files &#9989;</li>
+            <li>reduces duplication</li>
+            <li>are easier to manage in a larger project</li>
+            <li>allow styles to be shared with other HTML files</li>
           </ul>
+
+          <p class="fragment">External CSS styles - recommended! &#9989;</p>
         </section>
 
         <section>
@@ -444,7 +490,7 @@
 
         <section>
           <h2>Create an HTML document</h2>
-          <p>Open the index.html file in the website folder.</p>
+          <p>Open the newly created index.html file.</p>
           <p>Add the following HTML.</p>
 
           <pre>
@@ -492,6 +538,8 @@
 
         <section>
           <h2>Let's add a CSS Rule</h2>
+          <p>In the file styles.css, add the following:</p>
+
           <pre>
             <code class="css" data-trim contenteditable>
               body {
@@ -516,23 +564,117 @@
             </code>
           </pre>
 
+          <p>Breaking down the attributes...</p>
           <ul>
-            <li>"rel" - states the purpose (relationship) of the file</li>
-            <li>"type" - specifies the type of content in the file</li>
-            <li>"href" - provides the location of the file</li>
+            <li>
+              <em>rel</em> - states the purpose (relationship) of the file
+            </li>
+            <li>
+              <em>type</em> - specifies the type of content in the file
+            </li>
+            <li>
+              <em>href</em> - provides the location of the file
+            </li>
           </ul>
         </section>
 
         <section>
-          <h2>So what is Cascading...?</h2>
-          <p>provide example of cascading</p>
+          <h2>The "Cascade" in action</h2>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              body {
+                background-color: LightBlue;
+              }
+
+              body {
+                background-color: plum;
+              }
+            </code>
+          </pre>
         </section>
 
         <section>
-          <h2>Let's talk about Colors!</h2>
-          <p>Approximately 147 colors supported by all browsers</p>
-          <p>http://www.colors.commutercreative.com/grid</p>
-          <p>Color name vs Hex value</p>
+          <h2>Let's talk Color!</h2>
+          <img src="images/colors.png" alt="powders with different colors">
+          <p class="footnote">Image from blog.hubspot.com</p>
+
+          <p>Colors can be referenced by:</p>
+          <ul>
+            <li>a specific name (ex: LightBlue)</li>
+            <li>a hex value (ex: #ADD8E6)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Color by Name</h2>
+
+          <p>Approximately 147 color names are supported by all browsers.</p>
+          <p>A few examples include: LightBlue, Blue, Red, Purple, and Green</p>
+        </section>
+
+        <section>
+          <h2>Color by Hex Value</h2>
+          <p>How to write a hex value: #ADD8E6</p>
+          <p>
+            Hex values (short for hexidecimal values) are used to specify a
+            color by a unique code. This unique code is composed of six
+            characters, using numerals and letters.
+          </p>
+          <p>The leading "#" symbol declares "this is a hex value".</p>
+
+          <aside class="notes">
+            Naming all the colors in the universe would be a rather impossible
+            task.
+
+            Article on hex value notation:
+            https://www.smashingmagazine.com/2012/10/the-code-side-of-color
+          </aside>
+        </section>
+
+        <section>
+          <h2>Choose a Background Color</h2>
+          <p>Use one of the sites below to select a background color.</p>
+
+          <ul>
+            <li>
+              <a href="http://www.colors.commutercreative.com/grid" target="_blank">
+                colors.commutercreative.com/grid (List of color names)
+              </a>
+            </li>
+
+            <li>
+              <a href="https://colordrop.io" target="_blank">
+                colordrop.io
+              </a>
+            </li>
+
+            <li>
+              <a href="https://www.w3schools.com/colors/colors_picker.asp"
+                target="_blank">
+                www.w3schools.com/colors/colors_picker.asp
+              </a>
+            </li>
+          </ul>
+
+          <ol>
+            <li><p>Try specifying a color by it's name</p></li>
+            <li><p>Try specifying a color by it's hex value</p></li>
+            <li>
+              <p>
+                Bonus: Are hex values case sensitive? Does #add8e6 work the same as
+                #ADD8E6?
+              </p>
+            </li>
+          </ol>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              body {
+                background-color: your-color-here;
+              }
+            </code>
+          </pre>
         </section>
 
         <section>
