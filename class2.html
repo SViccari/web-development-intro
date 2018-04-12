@@ -595,32 +595,58 @@
         </section>
 
         <section>
-          <h2>Let's talk Color!</h2>
-          <img src="images/colors.png" alt="powders with different colors">
-          <p class="footnote">Image from blog.hubspot.com</p>
-
+          <h2>Let's talk Colors!</h2>
           <p>Colors can be referenced by:</p>
+
           <ul>
             <li>a specific name (ex: LightBlue)</li>
             <li>a hex value (ex: #ADD8E6)</li>
           </ul>
+
+          <img src="images/colors.png" alt="powders with different colors">
+          <p class="footnote">Image from blog.hubspot.com</p>
         </section>
 
         <section>
-          <h2>Color by Name</h2>
+          <h2>Colors by Name</h2>
 
           <p>Approximately 147 color names are supported by all browsers.</p>
-          <p>A few examples include: LightBlue, Blue, Red, Purple, and Green</p>
+          <p>A few examples include: LightBlue, Blue, Red, Purple, and Green.</p>
         </section>
 
         <section>
-          <h2>Color by Hex Value</h2>
-          <p>How to write a hex value: #ADD8E6</p>
+          <h2>Colors by Name</h2>
           <p>
-            Hex values (short for hexidecimal values) are used to specify a
-            color by a unique code. This unique code is composed of six
-            characters, using numerals and letters.
+            In the styles.css file, change the background color to a different
+            color.
           </p>
+          <p>
+            For color name options, visit:
+            <a href="http://www.colors.commutercreative.com/grid" target="_blank">
+              colors.commutercreative.com/grid
+            </a>
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              body {
+                background-color: color-name-here;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Colors by Hex Value</h2>
+          <p>
+            A hex value (short for hexidecimal value) looks like this: #ADD8E6
+          </p>
+
+          <p>
+            Hex values are a unique code that represent a color. This unique
+            code is composed of six characters, using numerals and letters.
+          </p>
+
           <p>The leading "#" symbol declares "this is a hex value".</p>
 
           <aside class="notes">
@@ -633,68 +659,216 @@
         </section>
 
         <section>
-          <h2>Choose a Background Color</h2>
-          <p>Use one of the sites below to select a background color.</p>
+          <h2>Colors by Hex Value</h2>
 
+          <p>
+            In the styles.css file, change the background color to a different
+            color using a hex value.
+          </p>
+
+          <p>For color hex values, visit either site:</p>
           <ul>
             <li>
-              <a href="http://www.colors.commutercreative.com/grid" target="_blank">
-                colors.commutercreative.com/grid (List of color names)
-              </a>
+              <a href="https://colordrop.io" target="_blank">colordrop.io</a>
             </li>
-
             <li>
-              <a href="https://colordrop.io" target="_blank">
-                colordrop.io
-              </a>
-            </li>
-
-            <li>
-              <a href="https://www.w3schools.com/colors/colors_picker.asp"
-                target="_blank">
+              <a href="https://www.w3schools.com/colors/colors_picker.asp" target="_blank">
                 www.w3schools.com/colors/colors_picker.asp
               </a>
             </li>
           </ul>
 
-          <ol>
-            <li><p>Try specifying a color by it's name</p></li>
-            <li><p>Try specifying a color by it's hex value</p></li>
-            <li>
-              <p>
-                Bonus: Are hex values case sensitive? Does #add8e6 work the same as
-                #ADD8E6?
-              </p>
-            </li>
-          </ol>
-
           <pre>
             <code class="css" data-trim contenteditable>
               body {
-                background-color: your-color-here;
+                background-color: color-hex-value-here;
               }
             </code>
           </pre>
         </section>
 
         <section>
-          <h2>Text Color</h2>
+          <h2>Colors</h2>
+          <p>Bonus:</p>
+          <p>
+            Can you tell if hex values are case sensitive?<br>
+            Does #add8e6 work the same as #ADD8E6?
+          </p>
         </section>
 
         <section>
-          <h2>Font Size</h2>
-          <p>discuss pixels only</p>
+          <h2>Property: color</h2>
+          <p>The color property sets the font color.</p>
+          <p>
+            To change the font color, select the body and set the property
+            <strong>color</strong> to a color value (color name or hex value).
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              body {
+                background-color: color-value-here;
+                color: color-value-here;
+              }
+            </code>
+          </pre>
         </section>
 
         <section>
-          <h2>Font Families</h2>
-          <p>available font families</p>
-          <p>how to add a specific font</p>
+          <h2>Property: color</h2>
+          <p>
+            To change the header font color, select the header tag and set the
+            property <strong>color</strong> to a color value (color name or hex value).
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              h1 {
+                color: color-value-here;
+              }
+            </code>
+          </pre>
         </section>
 
         <section>
-          <h2>Specify Image Size</h2>
-          <p>Practice adding an image</p>
+          <h2>Property: font-family</h2>
+          <p>
+            The <strong>font-family</strong> property defines which typeface is
+            used.
+          </p>
+
+          <p>
+            <strong>font-family</strong> accepts multiple values because not all
+            browsers have the same fonts available.
+          </p>
+
+          <p>
+            In the example below, the browser tries to load the left-most
+            value first (Helvetica), falls back to Arial if the font is not
+            available and finally, chooses the system's default sans serif font.
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              p {
+                font-family: "Helvetica", "Arial", sans-serif;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Web Safe Font Stacks</h2>
+
+          <p>Example of fonts on different systems:</p>
+
+          <img src="images/web-safe-font-venn-diagram.png" alt="Venn diamgram of
+          fonts">
+
+          <p>There are five fonts that are truly universal:</p>
+          <p>Arial, Courier New, Georgia, Times New Roman, and Verdana</p>
+
+          <aside class="notes">
+            Typography is more than just choosing a font. It's about the space
+            between and around letters, words, and lines. Typography makes your
+            content more readable and can help you communicate your message more
+            effectively.
+
+            Web safe fonts are fonts that are pre-installed by many operating
+            systems. While not all systems have the same fonts installed, we can
+            specify a web safe font stack which provides several fonts that look
+            similar.
+            <!-- https://www.coffeecup.com/help/articles/what&#45;is&#45;a&#45;web&#45;safe&#45;font -->
+          </aside>
+        </section>
+
+        <section>
+          <h2>Web Safe Font Stacks</h2>
+          <p>
+            List of web safe font stacks:
+            <a href="https://www.w3schools.com/cssref/css_websafe_fonts.asp"
+               target="_blank">
+              https://www.w3schools.com/cssref/css_websafe_fonts.asp
+            </a>
+          </p>
+        </section>
+
+        <section>
+          <h2>Serif vs Sans-Serif Font</h2>
+          <p>The small features on the ends of strokes are known as "serifs".</p>
+
+          <img src="images/serif-vs-sans-serif-font.png" alt="Example of serif
+          and sans-serif fonts">
+          <p class="footnote">Image from about.easil.com</p>
+
+          <p>
+            Common Serif typefaces include: Times New Roman, Georgia, Palatino
+            and Garamond.
+          </p>
+          <p>
+            Common Sans Serif typefaces include: Arial, Helvetica and Tahoma.
+          </p>
+        </section>
+
+        <section>
+          <h2>Property: font-family</h2>
+          <p>Let's pick out a font stack!</p>
+        </section>
+
+        <section>
+          <h2>Custom Font</h2>
+          <p>
+            Externally hosted fonts allow us to use fonts that our user's
+            systems aren't likely to have installed.
+          </p>
+
+          <ol>
+            <li>
+              Visit Google Fonts at:
+              <a href="https://fonts.google.com"
+                 target="_blank">fonts.google.com
+              </a>
+            </li>
+            <li>
+              Select a font and copy the provided HTML. The provided HTML will
+              being with a &lt;link&gt; tag.
+            </li>
+            <li>
+              Add this copied HTML to the index.html file, between the
+              &lt;head&gt; tags.
+            </li>
+            <li>
+              Copy the provided CSS, which will begin with the property
+              <strong>font-family</strong>.
+            </li>
+            <li>
+              Add this copied CSS to the styles.css file, specifically to the
+              body selector.
+            </li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Property: font-size</h2>
+
+          <p>
+            A "px", or pixel, is a unit of measurement when discussing a
+            graphical display, like a computer screen.
+          </p>
+
+          <p>
+            Screen display resolution is often expressed in the unit of pixels.
+            Example: A "800 x 600" pixel resolution means that 800 pixels can be
+            displayed in width and 600 pixels in height.
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              body {
+                font-size: 20px;
+              }
+            </code>
+          </pre>
         </section>
       </div>
     </div>
@@ -711,7 +885,7 @@
         slideNumber: true,
         // use 'z' to jump to a particular slide
         keyboard: {
-          90: function() { Reveal.slide( 35 ) },
+          90: function() { Reveal.slide( 46 ) },
         },
         dependencies: [
           { src: 'plugin/markdown/marked.js' },
