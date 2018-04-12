@@ -870,6 +870,46 @@
             </code>
           </pre>
         </section>
+
+        <section>
+          <h2>&lt;div&gt; is for Division</h2>
+          <p>
+            The &lt;div&gt; tag is a "container", block HTML element that groups
+            content together so it can be styled in a similar manner.
+          </p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <div>
+                <p>I am in a div!</p>
+              </div>
+            </code>
+          </pre>
+
+          <aside class="notes">
+            So far, we've been selecting HTML by specific HTML tags like "body",
+            "paragraph", and "header". But what if we want a way to apply code
+            to several paragraphs but not all paragraphs?
+
+            We can target this div tag and apply specific styles.
+            But what if we need more divs?
+          </aside>
+        </section>
+
+        <section>
+          <h2>CSS Classes</h2>
+          <p>
+            Classes live in the HTML file and in the CSS file. They help us
+            style HTML elements even when we have multiple HTML elements on the
+            same page. For example, when when we have multiple &lt;div&gt; tags.
+          </p>
+
+          <p> To use classes, we need two items:</p>
+          <ul>
+            <li>The class needs to be added to the HTML element</li>
+            <li>The class must be referenced in the CSS</li>
+          </ul>
+        </section>
       </div>
     </div>
 
@@ -885,7 +925,7 @@
         slideNumber: true,
         // use 'z' to jump to a particular slide
         keyboard: {
-          90: function() { Reveal.slide( 46 ) },
+          90: function() { Reveal.slide( 54 ) },
         },
         dependencies: [
           { src: 'plugin/markdown/marked.js' },
