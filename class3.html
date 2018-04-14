@@ -1,0 +1,568 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1.0,
+                   maximum-scale=1.0,
+                   user-scalable=no">
+
+    <title>Intro to Web Development</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/custom.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Font Awesome Icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
+      integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+      crossorigin="anonymous">
+    </script>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ?
+        'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Intro to Web Development</h2>
+        </section>
+
+        <section>
+          <h2>
+            <a href="https://www.sli.do" target="_blank">
+              Ask Questions with Sli.do
+            </a>
+          </h2>
+
+          <p>The event code will be announced.</p>
+        </section>
+
+        <section>
+          <h2>Today</h2>
+          <ul>
+            <li>Review</li>
+            <li>CSS Classes and IDs</li>
+            <li>Container Divs</li>
+            <li>CSS Box Model</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Let's Review...</h2>
+        </section>
+
+        <section>
+          <h2>Basic structure of an HTML page</h2>
+          <pre>
+            <code data-trim contenteditable data-noescape>
+              <mark>&lt;!DOCTYPE html&gt;</mark>
+              &lt;html&gt;
+                &lt;head&gt;
+                &lt;/head&gt;
+
+                &lt;body&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>HTML Elements</h2>
+          <p>Container HTML Element</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <tagname>Your Content</tagname>
+            </code>
+          </pre>
+
+          <p>Self-Closing HTML Element</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable data-noescape>
+              &lt;tagname attribute="value"&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Review</h2>
+
+          <p>A static website has two layers: HTML and CSS</p>
+
+          <p>HTML (Structure) vs CSS (Presentation)</p>
+          <img src="images/html-vs-css.png"
+               alt="Two houses that demonstrate the difference between html and
+               css">
+        </section>
+
+        <section>
+          <h2>Review - CSS</h2>
+          <p>CSS stands for Cascading Style Sheets</p>
+          <p>"Cascading" refers to the "Cascade", which determines which rule
+          gets applied to our HTML.</p>
+        </section>
+
+        <section>
+          <h2>Review - CSS</h2>
+          <p>Three ways to add CSS to HTML:<p>
+          <ul>
+            <li>Inline &#10060;</li>
+            <li>Embedded &#10060;</li>
+            <li>External &#9989;</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Review - Inline CSS</h2>
+          <p>Use the HTML "style" attribute.</p>
+          <p class="fragment">Inline CSS styles - not recommended &#10060;</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <p style="background-color:lightblue;">
+                A paragraph with a background color.
+              </p>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Review - Embedded CSS</h2>
+          <p>Use the &lt;style&gt; tag inside the &lt;head&gt; tags.</p>
+
+          <p class="fragment">Embedded CSS styles - not recommended &#10060;</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                &lt;head&gt;
+                  <style type="text/css">
+                    p {
+                      color: blue;
+                    }
+                  </style>
+                &lt;/head&gt;
+
+                &lt;body&gt;
+                  <p>This text will be blue.</p>
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre>
+
+        </section>
+
+        <section>
+          <h2>Review - External CSS</h2>
+          <p>Use the &lt;link&gt; tag inside the &lt;head&gt; tags.</p>
+
+          <p class="fragment">External CSS styles - recommended! &#9989;</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                &lt;head&gt;
+                  <link rel="stylesheet" type="text/css" href="style.css">
+                &lt;/head&gt;
+
+                &lt;body&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Review - How to Write CSS</h2>
+
+          <table>
+            <tr>
+              <td>HTML</td>
+              <td>uses tags</td>
+              <td>&lt; &gt;</td>
+            </tr>
+            <tr>
+              <td>CSS</td>
+              <td>creates rules</td>
+              <td>{ }</td>
+            </tr>
+          </table>
+
+          <img src="images/css-rule.png" alt="Diagram of defining a CSS rule">
+          <p class="footnote">Image from internetingishard.com</p>
+        </section>
+
+        <section>
+          <h2>Setup a basic web page</h2>
+          <p>We will need:</p>
+          <ul>
+            <li>Atom, a text editor used to write code</li>
+            <li>Chrome, a browser to render our website</li>
+            <li>A project folder</li>
+            <li>An HTML file</li>
+            <li>A CSS file</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>HTML Setup</h2>
+          <p>Copy the following HTML</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                &lt;head&gt;
+                  <link rel="stylesheet" type="text/css" href="style.css">
+                  <title>My Website</title>
+                &lt;/head&gt;
+
+                &lt;body&gt;
+                  <h1>Welcome to my site!</h1>
+
+                  <p>First paragraph</p>
+                  <p>Second paragraph</p>
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>CSS: Type Selectors</h2>
+
+          <p>Type Selectors are used to select an HTML element type.</p>
+          <p>
+            Below is a example of using a CSS Type Selector. This will set the
+            background-color for ALL paragraphs.
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              p {
+                background-color: blue;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Practice Type Selectors</h2>
+          <p>In the .css file, add a CSS rule that:</p>
+          <ol>
+            <li>Selects all &lt;p&gt; tags</li>
+            <li>Sets the background-color property to blue</li>
+          </ol>
+
+          <p class="fragment">
+            But what if we only want one paragraph to be blue?
+          </p>
+        </section>
+
+        <section>
+          <h2>CSS: Class Selectors</h2>
+
+          <ul>
+            <li>
+              Target HTML elements by using the HTML tag's <em>class</em>
+              attribute.
+            </li>
+
+            <li>
+              Can be any name you choose
+            </li>
+
+            <li>
+              Written in lowercase letters
+            </li>
+
+            <li>
+              Words are separated by hypens
+            </li>
+          </ul>
+
+          <p>
+            Below is an example of how to add a class attribute to an HTML tag.
+          </p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <p class="my-class-name">
+                Paragraph tag with a class attribute.
+              </p>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>CSS: Class Selectors</h2>
+          <p>
+            A class selector is written in the CSS file by placing a period
+            (.) before the class name.
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .my-class-name {
+                background-color: yellow;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Practice Class Selectors</h2>
+          <p>In the .html file...</p>
+          <p>
+            Add a class attribute, with the name "my-class-name", to the first
+            paragraph tag.
+          </p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <p class="my-class-name">
+                First paragraph.
+              </p>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Practice Class Selectors</h2>
+          <p>In the .css file...</p>
+          <ol>
+            <li>
+              Remove the CSS rule that selects all &lt;p&gt; tags.
+            </li>
+            <li>
+              Add a CSS rule that selects the class name and set the
+              background-color to yellow.
+            </li>
+          </ol>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .my-class-name {
+                background-color: yellow;
+               }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Practice Class Selectors</h2>
+          <p>
+            Knowing how to use Type Selectors is important, but most of the
+            time class names, or Class Selectors, are used to style HTML. Class
+            Selectors are preferred because they allow us to share CSS styles
+            with other HTML elements.
+          </p>
+
+          <p>Add the class name to the other paragraph tag.</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <p class="my-class-name">First paragraph</p>
+              <p class="my-class-name">Second paragraph</p>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Sharing CSS Styles</h2>
+          <p>Sharing styles = Less Work</p>
+          <p>
+            Buttons are a good example of when we want to share CSS styles.
+          </p>
+
+          <img src="images/buttons-with-same-style.png"
+               alt="Consistently styled buttons">
+          <p class="footnote">Image from teamtreehouse.com</p>
+        </section>
+
+        <section>
+          <h2>CSS: ID Selectors</h2>
+          <ul>
+            <li>
+              Target HTML elements by using the HTML tag's <em>id</em>
+              attribute.
+            </li>
+
+            <li>
+              Are unique because each ID is only used once
+            </li>
+
+            <li>
+              Can be any name you choose
+            </li>
+
+            <li>
+              Written in lowercase letters
+            </li>
+
+            <li>
+              Words are separated by hypens
+            </li>
+          </ul>
+
+          <p>
+            Below is an example of how to add an ID attribute to an HTML tag.
+          </p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <p id="my-id-name">
+                Paragraph tag with an ID attribute.
+              </p>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>CSS: ID Selectors</h2>
+          <p>
+            An ID selector is written in the CSS file by placing a pound sign
+            (#) before the ID name.
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              #my-id-name {
+                background-color: purple;
+              }
+            </code>
+          </pre>
+        </section>
+
+
+        <section>
+          <h2>Practice ID Selectors</h2>
+          <p>In the .html file...</p>
+          <ol>
+            <li>Remove the class attribute from the first paragraph</li>
+            <li>
+              Add the ID attribute, with the name "my-id-name", to the first
+              paragraph.
+            </li>
+          </ol>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <p id="my-id-name">
+                First paragraph
+              </p>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Practice ID Selectors</h2>
+          <p>In the .css file...</p>
+          <ol>
+            <li>
+              Add a CSS rule that selects the ID attribute name and set the
+              background-color to purple.
+            </li>
+          </ol>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              #my-id-name {
+                background-color: purple;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Recap of CSS Selector Types</h2>
+          <ol>
+            <li>Type Selectors - selects HTML by <em>tag name</em></li>
+            <li>Class Selectors - selects HTML by <em>class name</em></li>
+            <li>ID Selectors - selects HTML by <em>ID name</em></li>
+          </ol>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              p {
+                color: red;
+              }
+
+              .my-class-name {
+                color: blue;
+              }
+
+              #my-id-name {
+                color: purple;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <!-- <section> -->
+        <!--   <h2>&#38;lt;div&#38;gt; is for Division</h2> -->
+        <!--   <p> -->
+        <!--     The &#38;lt;div&#38;gt; tag is a "container", block HTML element that groups -->
+        <!--     content together so it can be styled in a similar manner. -->
+        <!--   </p> -->
+        <!--  -->
+        <!--   <pre> -->
+        <!--     <code class="html" data&#45;trim contenteditable> -->
+        <!--       <div> -->
+        <!--         <p>I am in a div!</p> -->
+        <!--       </div> -->
+        <!--     </code> -->
+        <!--   </pre> -->
+        <!--  -->
+        <!--   <aside class="notes"> -->
+        <!--     So far, we've been selecting HTML by specific HTML tags like "body", -->
+        <!--     "paragraph", and "header". But what if we want a way to apply code -->
+        <!--     to several paragraphs but not all paragraphs? -->
+        <!--  -->
+        <!--     We can target this div tag and apply specific styles. -->
+        <!--     But what if we need more divs? -->
+        <!--   </aside> -->
+        <!-- </section> -->
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        width: 950,
+        slideNumber: true,
+        // use 'z' to jump to a particular slide
+        keyboard: {
+          90: function() { Reveal.slide( 20 ) },
+        },
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
