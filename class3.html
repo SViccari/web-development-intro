@@ -491,6 +491,59 @@
         </section>
 
         <section>
+          <h2>Framgent Identifiers</h2>
+          <p>
+            ID attributes can also be used as "fragment identifiers", which
+            let's us link a user to another section on the same page.
+          </p>
+
+          <p>
+            Let's hop in the code and walk through an example.
+          </p>
+        </section>
+
+        <section>
+          <h2>ID Selectors and Links</h2>
+          <p>In the .html file...</p>
+          <ol>
+            <li>
+              After the last &lt;p&gt; tag, add a link tag. However,
+              instead of setting the "href" attribute to a URL, as you normally
+              would, set it to the ID attribute name.
+            </li>
+          </ol>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <a href="#my-id-name">Top of the Page</a>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>ID Selectors and Links</h2>
+          <p>
+            To see this work, our page needs space between the top and bottom of
+            the page. In the .css file...
+          </p>
+
+          <ol>
+            <li>
+              Select a class name that already exists in the .html file and
+              set the <em>height</em> property to 2000 pixels.
+            </li>
+          </ol>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .my-class-name {
+                height: 2000px;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
           <h2>Recap of CSS Selector Types</h2>
           <ol>
             <li>Type Selectors - selects HTML by <em>tag name</em></li>
@@ -513,6 +566,10 @@
               }
             </code>
           </pre>
+        </section>
+
+        <section>
+          <h2>CSS Box Model</h2>
         </section>
 
         <!-- <section> -->
