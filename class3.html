@@ -53,9 +53,9 @@
           <h2>Today</h2>
           <ul>
             <li>Review</li>
-            <li>CSS Classes and IDs</li>
-            <li>Container Divs</li>
+            <li>CSS Selectors</li>
             <li>CSS Box Model</li>
+            <li>Container Divs</li>
           </ul>
         </section>
 
@@ -112,8 +112,10 @@
         <section>
           <h2>Review - CSS</h2>
           <p>CSS stands for Cascading Style Sheets</p>
-          <p>"Cascading" refers to the "Cascade", which determines which rule
-          gets applied to our HTML.</p>
+          <p>
+            "Cascading" refers to the "Cascade", which determines which CSS rule
+            gets applied to our HTML.
+          </p>
         </section>
 
         <section>
@@ -352,7 +354,7 @@
             </li>
             <li>
               Add a CSS rule that selects the class name and set the
-              background-color to yellow.
+              background-color to a color.
             </li>
           </ol>
 
@@ -370,16 +372,29 @@
           <p>
             Knowing how to use Type Selectors is important, but most of the
             time class names, or Class Selectors, are used to style HTML. Class
-            Selectors are preferred because they allow us to share CSS styles
-            with other HTML elements.
+            Selectors are preferred because they help us differentiate between
+            elements of the same type.
           </p>
-
-          <p>Add the class name to the other paragraph tag.</p>
 
           <pre>
             <code class="html" data-trim contenteditable>
               <p class="my-class-name">First paragraph</p>
-              <p class="my-class-name">Second paragraph</p>
+              <p>Second paragraph</p>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Practice Class Selectors</h2>
+          <p>
+            Add a class to the other &lt;p&gt; tag and set the background-color
+            to a different color.
+          </p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <p class="my-class-name">First paragraph</p>
+              <p class="another-class-name">Second paragraph</p>
             </code>
           </pre>
         </section>
@@ -391,7 +406,7 @@
             Buttons are a good example of when we want to share CSS styles.
           </p>
 
-          <img src="images/buttons-with-same-style.png"
+          <img src="images/buttons/buttons-with-same-style.png"
                alt="Consistently styled buttons">
           <p class="footnote">Image from teamtreehouse.com</p>
         </section>
@@ -477,7 +492,7 @@
           <ol>
             <li>
               Add a CSS rule that selects the ID attribute name and set the
-              background-color to purple.
+              background-color to a color.
             </li>
           </ol>
 
@@ -491,10 +506,10 @@
         </section>
 
         <section>
-          <h2>Framgent Identifiers</h2>
+          <h2>Fragment Identifiers</h2>
           <p>
             ID attributes can also be used as "fragment identifiers", which
-            let's us link a user to another section on the same page.
+            let's us link to another section on the same page.
           </p>
 
           <p>
@@ -507,7 +522,7 @@
           <p>In the .html file...</p>
           <ol>
             <li>
-              After the last &lt;p&gt; tag, add a link tag. However,
+              After the last &lt;p&gt; tag, add a link. However,
               instead of setting the "href" attribute to a URL, as you normally
               would, set it to the ID attribute name.
             </li>
@@ -569,33 +584,361 @@
         </section>
 
         <section>
-          <h2>CSS Box Model</h2>
+          <h2>Seeing the world in boxes...</h2>
+          <p>
+            CSS treats all HTML elements as <strong>boxes</strong>. Some of
+            elements are treated as <strong>block boxes</strong> and others are
+            treated as <strong>inline boxes</strong>.
+          </p>
+
+          <img src="images/block-vs-inline-element.jpeg"
+               alt="Example of block and inline html elements">
+          <p class="footnote">Image from https://codeburst.io</p>
+
+          <aside class="notes">
+            Revisiting a topic we discussed very briefly in last class, all HTML
+            elements are "boxes". Some of them are inline boxes and some of
+            them are block boxes.
+          </aside>
         </section>
 
-        <!-- <section> -->
-        <!--   <h2>&#38;lt;div&#38;gt; is for Division</h2> -->
-        <!--   <p> -->
-        <!--     The &#38;lt;div&#38;gt; tag is a "container", block HTML element that groups -->
-        <!--     content together so it can be styled in a similar manner. -->
-        <!--   </p> -->
-        <!--  -->
-        <!--   <pre> -->
-        <!--     <code class="html" data&#45;trim contenteditable> -->
-        <!--       <div> -->
-        <!--         <p>I am in a div!</p> -->
-        <!--       </div> -->
-        <!--     </code> -->
-        <!--   </pre> -->
-        <!--  -->
-        <!--   <aside class="notes"> -->
-        <!--     So far, we've been selecting HTML by specific HTML tags like "body", -->
-        <!--     "paragraph", and "header". But what if we want a way to apply code -->
-        <!--     to several paragraphs but not all paragraphs? -->
-        <!--  -->
-        <!--     We can target this div tag and apply specific styles. -->
-        <!--     But what if we need more divs? -->
-        <!--   </aside> -->
-        <!-- </section> -->
+        <section>
+          <h2>Think inside the box</h2>
+          <img src="images/css-box-model/dovetail-website.png"
+               alt="Section of the dovetail website">
+          <p class="footnote">Image from dovetailapp.com</p>
+
+          <aside class="notes">
+             When thinking about our website layout or looking at other website
+             layouts, it's helpful to think of the layout in terms of boxes.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Think inside the box</h2>
+          <img src="images/css-box-model/dovetail-website-layout.png"
+               alt="The dovetail website sectioned into boxes.">
+          <p class="footnote">Image from dovetailapp.com</p>
+
+
+          <aside class="notes">
+            The reason we want to think of websites in terms of boxes is because
+            that's how the browser treats our HTML elements. Each element, from
+            a paragraph, to a link, to a header, is considered a box.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Think inside the box</h2>
+          <img src="images/css-box-model/instagram-website.png"
+               alt="Instagram website">
+          <p class="footnote">Image from instagram.com</p>
+        </section>
+
+        <section>
+          <h2>Think inside the box</h2>
+          <img src="images/css-box-model/instagram-website-layout.png"
+               alt="The instagram website sectioned into boxes.">
+          <p class="footnote">Image from instagram.com</p>
+        </section>
+
+        <section>
+          <h2>Block vs Inline Boxes</h2>
+          <p>Replace existing HTML with the following:</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <h1>Headings Are Block Elements</h1>
+
+              <p>
+                Paragraphs are blocks, too. <em>However</em>, em and strong
+                elements are not. They are <strong>inline</strong> elements.
+              </p>
+
+              <p>
+                Block elements define the flow of the HTML document, while
+                inline elements do not.
+              </p>
+            </code>
+          </pre>
+
+          <aside class="notes">
+            All the HTML elements that we've been working with have a default
+            type of box. The h1 and p elements are block boxes while em and
+            strong elements are inline boxes.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Block vs Inline Elements</h2>
+          <p>Replace existing CSS with the following:</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              h1, p {
+                background-color: lightgrey;
+              }
+
+              em, strong {
+                background-color: lightblue;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Block vs Inline Elements</h2>
+          <p>This example demonstrates:</p>
+          <ul>
+            <li class="fragment">
+              <strong>Block elements</strong>
+              always appear below the previous block element.
+            </li>
+
+            <li class="fragment">
+              The <strong>width of block elements</strong> is set automatically
+              to the parent container. In this case, the browser window.
+            </li>
+
+            <li class="fragment">
+              The <strong>height of block elements</strong> is based on the content
+              it contains. The height adjusts accordingly when the browser
+              window is narrowed.
+            </li>
+
+            <li class="fragment">
+              The <strong>width of inline elements</strong> is based on the
+              content it contains, not the width of the parent element.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Changing Box Behavior</h2>
+          <p>
+            We can override the default box type of HTML elements with the CSS
+            <strong>display property</strong>. For example, if we want to make
+            an inline element behave like a block element.
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              em {
+                display: block;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>CSS Box Model</h2>
+          <p>
+            To understand how CSS treats each HTML element as a "box", we'll
+            examine the CSS Box Model - a set of rules that determine the
+            dimensions of every element on a web page.
+          </p>
+
+          <img src="images/css-box-model/box-model-diagram.png"
+               alt="Diagram of the CSS box model">
+          <p class="footnote">Image from internetingishard.com</p>
+
+          <aside class="notes">
+            The box model gives each element (both block and inline) four
+            properties: content, padding, border, and margin.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Inspecting the CSS Box Model</h2>
+          <p>
+            To help us along the way, we'll use a helpful browser tool called
+            the <strong>inspector</strong> To open the
+            <strong>inspector</strong>, right-click on your website and select
+            "inspect".
+          </p>
+
+          <img src="images/css-box-model/inspector-with-box-model.png"
+               alt="Chrome inspector with box model">
+        </section>
+
+        <section>
+          <h2>CSS Box Model - Content</h2>
+          <p>Content - the text, image or media content in the element.</p>
+
+          <aside class="notes">
+            We've already worked with content, so on to padding!
+          </aside>
+        </section>
+
+        <section>
+          <h2>CSS Box Model - Padding</h2>
+          <p>
+            <strong>Padding</strong>
+            - the space between the box's content and its border.
+          </p>
+          <br>
+
+          <p>Let's test it out by adding padding to the header element:</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              h1 {
+                padding: 50px;
+              }
+            </code>
+          </pre>
+
+          <aside class="notes">
+            This adds 50 pixels to each side of the header element. Notice how
+            the background color expands to fill this space. That's always the
+            case for paddings because it's inside the border and everything
+            inside the border gets a background.
+          </aside>
+        </section>
+
+        <section>
+          <h2>CSS Box Model - Padding</h2>
+          <p>Add padding to a specific side of the element:</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              h1 {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 10px;
+                padding-right: 10px;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>CSS Box Model - Padding</h2>
+          <p>Padding shorthand format: vertical horizontal</p>
+          <img src="images/css-box-model/padding-shorthand-two-value-format.png"
+               alt="Diagram of padding property with two values">
+          <p class="footnote">Image from internetingishard.com</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              h1 {
+                padding: 20px 10px;
+              }
+            </code>
+          </pre>
+
+          <aside class="notes">
+            Typing out all these properties can be tiresome, so CSS provdes an
+            alternative shorthand form of the padding property. This shorthand
+            lets us set the top/bottom and left/right padding with only one line
+            of CSS.
+          </aside>
+        </section>
+
+        <section>
+          <h2>CSS Box Model - Padding</h2>
+          <p>Padding shorthand format: top right bottom left</p>
+
+          <img src="images/css-box-model/padding-shorthand-four-value-format.png"
+               alt="Diagram of padding property with four values">
+          <p class="footnote">Image from internetingishard.com</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              h1 {
+                padding: 20px 10px 20px 10px;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>CSS Box Model - Borders</h2>
+          <p>
+            <strong>Border</strong> - The line drawn around the content and
+            padding of an element.
+          </p>
+
+          <img src="images/css-box-model/border-shorthand-format.png"
+               alt="Diagram of border property with three values">
+          <p class="footnote">Image from internetingishard.com</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              h1 {
+                border: 1px solid grey;
+              }
+            </code>
+          </pre>
+
+          <aside class="notes">
+            This tells the browser to draw a thin gray line around our heading.
+            Notice how the border bumps right up next to the padding with no
+            space in between. And, if you shrink your browser enough for the
+            heading to be split over two lines, both the padding and the border
+            will still be there.
+          </aside>
+        </section>
+
+        <section>
+          <h2>CSS Box Model - Borders</h2>
+          <p>
+            Like padding, there are
+            <em>-top</em>,
+            <em>-bottom</em>,
+            <em>-left</em>,
+            <em>-right</em>,
+            variants for the border property
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              h1 {
+                border-top: 1px solid pink;
+                border-right: 1px solid red;
+                border-bottom: 1px solid grey;
+                border-left: 1px solid green;
+              }
+            </code>
+          </pre>
+
+          <aside class="notes">
+            Borders are great for debugging!
+          </aside>
+        </section>
+
+        <section>
+          <h2>CSS Box Model - Margin</h2>
+          <p>
+            <strong>Margin</strong>
+            - define the space outside of the element's border. Or, rather, the
+            space between a box and its surrounding boxes.
+          </p>
+
+          <p>Add some space (margin) to the bottom of each paragraph:</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              p {
+                margin-bottom: 50px;
+              }
+            </code>
+          </pre>
+
+          <aside class="notes">
+            This demonstrates a side-specific variant of the margin property but
+            this also accepts the same shorthand formats as padding.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Let's Build!</h2>
+          <p>Build a section with a title, a paragraph, and a button.</p>
+
+          <img src="images/css-box-model/exercise.png"
+               alt="two paragraphs with a button">
+          <p class="footnote">Image from turing.io</p>
+        </section>
       </div>
     </div>
 
@@ -611,7 +954,7 @@
         slideNumber: true,
         // use 'z' to jump to a particular slide
         keyboard: {
-          90: function() { Reveal.slide( 20 ) },
+          90: function() { Reveal.slide( 1 ) },
         },
         dependencies: [
           { src: 'plugin/markdown/marked.js' },
