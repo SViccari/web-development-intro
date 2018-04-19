@@ -763,7 +763,19 @@
 
         <section>
           <h2>CSS Box Model - Content</h2>
-          <p>Content - the text, image or media content in the element.</p>
+          <p>
+            <strong>Content</strong>
+            - the text, image or media content in the element.
+          </p>
+
+          <img src="images/css-box-model/box-model-content.png"
+               alt="Diagram of the box model content">
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <p>This is content</p>
+            </code>
+          </pre>
 
           <aside class="notes">
             We've already worked with content, so on to padding!
@@ -776,9 +788,9 @@
             <strong>Padding</strong>
             - the space between the box's content and its border.
           </p>
-          <br>
 
-          <p>Let's test it out by adding padding to the header element:</p>
+          <img src="images/css-box-model/box-model-padding.png"
+               alt="Diagram of the box model padding">
 
           <pre>
             <code class="css" data-trim contenteditable>
@@ -797,8 +809,10 @@
         </section>
 
         <section>
-          <h2>CSS Box Model - Padding</h2>
-          <p>Add padding to a specific side of the element:</p>
+          <h2>Individual Padding Properties</h2>
+          <p>
+            CSS properties that add padding to a specific side of the element.
+          </p>
 
           <pre>
             <code class="css" data-trim contenteditable>
@@ -813,8 +827,7 @@
         </section>
 
         <section>
-          <h2>CSS Box Model - Padding</h2>
-          <p>Padding shorthand format: vertical horizontal</p>
+          <h2>Padding Shorthand Format</h2>
           <img src="images/css-box-model/padding-shorthand-two-value-format.png"
                alt="Diagram of padding property with two values">
           <p class="footnote">Image from internetingishard.com</p>
@@ -836,9 +849,7 @@
         </section>
 
         <section>
-          <h2>CSS Box Model - Padding</h2>
-          <p>Padding shorthand format: top right bottom left</p>
-
+          <h2>Padding Shorthand Format</h2>
           <img src="images/css-box-model/padding-shorthand-four-value-format.png"
                alt="Diagram of padding property with four values">
           <p class="footnote">Image from internetingishard.com</p>
@@ -856,12 +867,11 @@
           <h2>CSS Box Model - Borders</h2>
           <p>
             <strong>Border</strong> - The line drawn around the content and
-            padding of an element.
+            padding.
           </p>
 
-          <img src="images/css-box-model/border-shorthand-format.png"
-               alt="Diagram of border property with three values">
-          <p class="footnote">Image from internetingishard.com</p>
+          <img src="images/css-box-model/box-model-border.png"
+               alt="Diagram of the box model border">
 
           <pre>
             <code class="css" data-trim contenteditable>
@@ -873,6 +883,25 @@
 
           <aside class="notes">
             This tells the browser to draw a thin gray line around our heading.
+          </aside>
+        </section>
+
+        <section>
+          <h2>CSS Box Model - Borders</h2>
+
+          <img src="images/css-box-model/border-shorthand-format.png"
+               alt="Diagram of border property with three values">
+          <p class="footnote">Image from internetingishard.com</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              h1 {
+                border: 1px dotted pink;
+              }
+            </code>
+          </pre>
+
+          <aside class="notes">
             Notice how the border bumps right up next to the padding with no
             space in between. And, if you shrink your browser enough for the
             heading to be split over two lines, both the padding and the border
@@ -880,15 +909,12 @@
           </aside>
         </section>
 
+
         <section>
-          <h2>CSS Box Model - Borders</h2>
+          <h2>Individual Border Properties</h2>
           <p>
-            Like padding, there are
-            <em>-top</em>,
-            <em>-bottom</em>,
-            <em>-left</em>,
-            <em>-right</em>,
-            variants for the border property
+            Like padding, there are properies that add a border to a specific
+            side of the element.
           </p>
 
           <pre>
@@ -911,24 +937,62 @@
           <h2>CSS Box Model - Margin</h2>
           <p>
             <strong>Margin</strong>
-            - define the space outside of the element's border. Or, rather, the
-            space between a box and its surrounding boxes.
+            - the space between an element and surrounding elements.
           </p>
 
-          <p>Add some space (margin) to the bottom of each paragraph:</p>
+          <img src="images/css-box-model/box-model-margin.png"
+               alt="Diagram of the box model margin">
 
           <pre>
             <code class="css" data-trim contenteditable>
               p {
-                margin-bottom: 50px;
+                margin: 50px;
               }
             </code>
           </pre>
 
           <aside class="notes">
-            This demonstrates a side-specific variant of the margin property but
-            this also accepts the same shorthand formats as padding.
           </aside>
+        </section>
+
+        <section>
+          <h2>Individual Margin Properties</h2>
+          <p>
+            Like padding, there are properies that add a margin to a specific
+            side of the element.
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              h1 {
+                margin-top: 10px;
+                margin-right: 20px;
+                margin-bottom: 10px;
+                margin-left: 20px;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Recap CSS Box Properties</h2>
+          <p>
+          The CSS properties <strong>padding</strong>, <strong>border</strong>,
+          and <strong>margin</strong> can be written in the shorthand format,
+          which accepts one to four values OR we can target a specific side.
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              h1 {
+                margin: /*top right bottom left*/
+                margin-top: /*top*/
+                margin-right: /*right*/
+                margin-bottom: /*bottom*/
+                margin-left: /*left*/
+              }
+            </code>
+          </pre>
         </section>
 
         <section>
@@ -938,6 +1002,368 @@
           <img src="images/css-box-model/exercise.png"
                alt="two paragraphs with a button">
           <p class="footnote">Image from turing.io</p>
+        </section>
+
+        <section>
+          <h2>Add the Content</h2>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <p>Proven Results</p>
+              <p>
+                Turing is difficult, but worth it. 75% of our students graduate
+                within 7 months, and 92% graduate within 10.5 months. 69% of
+                graduates are employed full-time within 90 days of graduation.
+                By 180 days, the percentage jumps to 80%. They're not project
+                managers or off in a corner doing the stapling. They are
+                full-time software developers in careers they love. Their median
+                salary is $75K and, for most, that's nearly double their
+                previous salary.
+              </p>
+
+              <p>
+                We release our student outcomes semi-annually as founding
+                members of the <a href="#">Council on Integrity in Results
+                Reporting.</a>
+              </p>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style the section header</h2>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <p>Proven Results</p>
+            </code>
+          </pre>
+
+          <div class="fragment">
+            <p>Assign a class to target specific text:</p>
+
+            <pre>
+              <code class="html" data-trim contenteditable>
+                <p class="header">Proven Results</p>
+              </code>
+            </pre>
+          </div>
+
+          <aside class="notes">
+            We don't want ALL the paragraphs to be this big, so let's add a
+            class to the paragraph.
+            For the font, visit W3Schools css websafe fonts
+          </aside>
+        </section>
+
+        <section>
+          <h2>Style the section header</h2>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .header {
+              }
+            </code>
+          </pre>
+
+          <pre class="fragment">
+            <code class="css" data-trim contenteditable>
+              .header {
+                font-family: Helvetica, sans-serif;
+                font-size: 48px;
+                font-weight: bold;
+                text-align: center;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style the remaining content</h2>
+
+          <p>Add a class to target the remaining paragraphs</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <p class="content">
+                Turing is difficult, but (...etc...)
+              </p>
+
+              <p class="content">
+                We release our student outcomes (...etc...)
+              </p>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style the remaining content</h2>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .content {
+              }
+            </code>
+          </pre>
+
+          <pre class="fragment">
+            <code class="css" data-trim contenteditable>
+              .content {
+                font-family: Helvetica, sans-serif;
+                text-align: center;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Add the button</h2>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <a href="#" target="_blank">
+                2016 Student Outcomes Report
+              </a>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Add the button</h2>
+          <p>Add a class to target the button.</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <a href="#" target="_blank" class="call-to-action">
+                2016 Student Outcomes Report
+              </a>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style the button</h2>
+          <p>Add a class to target the button.</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .call-to-action {
+                text-align: center; /* hmmm... */
+              }
+            </code>
+          </pre>
+
+          <p>
+            This does not work as we cannot center an inline element.
+          </p>
+
+          <aside class="notes">
+            We can't center the link as it's an inline element. But there is
+            something we can use that will help us center the link AND reduce
+            some repetition in our CSS.
+          </aside>
+        </section>
+
+        <section>
+          <h2>&lt;div&gt; is for Division</h2>
+          <p>
+            We can use the &lt;div&gt; HTML container element to group other
+            HTML elements together.
+          <p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <div class="container">
+                <p class="header">Proven Results</p>
+
+                <p class="content">
+                  Turing is difficult, but (...etc...)
+                </p>
+
+                <p class="content">
+                  We release our student outcomes (...etc...)
+                </p>
+
+                <a href="#" target="_blank" class="call-to-action">
+                  2016 Student Outcomes Report
+                </a>
+              </div>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style the content in the Div</h2>
+          <p>Our current CSS should look like this:</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .container {
+                text-align: center;
+              }
+
+              .header {
+                font-family: Helvetica, sans-serif;
+                font-size: 48px;
+                font-weight: bold;
+              }
+
+              .content {
+                font-family: Helvetica, sans-serif;
+              }
+
+              .call-to-action {
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Add a border & padding to the button</h2>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .call-to-action {
+                border: 1px solid #05c2d1;
+                padding: 10px 16px;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Apply a height to the button</h2>
+          <p>
+            Links are inline elements, which means we can't adjust their
+            vertical spacing.
+          </p>
+
+          <p>
+            But we can change the display type to "inline-block", which treats
+            the width of the element as an inline element but allows us to apply
+            a height.
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .call-to-action {
+                border: 1px solid #05c2d1;
+                display: inline-block;
+                margin-top: 10px;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style all links</h2>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              a {
+                color: #05c2d1;
+                text-decoration: none;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>margin and max-width</h2>
+          <p>
+            Setting the max-width places a constraint on how wide the element
+            can expand.
+          </p>
+
+          <p>
+            When a width has been specified, setting the left and right margin
+            as "auto" as tells the browser to automatically determine the left
+            and right margins itself, which it does by setting them equally.
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .container {
+                text-align: center;
+                max-width: 70%;
+                margin: 0 auto;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Final CSS</h2>
+          <pre>
+            <code class="css" data-trim contenteditable>
+              a {
+                color: #05c2d1;
+                font-weight: bold;
+                text-decoration: none;
+              }
+
+              .container {
+                line-height: 1.7;
+                margin: 0 auto;
+                max-width: 70%;
+                text-align: center;
+              }
+
+              .header {
+                font-family: Helvetica, sans-serif;
+                font-size: 48px;
+                font-weight: bold;
+                margin-bottom: 0;
+              }
+
+              .content {
+                color: #7c8c8e;
+                font-family: Helvetica, sans-serif;
+              }
+
+              .call-to-action {
+                border-radius: 4px; /* new */
+                border: 1px solid #05c2d1;
+                display: inline-block;
+                margin-top: 10px;
+                padding: 10px 16px;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Final HTML</h2>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <body>
+                <div class="container">
+                  <p class="header">Proven Results</p>
+                  <p class="content">
+                    Turing is difficult, but worth it. 75% of our students
+                    graduate within 7 months, and 92% graduate within 10.5
+                    months. 69% of graduates are employed full-time within 90
+                    days of graduation. By 180 days, the percentage jumps to
+                    80%. They're not project managers or off in a corner doing
+                    the stapling. They are full-time software developers in
+                    careers they love. Their median salary is $75K and, for
+                    most, that's nearly double their previous salary.
+                  </p>
+
+                  <p class="content">
+                    We release our student outcomes semi-annually as founding
+                    members of the <a href="#" target="_blank">Council on
+                    Integrity in Results Reporting.</a>
+                  </p>
+
+                  <a href="#" target="_blank" class="call-to-action">
+                    2016 Student Outcomes Report
+                  </a>
+                </div>
+              </body>
+            </code>
+          </pre>
         </section>
       </div>
     </div>
@@ -954,7 +1380,7 @@
         slideNumber: true,
         // use 'z' to jump to a particular slide
         keyboard: {
-          90: function() { Reveal.slide( 1 ) },
+          90: function() { Reveal.slide( 55 ) },
         },
         dependencies: [
           { src: 'plugin/markdown/marked.js' },
