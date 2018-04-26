@@ -1,6 +1,5 @@
 body {
   background-color: #F1F1F1;
-  /* https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Fundamentals#Web_safe_fonts */
   font-family: Helvetica, Arial, sans-serif;
   margin: auto;
   margin-top: 0;
@@ -9,7 +8,7 @@ body {
 /* Nav Bar */
 
 nav {
-  background-color: #C8DCDE; /* or maybe #b0d7d8 */
+  background-color: #C8DCDE;
   border-bottom: 1px solid #d6d6d6;
 }
 
@@ -32,21 +31,21 @@ nav {
 
 /* Intro */
 
-.intro-section {
+.intro-container {
   height: 200px;
   text-align: center;
 }
 
-.intro {
+.intro-section {
   padding-top: 60px;
 }
 
-.intro p {
+.intro {
   font-size: 20px;
   margin-bottom: 5px;
 }
 
-.intro h1 {
+.intro-about {
   margin: 0;
   font-size: 28px;
 }

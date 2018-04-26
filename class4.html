@@ -62,18 +62,6 @@
           <h2>Let's Review...</h2>
         </section>
 
-        <!-- <section> -->
-        <!--   <h2>Setup a basic web page</h2> -->
-        <!--   <p>We will need:</p> -->
-        <!--   <ul> -->
-        <!--     <li>Atom, a text editor used to write code</li> -->
-        <!--     <li>Chrome, a browser to render our website</li> -->
-        <!--     <li>A project folder</li> -->
-        <!--     <li>An HTML file</li> -->
-        <!--     <li>A CSS file</li> -->
-        <!--   </ul> -->
-        <!-- </section> -->
-
         <section>
           <h2>CSS Selector Types</h2>
           <ol>
@@ -135,6 +123,18 @@
           <img src="images/css-box-model/exercise.png"
                alt="two paragraphs with a button">
           <p class="footnote">Image from turing.io</p>
+        </section>
+
+        <section>
+          <h2>Setup a Coding Environment</h2>
+          <p>We will need:</p>
+          <ul>
+            <li>Atom -  text editor used to write code</li>
+            <li>Chrome - browser to render our website</li>
+            <li>A project folder</li>
+            <li>An HTML file</li>
+            <li>A CSS file</li>
+          </ul>
         </section>
 
         <section>
@@ -571,6 +571,243 @@
             </code>
           </pre>
         </section>
+
+        <section>
+          <h2>Web Hosting</h2>
+          <p>
+            A service that stores website files (ie: index.html and
+            styles.css)<br>
+            so a website is accessible via the internet.
+          </p>
+
+          <ul>
+            <li>HostGator</li>
+            <li>DreamHost</li>
+            <li>GoDaddy</li>
+            <li>Wix - user-friendly editor</li>
+            <li>Squarespace - user-friendly editor</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Web Hosting</h2>
+          <p>
+            For our final project, we'll use the web hosting service Neocities.
+          </p>
+
+          <p class="fragment">Why neocities?</p>
+
+          <ul class="fragment">
+            <li>Free</li>
+            <li>In-browser HTML editor</li>
+            <li>Easy to save and view changes</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Neocities - Getting Started</h2>
+          <p>
+            Visit <a href="https://neocities.org">neocities.org</a> to create an
+            account.
+          </p>
+
+        </section>
+
+        <section>
+          <h2>Explore Neocities</h2>
+          <p class="fragment">
+            Neocities offers an
+            <a href="https://neocities.org/tutorial/html/1">HTML tutorial</a>
+          </p>
+
+          <p class="fragment">Edit the default website</p>
+        </section>
+
+        <section>
+          <h2>Final Project - Getting Started</h2>
+          <p>
+            Clear out the existing HTML but keep the HTML
+            <strong>structure</strong>.
+          </p>
+
+          <pre>
+            <code data-trim contenteditable>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                &lt;head&gt;
+                  <title>Beachadventures</title>
+                  <link href="/style.css" rel="stylesheet" type="text/css"
+                        media="all">
+                &lt;/head&gt;
+
+                &lt;body&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Add Intro Content</h2>
+          <p>
+            In the HTML file, inside the &lt;body&gt; tags, add the following:
+          </p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <p>Welcome!</p>
+              <h1>Somewhere on a Beach</h1>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Styling the Intro</h2>
+          <p>To style our HTML, we need a way for the CSS to target our HTML.</p>
+          <p>Let's add classes for this purpose:</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <p class="intro">Welcome!</p>
+              <h1 class="intro-about">Somewhere on a Beach</h1>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Styling the Intro</h2>
+          <p>Goal: reduce the space between the lines of content</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .intro {
+                margin-bottom: 5px;
+              }
+
+              .intro-about {
+                margin: 0;
+                font-size: 28px;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style the Intro</h2>
+          <p>Goal: Center the text.</p>
+          <p>Hint: Add a div and class to target both elements</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <div class="intro-section">
+                <p class="intro">Welcome!</p>
+                <h1 class="intro-about">Somewhere on a Beach</h1>
+              </div>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style the Intro</h2>
+          <p>Goal: Center the text.</p>
+          <p>
+            Hint: Use the recently added class to set the text-align property.
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .intro-section {
+                text-align: center;
+               }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style the Intro</h2>
+          <p>Goal: Give the Intro section space.</p>
+          <p>
+            Hint: Add another div (or "box") that wraps the inner content.
+          </p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <div class="intro-container">
+                <div class="intro-section">
+                  <p class="intro">Welcome!</p>
+                  <h1 class="intro-about">Somewhere on a Beach</h1>
+                </div>
+              </div>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style the Intro</h2>
+          <p>Goal: Give the Intro section space.</p>
+          <p>
+            Hint: Use the recently added class to set the height property.
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .intro-container {
+                height: 200px;
+                background-color: grey;
+               }
+
+              .intro-section {
+                padding-top: 60px
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style the Intro</h2>
+          <p>Goal: Center the text vertically</p>
+          <p>
+            Hint: Use an existing class to set the padding-top property.
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .intro-section {
+                padding-top: 60px
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Add an Image</h2>
+          <p>
+            To add an image, we'll use the background-image CSS property but
+            we'll need some HTML so the CSS has an element to target.
+          </p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <div class="hero"></div>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Add an Image</h2>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .hero {
+                background-image: url("watermelon.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 700px;
+              }
+            </code>
+          </pre>
+        </section>
       </div>
     </div>
 
@@ -586,7 +823,7 @@
         slideNumber: true,
         // use 'z' to jump to a particular slide
         keyboard: {
-          90: function() { Reveal.slide( 12 ) },
+          90: function() { Reveal.slide( 34 ) },
         },
         dependencies: [
           { src: 'plugin/markdown/marked.js' },
