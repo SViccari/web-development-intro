@@ -1,0 +1,89 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1.0,
+                   maximum-scale=1.0,
+                   user-scalable=no">
+
+    <title>Intro to Web Development</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/custom.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Final Project Image Option 1</h2>
+
+          <p>
+            Right-click on the image, select "Save Image As.." and save this
+            image in the same folder as your index and CSS file.
+          </p>
+
+          <img src="images/final-project/watermelon-on-beach.jpg">
+        </section>
+
+        <section>
+          <h2>Final Project Image Option 2</h2>
+
+          <p>
+            Right-click on the image, select "Save Image As.." and save this
+            image in the same folder as your index and CSS file.
+          </p>
+
+          <img src="images/final-project/crowded-beach.jpg">
+        </section>
+
+        <section>
+          <h2>Final Project Image Option 3</h2>
+
+          <p>
+            Right-click on the image, select "Save Image As.." and save this
+            image in the same folder as your index and CSS file.
+          </p>
+
+          <img src="images/final-project/beach-tower.jpg">
+        </section>
+
+        <section>
+          <h2>Final Project Image Option 4</h2>
+
+          <p>
+            Right-click on the image, select "Save Image As.." and save this
+            image in the same folder as your index and CSS file.
+          </p>
+
+          <img src="images/final-project/sea-kayak.jpg">
+        </section>
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        width: 950,
+        slideNumber: true,
+        // use 'z' to jump to a particular slide
+        keyboard: {
+          90: function() { Reveal.slide( 10 ) },
+        },
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>

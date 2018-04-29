@@ -1,0 +1,595 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1.0,
+                   maximum-scale=1.0,
+                   user-scalable=no">
+
+    <title>Intro to Web Development</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/custom.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <!-- Font Awesome Icons -->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
+      integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+      crossorigin="anonymous">
+    </script>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ?
+        'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h2>Intro to Web Development</h2>
+        </section>
+
+        <section>
+          <h2>Today</h2>
+          <ul>
+            <li>Review</li>
+            <li>Build and Publish a website</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Let's Review...</h2>
+        </section>
+
+        <section>
+          <h2>Putting New Skills Together</h2>
+          <p>We re-created the following section from the turing.io site.</p>
+
+          <img src="images/css-box-model/exercise.png"
+               alt="two paragraphs with a button">
+          <p class="footnote">Image from turing.io</p>
+        </section>
+
+        <section>
+          <h2>Using the Inspector</h2>
+          <p>
+            To open the <strong>inspector</strong>, right-click on the website
+            and select "inspect".
+          </p>
+
+          <img src="images/css-box-model/inspector-with-box-model.png"
+               alt="Chrome inspector with box model">
+        </section>
+
+        <section>
+          <h2>&lt;div&gt; is for Division</h2>
+          <p>
+            We can use the &lt;div&gt; HTML container element to group other
+            HTML elements together.
+          <p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <div class="container">
+                <p class="header">Header</p>
+
+                <p class="content">Some content for our site...</p>
+
+                <a href="#" target="_blank">
+                  Link to Somewhere
+                </a>
+              </div>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Setup a Coding Environment</h2>
+          <p>We will need:</p>
+          <ul>
+            <li>Atom -  text editor used to write code</li>
+            <li>Chrome - browser to render our website</li>
+            <li>A project folder</li>
+            <li>An HTML file</li>
+            <li>A CSS file</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Web Hosting</h2>
+          <p>
+            A service that stores website files (ie: index.html and
+            styles.css)<br>
+            so a website is accessible via the internet.
+          </p>
+
+          <ul>
+            <li>HostGator</li>
+            <li>DreamHost</li>
+            <li>GoDaddy</li>
+            <li>Wix - user-friendly editor</li>
+            <li>Squarespace - user-friendly editor</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Web Hosting</h2>
+          <p>
+            For our final project, we'll use the web hosting service Neocities.
+          </p>
+
+          <p class="fragment">Why neocities?</p>
+
+          <ul class="fragment">
+            <li>Free</li>
+            <li>In-browser HTML and CSS editor</li>
+            <li>Easy to save and view changes</li>
+          </ul>
+
+          <aside class="notes">
+            We'll circle back to setting up an account with Neocities. First,
+            let's build our site and then we'll give our HTML and CSS to
+            Neocities to be published on the web.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Final Prject - Let's Dive In!</h2>
+          <ol>
+            <li>Tab Title</li>
+            <li>Nav</li>
+            <li>Header</li>
+            <li>Image</li>
+            <li>Blog Posts</li>
+            <li>Responsive</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Add the HTML structure</h2>
+
+          <pre>
+            <code data-trim contenteditable>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                &lt;head&gt;
+                &lt;/head&gt;
+
+                &lt;body&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Set the browser tab Title</h2>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              &lt;head&gt;
+                <title>Beach Adventures</title>
+              &lt;/head&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Add the Nav Content</h2>
+          <p>
+            A large number of sites use "lists" to create their navigation or
+            footer as these section are a collection of links.
+          </p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <ul>
+                <li>Home</li>
+                <li>Posts</li>
+              </ul>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Turn the Nav Text into Links</h2>
+
+          <p>Wrap each list item in a link:</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <ul>
+                <a href="#">
+                  <li>Home</li>
+                </a>
+
+                <a href="#">
+                  <li>Posts</li>
+                </a>
+              </ul>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>List items - remove browser style</h2>
+          <p>
+            Goal: remove the style that is being applied by the
+            browser to the list items or &lt;li&gt; tags.
+          </p>
+
+          <p>Add the class "nav-list" to the &lt;ul&gt; tag</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .nav-list {
+                list-style-type: none;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Links - remove browser style</h2>
+          <p>
+            Goal: remove the style that is being applied by the
+            browser to the links or &lt;a&gt;s tags.
+          </p>
+
+          <p>
+            Here, we are remove the browser default style for ALL links by
+            targeting the "a" HTML tag. (ie: &lt;a href="#"&gt;)
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              a {
+                color: black;
+                text-decoration: none;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Horizontal Nav Bar</h2>
+          <p>
+            We live in the golden age of <strong>Flexbox</strong>. Flexbox
+            replaces a number of CSS practices that were used to adjust where
+            elements are positioned on a page.
+          </p>
+
+          <p>
+            Flexbox helps us create complex layouts with relatively little
+            code.
+          </p>
+        </section>
+
+
+        <section>
+          <h2>Horizontal Nav Bar</h2>
+
+          <p>To change the links to read left to right...</p>
+          <p>Add the following CSS:</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .nav-list {
+                list-style-type: none;
+                display: flex; /* new */
+                flex-direction: row; /* new */
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Horizontal Nav Bar</h2>
+          <p>Goal: Add space between the links.</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .nav-list li {
+                padding-right: 40px;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Nav - Background color</h2>
+          <p>Goal: Apply a background color to the nav section.</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .nav-list {
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+                background-color: #C8DCDE; /* new */
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Nav - Padding</h2>
+          <p>Goal: Increase the height of the nav.</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .nav-list {
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+                background-color: #C8DCDE;
+                padding-top: 20px; /* new */
+                padding-bottom: 20px; /* new */
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Nav - Margin</h2>
+          <p>Goal: Remove unwanted white space.</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .body {
+                margin: 0;
+              }
+
+              .nav-list {
+                /* above properties collapsed */
+                margin: 0;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Set the font</h2>
+          <p>Goal: Set the font type for all text.</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .body {
+                margin: 0;
+                font-family: Helvetica, Arial, sans-serif; /* new */
+              }
+            </code>
+          </pre>
+
+          <aside class="notes">
+            Nav complete!
+          </aside>
+        </section>
+
+        <section>
+          <h2>Add Intro Content</h2>
+          <p>
+            In the HTML file, below the nav, add the following:</p>
+          </p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <p>Welcome!</p>
+              <h1>Somewhere on a Beach</h1>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Styling the Intro</h2>
+          <p>Add a class to the &lt;p&gt; and &lt;h1&gt; tags:</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <p class="intro">Welcome!</p>
+              <h1 class="intro-about">Somewhere on a Beach</h1>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Styling the Intro</h2>
+          <p>Goal: Reduce the space between the lines of content</p>
+          <p>Goal: Increase the font size</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .intro {
+                margin-bottom: 5px;
+                font-size: 20px;
+              }
+
+              .intro-about {
+                margin: 0;
+                font-size: 28px;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style the Intro</h2>
+          <p>Goal: Center the text.</p>
+
+          <p>Wrap the &lt;p&gt; and &lt;h1&gt; tags in a &lt;div&gt;.</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <div class="intro-section">
+                <p class="intro">Welcome!</p>
+                <h1 class="intro-about">Somewhere on a Beach</h1>
+              </div>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style the Intro</h2>
+          <p>Goal: Center the text.</p>
+          <p>
+            Hint: Use the recently added class to set the text-align property.
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .intro-section {
+                text-align: center;
+               }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style the Intro</h2>
+          <p>Goal: Increase the size of the Intro section.</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              .intro-section {
+                padding-top: 50px;
+                padding-bottom: 50px;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style the Intro</h2>
+          <p>Goal: Set the background color</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              body {
+                background-color: #F1F1F1;
+              }
+            </code>
+          </pre>
+
+          <aside class="notes">
+            Header section complete!
+          </aside>
+        </section>
+
+        <section>
+          <h2>Add an Image</h2>
+          <p>
+            To add an image, we'll use the background-image CSS property but
+            we'll need some HTML so the CSS has HTML to target.
+          </p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <div class="hero"></div>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Select an Image</h2>
+          <p>Steph - improve image quality</p>
+          <a href="final_project_images.html" target="_blank">Image Options</a>
+        </section>
+
+        <section>
+          <h2>Add an Image</h2>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .hero {
+                background-image: url("watermelon.jpg");
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-top: 1px solid #d6d6d6;
+                height: 700px;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <!-- <section> -->
+        <!--   <h2>Neocities &#45; Getting Started</h2> -->
+        <!--   <p> -->
+        <!--     Visit <a href="https://neocities.org">neocities.org</a> to create an -->
+        <!--     account. -->
+        <!--   </p> -->
+        <!--  -->
+        <!-- </section> -->
+        <!--  -->
+        <!-- <section> -->
+        <!--   <h2>Explore Neocities</h2> -->
+        <!--   <p class="fragment"> -->
+        <!--     Neocities offers an -->
+        <!--     <a href="https://neocities.org/tutorial/html/1">HTML tutorial</a> -->
+        <!--   </p> -->
+        <!--  -->
+        <!--   <p class="fragment">Edit the default website</p> -->
+        <!-- </section> -->
+
+        <!-- <section> -->
+        <!--   <h2>Final Project &#45; Getting Started</h2> -->
+        <!--   <p> -->
+        <!--     Clear out the existing HTML but keep the HTML -->
+        <!--     <strong>structure</strong>. -->
+        <!--   </p> -->
+        <!--  -->
+        <!--   <pre> -->
+        <!--     <code data&#45;trim contenteditable> -->
+        <!--       &#38;lt;!DOCTYPE html&#38;gt; -->
+        <!--       &#38;lt;html&#38;gt; -->
+        <!--         &#38;lt;head&#38;gt; -->
+        <!--           <title>Beachadventures</title> -->
+        <!--           <link href="/style.css" rel="stylesheet" type="text/css" -->
+        <!--                 media="all"> -->
+        <!--         &#38;lt;/head&#38;gt; -->
+        <!--  -->
+        <!--         &#38;lt;body&#38;gt; -->
+        <!--         &#38;lt;/body&#38;gt; -->
+        <!--       &#38;lt;/html&#38;gt; -->
+        <!--     </code> -->
+        <!--   </pre> -->
+        <!-- </section> -->
+        <!--  -->
+
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        width: 950,
+        slideNumber: true,
+        // use 'z' to jump to a particular slide
+        keyboard: {
+          90: function() { Reveal.slide( 30 ) },
+        },
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+        ]
+      });
+    </script>
+  </body>
+</html>
