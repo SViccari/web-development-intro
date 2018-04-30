@@ -106,44 +106,6 @@
         </section>
 
         <section>
-          <h2>Web Hosting</h2>
-          <p>
-            A service that stores website files (ie: index.html and
-            styles.css)<br>
-            so a website is accessible via the internet.
-          </p>
-
-          <ul>
-            <li>HostGator</li>
-            <li>DreamHost</li>
-            <li>GoDaddy</li>
-            <li>Wix - user-friendly editor</li>
-            <li>Squarespace - user-friendly editor</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Web Hosting</h2>
-          <p>
-            For our final project, we'll use the web hosting service Neocities.
-          </p>
-
-          <p class="fragment">Why neocities?</p>
-
-          <ul class="fragment">
-            <li>Free</li>
-            <li>In-browser HTML and CSS editor</li>
-            <li>Easy to save and view changes</li>
-          </ul>
-
-          <aside class="notes">
-            We'll circle back to setting up an account with Neocities. First,
-            let's build our site and then we'll give our HTML and CSS to
-            Neocities to be published on the web.
-          </aside>
-        </section>
-
-        <section>
           <h2>Final Prject - Let's Dive In!</h2>
           <ol>
             <li>Tab Title</li>
@@ -247,13 +209,13 @@
           </p>
 
           <p>
-            Here, we are remove the browser default style for ALL links by
-            targeting the "a" HTML tag. (ie: &lt;a href="#"&gt;)
+            Here, we are remove the browser default style for links that appear
+            within the nav.
           </p>
 
           <pre>
             <code class="css" data-trim contenteditable>
-              a {
+              .nav-list a {
                 color: black;
                 text-decoration: none;
               }
@@ -274,7 +236,6 @@
             code.
           </p>
         </section>
-
 
         <section>
           <h2>Horizontal Nav Bar</h2>
@@ -522,50 +483,295 @@
           </pre>
         </section>
 
-        <!-- <section> -->
-        <!--   <h2>Neocities &#45; Getting Started</h2> -->
-        <!--   <p> -->
-        <!--     Visit <a href="https://neocities.org">neocities.org</a> to create an -->
-        <!--     account. -->
-        <!--   </p> -->
-        <!--  -->
-        <!-- </section> -->
-        <!--  -->
-        <!-- <section> -->
-        <!--   <h2>Explore Neocities</h2> -->
-        <!--   <p class="fragment"> -->
-        <!--     Neocities offers an -->
-        <!--     <a href="https://neocities.org/tutorial/html/1">HTML tutorial</a> -->
-        <!--   </p> -->
-        <!--  -->
-        <!--   <p class="fragment">Edit the default website</p> -->
-        <!-- </section> -->
+        <section>
+          <h2>Add our first blog post</h2>
+          <p>
+            Use Lorem Ipsum, also known as "dummy text", to simulate content.
+            Visit <a href="https://www.lipsum.com">https://www.lipsum.com</a> to
+            generate Lorem Ipsum.
+          </p>
 
-        <!-- <section> -->
-        <!--   <h2>Final Project &#45; Getting Started</h2> -->
-        <!--   <p> -->
-        <!--     Clear out the existing HTML but keep the HTML -->
-        <!--     <strong>structure</strong>. -->
-        <!--   </p> -->
-        <!--  -->
-        <!--   <pre> -->
-        <!--     <code data&#45;trim contenteditable> -->
-        <!--       &#38;lt;!DOCTYPE html&#38;gt; -->
-        <!--       &#38;lt;html&#38;gt; -->
-        <!--         &#38;lt;head&#38;gt; -->
-        <!--           <title>Beachadventures</title> -->
-        <!--           <link href="/style.css" rel="stylesheet" type="text/css" -->
-        <!--                 media="all"> -->
-        <!--         &#38;lt;/head&#38;gt; -->
-        <!--  -->
-        <!--         &#38;lt;body&#38;gt; -->
-        <!--         &#38;lt;/body&#38;gt; -->
-        <!--       &#38;lt;/html&#38;gt; -->
-        <!--     </code> -->
-        <!--   </pre> -->
-        <!-- </section> -->
-        <!--  -->
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <p>Best Florida Beaches</p>
+              <p>June 1, 2017</p>
+              <hr>
+              <p>Generated Lorem Ipsum...</p>
+            </code>
+          </pre>
+        </section>
 
+        <section>
+          <h2>Add a link to the blog post</h2>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <p>Best Florida Beaches</p>
+              <p>June 1, 2017</p>
+              <hr>
+              <p>Generated Lorem Ipsum...</p>
+              <p>
+                Read more about Florida Beaches
+                <a href="#" target="_blank">here</a>.
+              </p>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Thicken the Blog Post Title</h2>
+          <p>Add a class to the blog post title.</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <p class="article-title">Best Florida Beaches</p>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Thicken the Blog Post Title</h2>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .article-title {
+                font-size: 24px;
+                font-weight: bold;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Apply a Background</h2>
+          <p>
+            Goal: Apply a background color to help the blog post stand out from
+            the rest of the page.
+          </p>
+
+          <p>
+            Hint: wrap all the article-related elements in a &lt;div&gt;.
+          </p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <div class="article">
+                <p>Best Florida Beaches</p>
+                <p>June 1, 2017</p>
+                <hr>
+                <p>Generated Lorem Ipsum...</p>
+                <p>
+                  Read more about Florida Beaches
+                  <a href="#" target="_blank">here</a>.
+                </p>
+              </div>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Apply a Background</h2>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .article {
+                background-color: white;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Reduce the article width</h2>
+          <p>Goal: Limit the space the blog post takes up on the page.</p>
+          <p>Goal: Center the blog post on the page.</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .article {
+                background-color: white;
+                width: 50%;
+                margin: auto;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Padding</h2>
+          <p>
+            Goal: Increase the space between the article text and the edge of
+            the "box".
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .article {
+                background-color: white;
+                width: 50%;
+                margin: auto;
+                padding: 20px;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Margin-top</h2>
+          <p>Goal: Add space between the image and the blog post.</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .article {
+                background-color: white;
+                width: 50%;
+                margin: auto;
+                padding: 20px;
+                margin-top: 40px;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>How to add another Blog Post</h2>
+          <p>
+            Starting with the &lt;div&gt; that wraps the article-related
+            elements and content, copy all the HTML and paste it below the
+            existing article HTML.
+          </p>
+        </section>
+
+        <section>
+          <h2>Web Hosting</h2>
+          <p>
+            A service that stores website files (ie: index.html and
+            styles.css)<br>
+            so a website is accessible via the internet.
+          </p>
+
+          <ul>
+            <li>HostGator</li>
+            <li>DreamHost</li>
+            <li>GoDaddy</li>
+            <li>Wix - user-friendly editor</li>
+            <li>Squarespace - user-friendly editor</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Web Hosting</h2>
+          <p>
+            For our final project, we'll use the web hosting service Neocities.
+          </p>
+
+          <p class="fragment">Why neocities?</p>
+
+          <ul class="fragment">
+            <li>Free</li>
+            <li>In-browser HTML and CSS editor</li>
+            <li>Easy to save and view changes</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Neocities - Getting Started</h2>
+          <p>
+            Visit <a href="https://neocities.org">neocities.org</a> to create an
+            account.
+          </p>
+
+        </section>
+
+        <section>
+          <h2>Explore Neocities</h2>
+          <p class="fragment">
+            Neocities offers an
+            <a href="https://neocities.org/tutorial/html/1">HTML tutorial</a>
+          </p>
+
+          <p class="fragment">Edit the default website</p>
+
+          <aside class="notes">
+            Edit the existing site just to demo how the files work and how to
+            see the site change.
+          </aside>
+        </section>
+
+        <section>
+          <h2>Upload files to Neocities</h2>
+          <p>Clear out the code in the existing HTML and CSS files.</p>
+
+          <ol>
+            <li>Replace the HTML file with the contents in your HTML file.</li>
+            <li>Replace the CSS file with the contents in your CSS file.</li>
+            <li>Upload your hero image.</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Blog Post with an Image</h2>
+          <p>
+            To add an article with an image, copy the existing HTML for an
+            article.
+          </p>
+          <p>Add an image</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <div class="article">
+                ... existing HTML for the article...
+                <img src="my-photo.jpg" alt="description">
+              </div>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style the Image</h2>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .article img {
+                width: 100%;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Making our site Responsive</h2>
+
+          <p>Media queries set specific CSS rules based on the screen size.</p>
+
+          <p>
+            For example, the following code says "<em>For any screen that
+            is 800px wide, or less, apply these styles"</em>.
+          </p>
+
+          <p>800px is a width that covers most tablets and smart phones.</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              @media only screen and (max-width: 800px) {
+                .hero {
+                  height: 300px;
+                }
+
+                .article {
+                  width: 80%;
+                }
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Congrats! You've completed this course.</h2>
+          <p>Survey</p>
+          <p>Next Steps</p>
+          <p>Careers in Coding</p>
+        </section>
       </div>
     </div>
 
