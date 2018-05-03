@@ -44,6 +44,8 @@
           <ul>
             <li>Review</li>
             <li>Build and Publish a website</li>
+            <li>Next Steps</li>
+            <li>Q&A</li>
           </ul>
         </section>
 
@@ -52,8 +54,8 @@
         </section>
 
         <section>
-          <h2>Putting New Skills Together</h2>
-          <p>We re-created the following section from the turing.io site.</p>
+          <h2>Applying New Skills</h2>
+          <p>We re-created the following section from the turing website.</p>
 
           <img src="images/css-box-model/exercise.png"
                alt="two paragraphs with a button">
@@ -74,8 +76,8 @@
         <section>
           <h2>&lt;div&gt; is for Division</h2>
           <p>
-            We can use the &lt;div&gt; HTML container element to group other
-            HTML elements together.
+            The &lt;div&gt; HTML container element is used to group other HTML
+            elements together.
           <p>
 
           <pre>
@@ -202,6 +204,25 @@
         </section>
 
         <section>
+          <h2>Link the Stylesheet to the HTML Document</h2>
+          <p>This tells the HTML document to use the referenced stylesheet.</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                &lt;head&gt;
+                  <link rel="stylesheet" type="text/css" href="styles.css">
+                &lt;/head&gt;
+
+                &lt;body&gt;
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
           <h2>Links - remove browser style</h2>
           <p>
             Goal: remove the style that is being applied by the
@@ -307,7 +328,7 @@
 
           <pre>
             <code class="css" data-trim contenteditable>
-              .body {
+              body {
                 margin: 0;
               }
 
@@ -325,9 +346,9 @@
 
           <pre>
             <code class="css" data-trim contenteditable>
-              .body {
+              body {
                 margin: 0;
-                font-family: Helvetica, Arial, sans-serif; /* new */
+                font-family: Helvetica, Arial, sans-serif;
               }
             </code>
           </pre>
@@ -340,7 +361,7 @@
         <section>
           <h2>Add Intro Content</h2>
           <p>
-            In the HTML file, below the nav, add the following:</p>
+            In the HTML file, below the nav section, add the following:</p>
           </p>
 
           <pre>
@@ -390,7 +411,7 @@
           <p>Wrap the &lt;p&gt; and &lt;h1&gt; tags in a &lt;div&gt;.</p>
 
           <pre>
-            <code class="html" data-trim contenteditable>
+            <code class="css" data-trim contenteditable>
               <div class="intro-section">
                 <p class="intro">Welcome!</p>
                 <h1 class="intro-about">Somewhere on a Beach</h1>
@@ -462,7 +483,6 @@
 
         <section>
           <h2>Select an Image</h2>
-          <p>Steph - improve image quality</p>
           <a href="final_project_images.html" target="_blank">Image Options</a>
         </section>
 
@@ -810,7 +830,7 @@
         slideNumber: true,
         // use 'z' to jump to a particular slide
         keyboard: {
-          90: function() { Reveal.slide( 50 ) },
+          90: function() { Reveal.slide( 33 ) },
         },
         dependencies: [
           { src: 'plugin/markdown/marked.js' },

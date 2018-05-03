@@ -1,48 +1,39 @@
 body {
   background-color: #F1F1F1;
+  margin: 0;
   font-family: Helvetica, Arial, sans-serif;
-  margin: auto;
-  margin-top: 0;
 }
 
-/* Nav Bar */
-
-nav {
-  background-color: #C8DCDE;
-  border-bottom: 1px solid #d6d6d6;
-}
-
+/* Nav Section */
 .nav-list {
-  display: inline-block;
   list-style-type: none;
-  padding: 0px 50px;
-  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #C8DCDE;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin: 0;
 }
 
-.nav-item {
-  float: left;
+.nav-list a {
+  color: black;
+  text-decoration: none;
+}
+
+.nav-list li {
   padding-right: 40px;
 }
 
-.nav-item a {
-  text-decoration: none;
-  color: black;
-}
-
-/* Intro */
-
-.intro-container {
-  height: 200px;
-  text-align: center;
-}
-
+/* Intro Section */
 .intro-section {
-  padding-top: 60px;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 .intro {
-  font-size: 20px;
   margin-bottom: 5px;
+  font-size: 20px;
 }
 
 .intro-about {
@@ -50,8 +41,7 @@ nav {
   font-size: 28px;
 }
 
-/* Hero */
-
+/* Hero Section */
 .hero {
   background-image: url("../images/final-project/watermelon.jpg");
   background-position: center;
@@ -59,20 +49,15 @@ nav {
   background-size: cover;
   border-top: 1px solid #d6d6d6;
   height: 700px;
-  position: relative; /* helps the image respond to window size*/
 }
 
-/* Articles */
-
+/* Article Title */
 .article {
   background-color: white;
-  margin: auto;
-  margin-top: 40px;
   width: 50%;
-}
-
-.article-content {
+  margin: auto;
   padding: 20px;
+  margin-top: 40px
 }
 
 .article-title {
@@ -85,7 +70,6 @@ nav {
 }
 
 /* Media Queries */
-
 @media only screen and (max-width: 800px) {
   .hero {
     height: 300px;
