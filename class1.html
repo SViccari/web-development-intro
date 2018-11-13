@@ -138,17 +138,13 @@
             </li>
             <li class="fragment">
               <span class="bold">1958</span>
-              - ARPA is formed
-              <ul>
-                <li class="fragment">(Advanced Research Projects Agency)</li>
-              </ul>
+              - ARPA (Advanced Research Projects Agency) is formed
             </li>
             <li class="fragment">
               <span class="bold">1969</span>
               - ARPAnet sends the first computer-to-computer message
               <ul>
-                <li class="fragment">"lo"</li>
-                <li class="fragment">"login"</li>
+                <li class="fragment">"LOGIN"</li>
               </ul>
             </li>
             <li class="fragment">
@@ -161,12 +157,12 @@
             In 1957, Russia launched the very first satellite into orbit. This
             set of what was called the "race for space" as America realized that
             while we had been focused on building bigger cars and TVs, other
-            countries were exploring opportunities in space.
+            countries were exploring space.
 
             Not wanting to be left behind, the U.S. government created a
             division called ARPA (Advanced Research Projects Agency). This
-            agency focused on creating space-age technologies like rockets,
-            weapons and computers.
+            agency focused on creating technologies like rockets, weapons and
+            computers.
 
             In the 1960s - ARPA began creating a network of computers that could
             talk to each other, known as ARPAnet.
@@ -216,10 +212,10 @@
           <img src="images/chrome-address-bar.png" alt="Chrome address bar">
 
           <aside class="notes">
-            To request a website with our brower, we use the Address Bar to type
-            in the name of website. You can also type in something you would
-            like to search for as browers understand when your searching for
-            content vs requesting a website.
+            To request a website with our browser, we use the Address Bar to
+            type in the name of website. You can also type in something you
+            would like to search for as browers understand when you're searching
+            for content vs requesting a website.
           </aside>
         </section>
 
@@ -228,7 +224,7 @@
           <p>Let's act out requesting a website.</p>
 
           </br>
-          <p>Players Needed:</p>
+          <p>Actors Needed:</p>
           <ul>
             <li>Browser</li>
             <li>Internet Service Provider</li>
@@ -240,14 +236,14 @@
 
         <section>
           <h2>Requesting a website</h2>
-          <p>Browser -> ISP with DNS Access -> Router -> Google</p>
+          <p>Browser -> ISP -> Router -> Google</p>
           <p>Google -> Router -> ISP -> Browser</p>
 
           <aside class="notes">
             Materials:
               - Browser Material
                 - Piece of paper that reads:
-                  From: 65.30.200.101 (user)
+                  From: 65.30.200.101 (user's IP Address)
                   To: www.google.com
                   Message: Homepage
 
@@ -256,10 +252,10 @@
                   www.boston.gov - 107.154.103.58
                   www.google.com - 172.217.11.46
 
-              - ISP sends paper to DNS, DNS adds IP Address, back to ISP
+              - ISP Material to return files to User
                 - Piece of paper that reads:
+                  To: 65.30.200.101 (user's IP Address)
                   From: 74.125.19.104 (www.google.com)
-                  To: 65.30.200.101 (user)
                   Message: Homepage
 
               - Google Server
@@ -274,50 +270,59 @@
               - DNS passes back to ISP
               - ISP passes off to the router
               - Router sends paper to Google server
+                - The router knows how to forward the request along until it
+                  reaches its destination.
+              - Google receives the request (paper)
               - Google server adds HTML and CSS files to blank envelope
-              - Google server adds the user's IP address to the "To" field
+              - Google server adds the user's IP address in the "To" field
               - Google server passes envelope to router
               - Router sends envelope to ISP
               - ISP passes the envelope to the browser
               - Browser opens the enveloper and renders the html and css files
 
             When I enter an website's address in the browser's address bar and
-            press enter, my computer is going to send a request to the computer's
-            Internet Service Provider.
+            press enter, my computer is going to send a request to the
+            computer's Internet Service Provider.
 
-            My request includes three pieces of information, my IP address, the name
-            of the website I'm requesting and any additional information about
-            my request.
+            My request includes three pieces of information, my IP address, the
+            name of the website I'm requesting and any additional information
+            about my request.
 
             The Internet Service Provider is going to look at the website name
-            and using something called DNS to translate the website name to an
-            IP address. Just like my computer has an IP address, all other
-            computers have an IP address. The reason we type in a website's name
-            instead of an IP address is because they're very hard to remember.
+            and using something called DNS (Domain Name System) to translate the
+            website name to an IP address. You can think of DNS as looking up a
+            person's number in a phone book. Just like my computer has an IP
+            address, all other computers have an IP address. The reason we type
+            in a website's name instead of an IP address is because IP Addresses
+            hard to remember. 
 
             For example, I can go to Gooogle by typing in their IP address
             (demo: ping google.com and copy IP address).
 
-            This is similar to how we store someone's name when adding them to
-            our contacts. We don't want to rememeber their phone number because
-            it's easier for us to remember their name.
+            This is similar to how we call a friend by typing in their name
+            instead of their phone number. Their name is easier to remember than
+            their phone number.
 
             So the Internet Service Provider knows the website's name but the
-            internet communicates with IP Addresses, not by website names. So
-            before the ISP can send the request, they need to know the website's
-            IP Address.
+            internet (in this case, represented by the Router) knows how to find
+            other computers by their IP address, not by the website's name.
+            Before the ISP can pass the request, the ISP needs to add the
+            website's IP Address.
 
-            To do this, the ISP can ask the DNS system for help. The DNS system
-            will look up the website name and find the IP address.
-
+            To do this, the ISP looks to the Domain Name System for help. The
+            DNS system will look up the website name and find the IP address.
 
             The Internet Service Provider will then use their access to the
             internet to pass on the request.
 
-            The Internet will use information that's in the request to identify
-            where the information lives and return a response.
+            The internet will read the information that's in the request and
+            deliver the request to another computer. The receiving computer will
+            generate a response and send it back through the internet to the
+            user.
 
             That response will include two files, an html file and a CSS file.
+            The response can include other files but for this class, we're
+            focusing on just the HTML and CSS files.
 
             Internet connections are established by delivering electronic
             pulses, lightwaves in fiber optic cables and radiowaves.
@@ -334,7 +339,8 @@
 
           <aside class="notes">
             The HTML file contains all the content for our site.
-            The CSS file is used to make our website beautiful.
+            The CSS file is used style the content and make our wesite
+            attractive.
             CSS is how we add color to our page and place each picture or link
             in a specific place.
 
@@ -352,7 +358,7 @@
 
           <aside class="notes">
             HTML is called a "markup" language because we use it to inform the
-            browser of how to treat text differently.
+            browser how to treat text differently.
           </aside>
         </section>
 
@@ -368,9 +374,9 @@
           </div>
 
           <aside class="notes">
-            Similar to how a teacher markups a student's report to give
-            information to the student, we want to "markup" our text so the
-            browser knows how to show our content
+            Similar to how a teacher will markup a student's report to give
+            information to the student, we want can "markup" our text so the
+            browser knows how to show our content.
           </aside>
         </section>
 
@@ -386,7 +392,7 @@
           </pre>
 
           <aside class="notes">
-            We write HTML by using something called "tags". To "markup" our
+            We write HTML by using "tags". To "markup" our
             content with HTML, we create an opening tag, add our content, and
             then add a closing tag.
 
@@ -426,8 +432,9 @@
             Why the name index?
             It's a common practice for the homepage to be saved as the index
             page. The concept probably came from the idea that the index page
-            or the website's homepage, acts as a reference to all the other pages
-            a user can visit.
+            or the website's homepage, acts as a reference to all the other
+            pages a user can visit. Similar to a book index as it can help
+            readers find what they're looking for.
           </aside>
         </section>
 
@@ -713,16 +720,6 @@
         </section>
 
         <section>
-          <h2>&lt;a&gt; is for Anchor!</h2>
-          <p>Open the link in a new tab using "target".</p>
-          <pre>
-            <code class="html" data-trim contenteditable>
-              <a href="url" target="_blank">Boston</a>
-            </code>
-          </pre>
-        </section>
-
-        <section>
           <h2>&lt;img&gt; is for Image!</h2>
           <p>The image tag is used to add images to our site.</p>
           <p>Supported image formats include:</p>
@@ -779,8 +776,8 @@
           </pre>
 
           <aside class="notes">
-            Open up CodePen and walk through finding an image, copying the image
-            address, and adding it to the CodePen.
+            Open up a local HTML file, walk through finding an image, copying
+            the image address, and adding it to the HTML file.
           </aside>
         </section>
 
