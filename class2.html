@@ -40,20 +40,6 @@
         </section>
 
         <section>
-          <h2>Correspondence</h2>
-          <a href="https://goo.gl/forms/CzPBZMvDwLlLeZjz2" target="_blank">
-            Add email address
-          </a>
-        </section>
-
-        <section>
-          <h2>Addressing Questions & Concerns</h2>
-          <a href="https://www.sli.do" target="_blank">
-            Ask Questions with Sli.do
-          </a>
-        </section>
-
-        <section>
           <h2>Today</h2>
           <ul>
             <li>Review</li>
@@ -126,8 +112,8 @@
             Content placed within the head tags is not displayed.
           </p>
           <p>
-            Head tags store metadata. (Ex: A link
-            to stylesheets or a description of the site for search engines.)
+            Head tags store metadata. (Examples: a link to the site's CSS or a
+            description of the site for search engines.)
           </p>
         </section>
 
@@ -158,6 +144,7 @@
         <section>
           <h2>Container HTML Element</h2>
           <p>&lt;tagname&gt;Hello World&lt;/tagname&gt;</p>
+          <p>&lt;open&gt;Hello World&lt;/close&gt;</p>
 
           <pre>
             <code class="html" data-trim contenteditable>
@@ -185,9 +172,15 @@
           <pre>
             <code class="html" data-trim contenteditable>
               <img src="image.png" alt="image description">
+
               <br>
             </code>
           </pre>
+
+          <aside class="notes">
+            Not all HTML elements require a closing tag. These are called
+            "self-closing" elements or "self-closing" tags.
+          </aside>
         </section>
 
         <section>
@@ -259,8 +252,7 @@
 
             An inline element does not cause a line break (start on a new line)
             and does not take up the full width of a page, only the space
-            bounded by its opening and closing tag. It is usually used within
-            other HTML elements.
+            bounded by its opening and closing tag.
           </aside>
         </section>
 
@@ -299,6 +291,37 @@
           <p>Example: &lt;a&gt; tag</p>
           <a href="#">First Link</a>
           <a href="#">Second Link</a>
+
+        </section>
+
+        <section>
+          <h2>Let's Code</h2>
+
+          <p>Open Your Text Editor (Atom)</p>
+          <p>Steps to create an HTML file</p>
+          <p>File -> New File -> Save As -> index.html</p>
+        </section>
+
+        <section>
+          <h2>Let's Code</h2>
+          <p>Let's add a block element paragraph</p>
+          <p>Let's add an inline element</p>
+
+          <pre>
+            <code data-trim contenteditable data-noescape>
+            </code>
+          </pre>
+
+          <aside class="notes">
+            Walk through adding a paragraph tag and an anchor tag with a
+            background color.
+          </aside>
+        </section>
+
+        <section>
+          <h2>View your HTML in a browser</h2>
+          <p>Open Chrome</p>
+          <p>File -> Open File -> index.html -> Open</p>
         </section>
 
         <section>
@@ -314,6 +337,11 @@
           <img src="images/html-vs-css.png"
                alt="Two houses that demonstrate the difference between html and
                css">
+
+          <aside class="notes">
+            HTML is used to structure our content and CSS is used to style
+            everything on the page.
+          </aside>
         </section>
 
         <section>
@@ -328,7 +356,7 @@
           <p>
             <span class="bold">Style Sheets</span>
             - refers to "style sheet language".<br>
-            This language is used to describe the presentation of a document.
+            This language is used to describe the presentation of a web page.
           </p>
         </section>
 
@@ -343,6 +371,12 @@
         <section>
           <h2>What does CSS look like?</h2>
           <img src="images/css-structure-example.png" alt="Example of CSS">
+
+          <aside class="notes">
+            We'll dive further into the naming in a bit but here's a high-level
+            view of what CSS looks like. We have a selector, property, and a
+            value.
+          </aside>
         </section>
 
         <section>
@@ -382,8 +416,8 @@
           <p>However, Inline CSS styles:</p>
           <ul>
             <li>encourage duplication</li>
-            <li>are a nightmare to manage in a larger project</li>
-            <li>prevent styles from being shared with other HTML files </li>
+            <li>are tough to manage in a larger project</li>
+            <li>prevent styles from being shared with other HTML files</li>
           </ul>
 
           <p class="fragment">Inline CSS styles - not recommended &#10060;</p>
@@ -543,7 +577,7 @@
           <pre>
             <code class="css" data-trim contenteditable>
               body {
-                background-color: azure;
+                background-color: blue;
               }
             </code>
           </pre>
@@ -691,7 +725,7 @@
           <h2>Colors</h2>
           <p>Bonus:</p>
           <p>
-            Can you tell if hex values are case sensitive?<br>
+            Can you tell me if hex values case sensitive?<br>
             Does #add8e6 work the same as #ADD8E6?
           </p>
         </section>
