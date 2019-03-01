@@ -40,16 +40,6 @@
         </section>
 
         <section>
-          <h2>
-            <a href="https://www.sli.do" target="_blank">
-              Ask Questions with Sli.do
-            </a>
-          </h2>
-
-          <p>The event code will be announced.</p>
-        </section>
-
-        <section>
           <h2>Today</h2>
           <ul>
             <li>Review</li>
@@ -129,7 +119,7 @@
           <h2>Setup a Coding Environment</h2>
           <p>We will need:</p>
           <ul>
-            <li>Atom -  text editor used to write code</li>
+            <li>Atom - text editor used to write code</li>
             <li>Chrome - browser to render our website</li>
             <li>A project folder</li>
             <li>An HTML file</li>
@@ -573,11 +563,20 @@
         </section>
 
         <section>
+          <h2>Build a Website</h2>
+
+          <p>
+            Part of building a website includes ensuring everyone can access
+            the website. For this, we'll need to use a company that offers web
+            hosting.
+          </p>
+        </section>
+
+        <section>
           <h2>Web Hosting</h2>
           <p>
-            A service that stores website files (ie: index.html and
-            styles.css)<br>
-            so a website is accessible via the internet.
+            A service that stores all the necessary files to render your
+            website. This includes the index.html and styles.css files.
           </p>
 
           <ul>
@@ -619,12 +618,10 @@
             Neocities offers an
             <a href="https://neocities.org/tutorial/html/1">HTML tutorial</a>
           </p>
-
-          <p class="fragment">Edit the default website</p>
         </section>
 
         <section>
-          <h2>Final Project - Getting Started</h2>
+          <h2>Let's Get Started</h2>
           <p>
             Clear out the existing HTML but keep the HTML
             <strong>structure</strong>.
@@ -635,7 +632,7 @@
               &lt;!DOCTYPE html&gt;
               &lt;html&gt;
                 &lt;head&gt;
-                  <title>Beachadventures</title>
+                  <title>your-website-name</title>
                   <link href="/style.css" rel="stylesheet" type="text/css"
                         media="all">
                 &lt;/head&gt;
@@ -648,163 +645,54 @@
         </section>
 
         <section>
-          <h2>Add Intro Content</h2>
+          <h2>Set the browser tab Title</h2>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              &lt;head&gt;
+                <title>your-website-name</title>
+              &lt;/head&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Add the Nav Content</h2>
           <p>
-            In the HTML file, inside the &lt;body&gt; tags, add the following:
+            A large number of sites use "lists" to create their navigation or
+            footer as these section are a collection of links.
           </p>
 
           <pre>
             <code class="html" data-trim contenteditable>
-              <p>Welcome!</p>
-              <h1>Somewhere on a Beach</h1>
+              <nav>
+                <ul>
+                  <li>Home</li>
+                  <li>Posts</li>
+                </ul>
+              </nav>
             </code>
           </pre>
         </section>
 
         <section>
-          <h2>Styling the Intro</h2>
-          <p>To style our HTML, we need a way for the CSS to target our HTML.</p>
-          <p>Let's add classes for this purpose:</p>
+          <h2>Turn the Nav Text into Links</h2>
+
+          <p>Wrap each list item in a link:</p>
 
           <pre>
             <code class="html" data-trim contenteditable>
-              <p class="intro">Welcome!</p>
-              <h1 class="intro-about">Somewhere on a Beach</h1>
-            </code>
-          </pre>
-        </section>
+              <nav>
+                <ul>
+                  <li>
+                    <a href="#">Home</a>
+                  </li>
 
-        <section>
-          <h2>Styling the Intro</h2>
-          <p>Goal: reduce the space between the lines of content</p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .intro {
-                margin-bottom: 5px;
-              }
-
-              .intro-about {
-                margin: 0;
-                font-size: 28px;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style the Intro</h2>
-          <p>Goal: Center the text.</p>
-          <p>Hint: Add a div and class to target both elements</p>
-
-          <pre>
-            <code class="html" data-trim contenteditable>
-              <div class="intro-section">
-                <p class="intro">Welcome!</p>
-                <h1 class="intro-about">Somewhere on a Beach</h1>
-              </div>
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style the Intro</h2>
-          <p>Goal: Center the text.</p>
-          <p>
-            Hint: Use the recently added class to set the text-align property.
-          </p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .intro-section {
-                text-align: center;
-               }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style the Intro</h2>
-          <p>Goal: Give the Intro section space.</p>
-          <p>
-            Hint: Add another div (or "box") that wraps the inner content.
-          </p>
-
-          <pre>
-            <code class="html" data-trim contenteditable>
-              <div class="intro-container">
-                <div class="intro-section">
-                  <p class="intro">Welcome!</p>
-                  <h1 class="intro-about">Somewhere on a Beach</h1>
-                </div>
-              </div>
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style the Intro</h2>
-          <p>Goal: Give the Intro section space.</p>
-          <p>
-            Hint: Use the recently added class to set the height property.
-          </p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .intro-container {
-                height: 200px;
-                background-color: grey;
-               }
-
-              .intro-section {
-                padding-top: 60px
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style the Intro</h2>
-          <p>Goal: Center the text vertically</p>
-          <p>
-            Hint: Use an existing class to set the padding-top property.
-          </p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .intro-section {
-                padding-top: 60px
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Add an Image</h2>
-          <p>
-            To add an image, we'll use the background-image CSS property but
-            we'll need some HTML so the CSS has an element to target.
-          </p>
-
-          <pre>
-            <code class="html" data-trim contenteditable>
-              <div class="hero"></div>
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Add an Image</h2>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .hero {
-                background-image: url("watermelon.jpg");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                height: 700px;
-              }
+                  <li>
+                    <a href="#">Posts</a>
+                  </li>
+                </ul>
+              </nav>
             </code>
           </pre>
         </section>

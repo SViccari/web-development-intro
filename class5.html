@@ -96,11 +96,10 @@
         </section>
 
         <section>
-          <h2>Setup a Coding Environment</h2>
-          <p>We will need:</p>
+          <h2>Coding Environment Setup</h2>
           <ul>
-            <li>Atom -  text editor used to write code</li>
-            <li>Chrome - browser to render our website</li>
+            <li>A text editor used to write code (Atom)</li>
+            <li>A browser to render the website (Chrome)</li>
             <li>A project folder</li>
             <li>An HTML file</li>
             <li>A CSS file</li>
@@ -108,81 +107,14 @@
         </section>
 
         <section>
-          <h2>Final Prject - Let's Dive In!</h2>
+          <h2>Final Project - Let's Dive In!</h2>
           <ol>
-            <li>Tab Title</li>
             <li>Nav</li>
             <li>Header</li>
             <li>Image</li>
             <li>Blog Posts</li>
             <li>Responsive</li>
           </ol>
-        </section>
-
-        <section>
-          <h2>Add the HTML structure</h2>
-
-          <pre>
-            <code data-trim contenteditable>
-              &lt;!DOCTYPE html&gt;
-              &lt;html&gt;
-                &lt;head&gt;
-                &lt;/head&gt;
-
-                &lt;body&gt;
-                &lt;/body&gt;
-              &lt;/html&gt;
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Set the browser tab Title</h2>
-
-          <pre>
-            <code class="html" data-trim contenteditable>
-              &lt;head&gt;
-                <title>Beach Adventures</title>
-              &lt;/head&gt;
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Add the Nav Content</h2>
-          <p>
-            A large number of sites use "lists" to create their navigation or
-            footer as these section are a collection of links.
-          </p>
-
-          <pre>
-            <code class="html" data-trim contenteditable>
-              <ul>
-                <li>Home</li>
-                <li>Posts</li>
-              </ul>
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Turn the Nav Text into Links</h2>
-
-          <p>Wrap each list item in a link:</p>
-
-          <pre>
-            <code class="html" data-trim contenteditable>
-              <ul>
-                <a href="#">
-                  <li>Home</li>
-                </a>
-
-                <a href="#">
-                  <li>Posts</li>
-                </a>
-              </ul>
-            </code>
-          </pre>
         </section>
 
         <section>
@@ -199,25 +131,6 @@
               .nav-list {
                 list-style-type: none;
               }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Link the Stylesheet to the HTML Document</h2>
-          <p>This tells the HTML document to use the referenced stylesheet.</p>
-
-          <pre>
-            <code class="html" data-trim contenteditable>
-              &lt;!DOCTYPE html&gt;
-              &lt;html&gt;
-                &lt;head&gt;
-                  <link rel="stylesheet" type="text/css" href="styles.css">
-                &lt;/head&gt;
-
-                &lt;body&gt;
-                &lt;/body&gt;
-              &lt;/html&gt;
             </code>
           </pre>
         </section>
@@ -267,9 +180,9 @@
           <pre>
             <code class="css" data-trim contenteditable>
               .nav-list {
-                list-style-type: none;
                 display: flex; /* new */
                 flex-direction: row; /* new */
+                list-style-type: none;
               }
             </code>
           </pre>
@@ -441,7 +354,7 @@
           <p>Goal: Increase the size of the Intro section.</p>
 
           <pre>
-            <code class="html" data-trim contenteditable>
+            <code class="css" data-trim contenteditable>
               .intro-section {
                 padding-top: 50px;
                 padding-bottom: 50px;
@@ -504,7 +417,7 @@
         </section>
 
         <section>
-          <h2>Add our first blog post</h2>
+          <h2>Create a Blog Post</h2>
           <p>
             Use Lorem Ipsum, also known as "dummy text", to simulate content.
             Visit <a href="https://www.lipsum.com">https://www.lipsum.com</a> to
@@ -522,7 +435,7 @@
         </section>
 
         <section>
-          <h2>Add a link to the blog post</h2>
+          <h2>Add a Link to the Blog Post</h2>
 
           <pre>
             <code class="html" data-trim contenteditable>
@@ -532,14 +445,14 @@
               <p>Generated Lorem Ipsum...</p>
               <p>
                 Read more about Florida Beaches
-                <a href="#" target="_blank">here</a>.
+                <a href="#">here</a>.
               </p>
             </code>
           </pre>
         </section>
 
         <section>
-          <h2>Thicken the Blog Post Title</h2>
+          <h2>Style the Blog Post Title</h2>
           <p>Add a class to the blog post title.</p>
 
           <pre>
@@ -550,7 +463,7 @@
         </section>
 
         <section>
-          <h2>Thicken the Blog Post Title</h2>
+          <h2>Style the Blog Post Title</h2>
 
           <pre>
             <code class="css" data-trim contenteditable>
@@ -660,73 +573,6 @@
             elements and content, copy all the HTML and paste it below the
             existing article HTML.
           </p>
-        </section>
-
-        <section>
-          <h2>Web Hosting</h2>
-          <p>
-            A service that stores website files (ie: index.html and
-            styles.css)<br>
-            so a website is accessible via the internet.
-          </p>
-
-          <ul>
-            <li>HostGator</li>
-            <li>DreamHost</li>
-            <li>GoDaddy</li>
-            <li>Wix - user-friendly editor</li>
-            <li>Squarespace - user-friendly editor</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Web Hosting</h2>
-          <p>
-            For our final project, we'll use the web hosting service Neocities.
-          </p>
-
-          <p class="fragment">Why neocities?</p>
-
-          <ul class="fragment">
-            <li>Free</li>
-            <li>In-browser HTML and CSS editor</li>
-            <li>Easy to save and view changes</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Neocities - Getting Started</h2>
-          <p>
-            Visit <a href="https://neocities.org">neocities.org</a> to create an
-            account.
-          </p>
-
-        </section>
-
-        <section>
-          <h2>Explore Neocities</h2>
-          <p class="fragment">
-            Neocities offers an
-            <a href="https://neocities.org/tutorial/html/1">HTML tutorial</a>
-          </p>
-
-          <p class="fragment">Edit the default website</p>
-
-          <aside class="notes">
-            Edit the existing site just to demo how the files work and how to
-            see the site change.
-          </aside>
-        </section>
-
-        <section>
-          <h2>Upload files to Neocities</h2>
-          <p>Clear out the code in the existing HTML and CSS files.</p>
-
-          <ol>
-            <li>Replace the HTML file with the contents in your HTML file.</li>
-            <li>Replace the CSS file with the contents in your CSS file.</li>
-            <li>Upload your hero image.</li>
-          </ol>
         </section>
 
         <section>
