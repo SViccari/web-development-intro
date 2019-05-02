@@ -1,35 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport"
-          content="width=device-width,
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,
                    initial-scale=1.0,
                    maximum-scale=1.0,
-                   user-scalable=no">
+                   user-scalable=no"
+    />
 
     <title>Intro to Web Development</title>
 
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/custom.css">
+    <link rel="stylesheet" href="css/reveal.css" />
+    <link rel="stylesheet" href="css/theme/custom.css" />
 
     <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="lib/css/zenburn.css" />
 
     <!-- Font Awesome Icons -->
-    <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
+    <script
+      defer
+      src="https://use.fontawesome.com/releases/v5.0.9/js/all.js"
       integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
-      crossorigin="anonymous">
-    </script>
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Printing and PDF exports -->
     <script>
-      var link = document.createElement( 'link' );
+      var link = document.createElement('link');
       link.rel = 'stylesheet';
       link.type = 'text/css';
-      link.href = window.location.search.match( /print-pdf/gi ) ?
-        'css/print/pdf.css' : 'css/print/paper.css';
-      document.getElementsByTagName( 'head' )[0].appendChild( link );
+      link.href = window.location.search.match(/print-pdf/gi)
+        ? 'css/print/pdf.css'
+        : 'css/print/paper.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
     </script>
   </head>
   <body>
@@ -43,8 +48,7 @@
           <h2>Today</h2>
           <ul>
             <li>Review</li>
-            <li>CSS Box Model Practice</li>
-            <li>Start our personal website</li>
+            <li>Start building your personal website</li>
           </ul>
         </section>
 
@@ -80,20 +84,51 @@
         <section>
           <h2>CSS Box Model</h2>
 
-          <img src="images/css-box-model/box-model-diagram.png"
-               alt="Diagram of the CSS box model">
+          <img
+            src="images/css-box-model/box-model-diagram.png"
+            alt="Diagram of the CSS box model"
+          />
           <p class="footnote">Image from internetingishard.com</p>
 
           <aside class="notes">
             The box model gives each element (both block and inline) four
-            properties: content, padding, border, and margin.
-
-            Content - the text, image or media content in the element.
-            Padding - the space between the box's content and its border.
-            Border - The line drawn around the content and padding.
-            Margin - the space between an element and surrounding elements.
+            properties: content, padding, border, and margin. Content - the
+            text, image or media content in the element. Padding - the space
+            between the box's content and its border. Border - The line drawn
+            around the content and padding. Margin - the space between an
+            element and surrounding elements.
           </aside>
         </section>
+
+        <section>
+          <h2>Applying New Skills</h2>
+          <p>We re-created the following section from the turing website.</p>
+
+          <img src="images/css-box-model/exercise.png"
+               alt="two paragraphs with a button">
+          <p class="footnote">Image from turing.io</p>
+        </section>
+
+        <section>
+          <h2>&lt;div&gt; is for Division</h2>
+          <p>
+            The &lt;div&gt; HTML container element is used to group other HTML
+            elements together.
+          <p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <div class="container">
+                <p class="header">Header</p>
+
+                <p class="content">Some content for our site...</p>
+
+                <a href="#">Link to Somewhere</a>
+              </div>
+            </code>
+          </pre>
+        </section>
+
 
         <section>
           <h2>Using the Inspector</h2>
@@ -102,471 +137,18 @@
             and select "inspect".
           </p>
 
-          <img src="images/css-box-model/inspector-with-box-model.png"
-               alt="Chrome inspector with box model">
-        </section>
-
-        <section>
-          <h2>Let's Build!</h2>
-          <p>Build a section with a title, paragraphs, and a button.</p>
-
-          <img src="images/css-box-model/exercise.png"
-               alt="two paragraphs with a button">
-          <p class="footnote">Image from turing.io</p>
-        </section>
-
-        <section>
-          <h2>Setup a Coding Environment</h2>
-          <p>We will need:</p>
-          <ul>
-            <li>Atom - text editor used to write code</li>
-            <li>Chrome - browser to render our website</li>
-            <li>A project folder</li>
-            <li>An HTML file</li>
-            <li>A CSS file</li>
-          </ul>
-        </section>
-
-        <section>
-          <h2>Add the Content</h2>
-
-          <pre>
-            <code class="html" data-trim contenteditable>
-              <p>Proven Results</p>
-              <p>
-                Turing is difficult, but worth it. 75% of our students graduate
-                within 7 months, and 92% graduate within 10.5 months. 69% of
-                graduates are employed full-time within 90 days of graduation.
-                By 180 days, the percentage jumps to 80%. They're not project
-                managers or off in a corner doing the stapling. They are
-                full-time software developers in careers they love. Their median
-                salary is $75K and, for most, that's nearly double their
-                previous salary.
-              </p>
-
-              <p>
-                We release our student outcomes semi-annually as founding
-                members of the <a href="#">Council on Integrity in Results
-                Reporting.</a>
-              </p>
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style the Header</h2>
-
-          <pre>
-            <code class="html" data-trim contenteditable>
-              <p>Proven Results</p>
-            </code>
-          </pre>
-
-          <div class="fragment">
-            <p>Assign a class to target specific text:</p>
-
-            <pre>
-              <code class="html" data-trim contenteditable>
-                <p class="header">Proven Results</p>
-              </code>
-            </pre>
-          </div>
-
-          <aside class="notes">
-            We don't want ALL the paragraphs to be this big, so let's add a
-            class to the paragraph.
-            For the font, visit W3Schools css websafe fonts
-          </aside>
-        </section>
-
-        <section>
-          <h2>Style the Header</h2>
-          <p>How can we make the text bigger and thicker?</p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .header {
-              }
-            </code>
-          </pre>
-
-          <pre class="fragment">
-            <code class="css" data-trim contenteditable>
-              .header {
-                font-size: 48px;
-                font-weight: bold;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style the Header</h2>
-          <p>Use the inspector to determine the font</p>
-          <p>
-            <a href="https://www.w3schools.com/cssref/css_websafe_fonts.asp">
-              W3Schools Web Safe Fonts
-            </a>
-          </p>
-
-          <pre class="fragment">
-            <code class="css" data-trim contenteditable>
-              .header {
-                font-family: Helvetica, Arial, sans-serif;
-                font-size: 48px;
-                font-weight: bold;
-              }
-            </code>
-          </pre>
-        </section>
-
-
-        <section>
-          <h2>Style the Header</h2>
-          <p>Center the text</p>
-
-          <pre class="fragment">
-            <code class="css" data-trim contenteditable>
-              .header {
-                font-family: Helvetica, Arial, sans-serif;
-                font-size: 48px;
-                font-weight: bold;
-                text-align: center;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style the Paragraphs</h2>
-
-          <p>Add a class to target the remaining paragraphs</p>
-
-          <pre>
-            <code class="html" data-trim contenteditable>
-              <p class="content">
-                Turing is difficult, but (...etc...)
-              </p>
-
-              <p class="content">
-                We release our student outcomes (...etc...)
-              </p>
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style the Paragraphs</h2>
-          <p>Select the font</p>
-          <p>Center the text</p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .content {
-              }
-            </code>
-          </pre>
-
-          <pre class="fragment">
-            <code class="css" data-trim contenteditable>
-              .content {
-                font-family: Helvetica, Arial, sans-serif;
-                text-align: center;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style the Link</h2>
-          <p>Add a class to target the link.</p>
-
-          <pre>
-            <code class="html" data-trim contenteditable>
-              <a href="#" class="call-to-action">
-                2016 Student Outcomes Report
-              </a>
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style the Link</h2>
-          <p>Select the font</p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .call-to-action {
-                font-family: Helvetica, Arial, sans-serif;
-              }
-            </code>
-          </pre>
-
-        </section>
-
-        <section>
-          <h2>Style the Link</h2>
-          <p>Center the link</p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .call-to-action {
-                font-family: Helvetica, Arial, sans-serif;
-                text-align: center; /* hmmm... */
-              }
-            </code>
-          </pre>
-
-          <p>
-            This won't work because we can't center an inline element.
-          </p>
-
-          <aside class="notes">
-            We can't center the link as it's an inline element. But there is
-            something we can use that will help us center the link AND reduce
-            some repetition in our CSS.
-          </aside>
-        </section>
-
-        <section>
-          <h2>&lt;div&gt; is for Division</h2>
-          <p>
-            We can use the &lt;div&gt; HTML container element to group other
-            HTML elements together.
-          <p>
-
-          <pre>
-            <code class="html" data-trim contenteditable>
-              <div class="container">
-                <p class="header">Proven Results</p>
-
-                <p class="content">
-                  Turing is difficult, but (...etc...)
-                </p>
-
-                <p class="content">
-                  We release our student outcomes (...etc...)
-                </p>
-
-                <a href="#" class="call-to-action">
-                  2016 Student Outcomes Report
-                </a>
-              </div>
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>CSS rules for grouped content</h2>
-          <p>
-            Styles set for the containing element will apply to inner elements.
-          </p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .container {
-                text-align: center;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style the Link</h2>
-          <p>Add a Border</p>
-          <p>Use the inspector to find the border color</p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .call-to-action {
-                border: 1px solid #05c2d1;
-                font-family: Helvetica, Arial, sans-serif;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style the Link</h2>
-          <p>Add Padding</p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .call-to-action {
-                border: 1px solid #05c2d1;
-                font-family: Helvetica, Arial, sans-serif;
-                padding: 10px 16px;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style all Links</h2>
-          <p>Set the color</p>
-          <p>Thicken the text</p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              a {
-                color: #05c2d1;
-                font-weight: bold;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style all Links</h2>
-          <p>Remove default browser styles applied to links.</p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              a {
-                color: #05c2d1;
-                font-weight: bold;
-                text-decoration: none;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Final Touches</h2>
-
-          <p>
-            Set the max-width to limit how wide the text can expand.
-          </p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .container {
-                max-width: 70%;
-                text-align: center;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Final Touches</h2>
-          <p>Center the element on the page.</p>
-
-          <p>
-            When a width has been specified, setting the left and right margin
-            as "auto" tells the browser to automatically determine the left
-            and right margins itself, which it does by setting them equally.
-          </p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .container {
-                margin: 0 auto;
-                max-width: 70%;
-                text-align: center;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Final Touches</h2>
-          <p>
-            Set the line-height to increase the distance between the lines of
-            text.
-          </p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .container {
-                line-height: 1.7;
-                margin: 0 auto;
-                max-width: 70%;
-                text-align: center;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Final CSS</h2>
-          <pre>
-            <code class="css" data-trim contenteditable>
-              a {
-                color: #05c2d1;
-                font-weight: bold;
-                text-decoration: none;
-              }
-
-              .container {
-                line-height: 1.7;
-                margin: 0 auto;
-                max-width: 70%;
-                text-align: center;
-              }
-
-              .header {
-                font-family: Helvetica, Arial, sans-serif;
-                font-size: 48px;
-                font-weight: bold;
-                margin-bottom: 0;
-              }
-
-              .content {
-                color: #7c8c8e;
-                font-family: Helvetica, Arial, sans-serif;
-              }
-
-              .call-to-action {
-                border-radius: 4px;
-                border: 1px solid #05c2d1;
-                font-family: Helvetica, Arial, sans-serif;
-                padding: 10px 16px;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Final HTML</h2>
-
-          <pre>
-            <code class="html" data-trim contenteditable>
-              <body>
-                <div class="container">
-                  <p class="header">Proven Results</p>
-                  <p class="content">
-                    Turing is difficult, but worth it. 75% of our students
-                    graduate within 7 months, and 92% graduate within 10.5
-                    months. 69% of graduates are employed full-time within 90
-                    days of graduation. By 180 days, the percentage jumps to
-                    80%. They're not project managers or off in a corner doing
-                    the stapling. They are full-time software developers in
-                    careers they love. Their median salary is $75K and, for
-                    most, that's nearly double their previous salary.
-                  </p>
-
-                  <p class="content">
-                    We release our student outcomes semi-annually as founding
-                    members of the <a href="#">Council on
-                    Integrity in Results Reporting.</a>
-                  </p>
-
-                  <a href="#" class="call-to-action">
-                    2016 Student Outcomes Report
-                  </a>
-                </div>
-              </body>
-            </code>
-          </pre>
+          <img
+            src="images/css-box-model/inspector-with-box-model.png"
+            alt="Chrome inspector with box model"
+          />
         </section>
 
         <section>
           <h2>Build a Website</h2>
 
           <p>
-            Part of building a website includes ensuring everyone can access
-            the website. For this, we'll need to use a company that offers web
+            Part of building a website includes ensuring everyone can access the
+            website. For this, we'll need to use a company that offers web
             hosting.
           </p>
         </section>
@@ -575,13 +157,12 @@
           <h2>Web Hosting</h2>
           <p>
             A service that stores all the necessary files to render your
-            website. This includes the index.html and styles.css files.
+            website. This includes the HTML and CSS files.
           </p>
 
           <ul>
             <li>HostGator</li>
             <li>DreamHost</li>
-            <li>GoDaddy</li>
             <li>Wix - user-friendly editor</li>
             <li>Squarespace - user-friendly editor</li>
           </ul>
@@ -608,7 +189,6 @@
             Visit <a href="https://neocities.org">neocities.org</a> to create an
             account.
           </p>
-
         </section>
 
         <section>
@@ -695,11 +275,6 @@
             </code>
           </pre>
         </section>
-
-        <section>
-          <h2>Coming up next class...</h2>
-          <p>Final Project!</p>
-        </section>
       </div>
     </div>
 
@@ -715,14 +290,22 @@
         slideNumber: true,
         // use 'z' to jump to a particular slide
         keyboard: {
-          90: function() { Reveal.slide( 34 ) },
+          90: function() {
+            Reveal.slide(34);
+          },
         },
         dependencies: [
-          { src: 'plugin/markdown/marked.js' },
-          { src: 'plugin/markdown/markdown.js' },
-          { src: 'plugin/notes/notes.js', async: true },
-          { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
-        ]
+          {src: 'plugin/markdown/marked.js'},
+          {src: 'plugin/markdown/markdown.js'},
+          {src: 'plugin/notes/notes.js', async: true},
+          {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+              hljs.initHighlightingOnLoad();
+            },
+          },
+        ],
       });
     </script>
   </body>
