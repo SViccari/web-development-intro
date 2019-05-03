@@ -104,8 +104,10 @@
           <h2>Applying New Skills</h2>
           <p>We re-created the following section from the turing website.</p>
 
-          <img src="images/css-box-model/exercise.png"
-               alt="two paragraphs with a button">
+          <img
+            src="images/css-box-model/exercise.png"
+            alt="two paragraphs with a button"
+          />
           <p class="footnote">Image from turing.io</p>
         </section>
 
@@ -114,7 +116,9 @@
           <p>
             The &lt;div&gt; HTML container element is used to group other HTML
             elements together.
-          <p>
+          </p>
+
+          <p></p>
 
           <pre>
             <code class="html" data-trim contenteditable>
@@ -128,7 +132,6 @@
             </code>
           </pre>
         </section>
-
 
         <section>
           <h2>Using the Inspector</h2>
@@ -236,7 +239,126 @@
         </section>
 
         <section>
-          <h2>Add the Nav Content</h2>
+          <h2>Assess the Layout</h2>
+
+          <p>
+            Focusing on the top portion of our website, we have a vertical
+            split. Ignoring the content for now, let's focus on building this
+            layout.
+          </p>
+        </section>
+
+        <section>
+          <h2>Getting Started</h2>
+
+          <ol>
+            <li>Create a generic container using a div.</li>
+            <li>Add a class so we can style it with CSS</li>
+          </ol>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              &lt;body&gt;
+                <div class="split-layout-container"></div>
+              &lt;/body&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style the empty container (css)</h2>
+
+          <ol>
+            <li>
+              Set the container to span the full height and width of the
+              browser.
+            </li>
+            <li>Add a background color so we can see our changes</li>
+          </ol>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .split-layout-container {
+                height: 100vh;
+                background-color: purple;
+              }
+            </code>
+          </pre>
+
+          <p>
+            The "vh" unit stands for "viewport height". The viewport height is
+            the height of the browser's window, which across laptops, tables,
+            and phones.
+          </p>
+        </section>
+
+        <section>
+          <h2>Introducing Flexbox</h2>
+
+          <p>
+            So far, we've discussed two ways elements take up space on a page:
+            <strong>block layout</strong> and <strong>inline layout</strong>.
+            For advanced positioning, we're going to use a third layout option
+            called: <strong>Flexbox</strong>.
+          </p>
+
+          <p>
+            A flexbox layout consists of a <strong>flex container</strong> that
+            holds <strong>flex items</strong>. These <strong>flex items</strong>
+            can "flex" their sizes, growing to fill unused space in the
+            container, or shrinking to avoid overflowing.
+          </p>
+        </section>
+
+        <section>
+          <h2>Create the vertical split (html)</h2>
+
+          <ol>
+            <li>Add two containers, one for the image, one for the text</li>
+          </ol>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              &lt;body&gt;
+                <div class="split-layout-container">
+                  <div class="split-layout-media"></div>
+                  <div class="split-layout-content"></div>
+                </div>
+              &lt;/body&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Create the vertical split (css)</h2>
+
+          <ol>
+            <li>Add two containers, one for the image, one for the text</li>
+          </ol>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .split-layout-container {
+                display: flex;
+                height: 100vh;
+                background-color: purple;
+              }
+
+              .split-layout-media {
+                background-color: lightblue;
+                width: 50%;
+              }
+
+              .split-layout-container {
+                background-color: pink;
+                width: 50%;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Add the Navigation Text (html)</h2>
           <p>
             A large number of sites use "lists" to create their navigation or
             footer as these section are a collection of links.
@@ -255,14 +377,14 @@
         </section>
 
         <section>
-          <h2>Turn the Nav Text into Links</h2>
+          <h2>Turn the Nav Text into Links (html)</h2>
 
-          <p>Wrap each list item in a link:</p>
+          <p>Wrap each list item in a link (aka, anchor tag):</p>
 
           <pre>
             <code class="html" data-trim contenteditable>
-              <nav>
-                <ul>
+              <nav class="navigation">
+                <ul class="navigation-list">
                   <li>
                     <a href="#">Home</a>
                   </li>
@@ -272,6 +394,476 @@
                   </li>
                 </ul>
               </nav>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style the Nav (css)</h2>
+
+          <p>Remove the bullet point icon</p>
+          <p>Remove the blue color and underline</p>
+          <p>Style each list item to be on the same line</p>
+          <p>Nav is on the right-hand side of the page</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .navigation-list {
+                list-style-type: none;
+              }
+
+              .navigation a {
+                color: black;
+                text-decoration: none;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style the Nav (css)</h2>
+
+          <p>Place each list item to on the same line</p>
+          <p>Nav is on the right-hand side of the page</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .navigation-list {
+                display: flex;
+                flex-direction: row-reverse;
+                list-style-type: none;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style the Nav (css)</h2>
+
+          <p>Create space between each list item</p>
+          <p>Create space around the navigation links</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .navigation {
+                background-color: yellow;
+                padding-top: 40px;
+                padding-bottom: 20px;
+              }
+            </code>
+          </pre>
+
+          <p>
+            Side-note, the background color is temporary and will help us see
+            the padding that surrounds the nav element
+          </p>
+        </section>
+
+        <section>
+          <h2>Current state of our website</h2>
+
+          <img
+            alt="website layout with a vertical split and navigation element
+          in the top right corner"
+            src="images/vertical-split-with-nav.png"
+          />
+        </section>
+
+        <section>
+          <h2>Add the Intro Content (html)</h2>
+
+          <p>
+            Below the nav, let's add a container (div). Within that div, add the
+            intro text.
+          </p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <div class="intro">
+                <h1>Pineapple</h1>
+
+                <p>
+                  Lorem ipsum dolor sit amet...
+                </p>
+              </div>
+            </code>
+          </pre>
+
+          <p>
+            Visit <a href="https://www.lipsum.com">lipsum.com</a> to generate
+            dummy text, also known as Lorem Ipsum.
+          </p>
+        </section>
+
+        <section>
+          <h2>Intro Content (css)</h2>
+
+          <p>
+            Centering an element, vertically, can be tricky business. However,
+            we can use flexbox to make it easy. Revisit the
+            "split-layout-content" CSS class and set the layout to use "flex".
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .split-layout-content {
+                background-color: pink;
+                width: 50%;
+                display: flex;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Intro Content (css)</h2>
+
+          <p>
+            The flex layout defaults to placing elements in a row. In our case,
+            we want a column layout.
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .split-layout-content {
+                background-color: pink;
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Intro Content (css)</h2>
+
+          <p>
+            Not much has changed but changing the layout of the parent container
+            will help the "intro" container position itself vertically. Let's
+            vertically center the intro container.
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .intro {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: center;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Intro Content (css)</h2>
+
+          <p>Add space around the text</p>
+          <p>Limit how much space the text can occupy</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .intro {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: center;
+                max-width: 500px;
+                padding: 0 50px;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Intro Content (css)</h2>
+
+          <p>Add space between each line of text</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .intro {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: center;
+                max-width: 500px;
+                padding: 0 50px;
+                line-height: 1.5;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Update the background colors (css)</h2>
+
+          <p>Remove the pink and yellow background colors</p>
+          <p>Set the green background color</p>
+
+          <p>Below is the updated CSS with the green color:</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .split-layout-content {
+                background-color: #828170;
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+              }
+
+              .navigation {
+                padding-top: 40px;
+                padding-bottom: 20px;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Update the font color (css)</h2>
+
+          <p>
+            Update the navigation links and the intro text to use the color
+            white. Below is the updated CSS:
+          </p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .navigation a {
+                color: white;
+                text-decoration: none;
+              }
+
+              .intro {
+                color: white;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: center;
+                line-height: 1.5;
+                max-width: 500px;
+                padding: 0 50px;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Remove white border (css)</h2>
+
+          <p>Remove the white border around the page</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              body {
+                margin: 0;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Font Improvements (css)</h2>
+
+          <p>Set the font family</p>
+          <p>Set the font size</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              body {
+                font-family: Georgia, Arial, sans-serif;
+                font-size: 18px;
+                margin: 0;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Add an Image (html)</h2>
+
+          <p>
+            Visit <a href="https://unsplash.com/">Unsplash</a> for high-quality,
+            free images.
+          </p>
+          <p>A tall image will work best.</p>
+
+          <p>Once you found an image you like:</p>
+          <ol>
+            <li>Download the image</li>
+            <li>In Neocities, use the upload button to upload the image</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>Add an Image (html)</h2>
+
+          <p>
+            Update the existing HTML for "split-layout-media" and add a nested
+            image tag to reference the recently uploaded image.
+          </p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              <div class="split-layout-media">
+                <img src="./name-of-your-image.jpg" alt="image description" />
+              </div>
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Add an Image (html)</h2>
+
+          <p>Position the image:</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .split-layout-media img {
+                height: 100vh;
+                object-fit: cover;
+                width: 100%;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Final HTML & CSS</h2>
+
+          <p>Current State of our Website</p>
+          <img
+            alt="website with picture of a pineapple and text"
+            src="./images/final-project-intro-complete.png"
+          />
+        </section>
+
+        <section>
+          <h2>Final HTML</h2>
+          <p>
+            If you copy from below, update the image name to match the name of
+            the image you uploaded to Neocities.
+          </p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              &lt;!DOCTYPE html&gt;
+              &lt;html&gt;
+                &lt;head&gt;
+                  <link rel="stylesheet" type="text/css" href="style.css" />
+                  <title>Pineapples</title>
+                &lt;/head&gt;
+
+                &lt;body&gt;
+                  <div class="split-layout-container">
+                    <div class="split-layout-media">
+                      <img src="./name-of-your-image.jpg" alt="image description" />
+                    </div>
+                    <div class="split-layout-content">
+                      <nav class="navigation">
+                        <ul class="navigation-list">
+                          <li>
+                            <a href="#">Home</a>
+                          </li>
+
+                          <li>
+                            <a href="#">Posts</a>
+                          </li>
+                        </ul>
+                      </nav>
+
+                      <div class="intro">
+                        <h1>Pineapple</h1>
+
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla
+                          libero orci, dictum vitae dapibus ornare, mollis eu urna. Proin
+                          posuere maximus lacinia. Mauris non odio eget nisi dapibus vulputate
+                          vitae non tellus. Nam dolor ex, ornare eu hendrerit nec, consequat
+                          sit amet nisl. Etiam in condimentum ipsum, et fringilla massa.
+                          Curabitur vel arcu quam.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                &lt;/body&gt;
+              &lt;/html&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Final CSS</h2>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              body {
+                font-family: Georgia, Arial, sans-serif;
+                font-size: 18px;
+                margin: 0;
+              }
+
+              /* Intro Section */
+
+              .split-layout-container {
+                background-color: purple;
+                display: flex;
+                height: 100vh;
+              }
+
+              .split-layout-media {
+                background-color: lightblue;
+                width: 50%;
+              }
+
+              .split-layout-media img {
+                height: 100vh;
+                object-fit: cover;
+                width: 100%;
+              }
+
+              .split-layout-content {
+                background-color: #828170;
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+              }
+
+              /* Nav Section */
+
+              .navigation {
+                padding-top: 40px;
+                padding-bottom: 20px;
+              }
+
+              .navigation-list {
+                display: flex;
+                flex-direction: row-reverse;
+                list-style-type: none;
+              }
+
+              .navigation a {
+                color: white;
+                text-decoration: none;
+              }
+
+              .navigation li {
+                padding-right: 60px;
+              }
+
+              .intro {
+                color: white;
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+                justify-content: center;
+                line-height: 1.5;
+                margin: 0 auto;
+                max-width: 500px;
+                padding: 0 50px;
+              }
             </code>
           </pre>
         </section>

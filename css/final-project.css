@@ -46,7 +46,6 @@ body {
 .navigation {
   padding-top: 40px;
   padding-bottom: 20px;
-  margin: 0;
 }
 
 .navigation-list {
@@ -56,12 +55,11 @@ body {
 }
 
 .navigation a {
-  color: black;
+  color: white;
   text-decoration: none;
 }
 
 .navigation li {
-  color: white;
   padding-right: 60px;
 }
 
@@ -84,7 +82,7 @@ body {
 }
 
 /* Media Queries */
-@media only screen and (max-width: 80em) {
+@media only screen and (max-width: 60em) {
   .split-layout-container {
     height: 500px;
   }
