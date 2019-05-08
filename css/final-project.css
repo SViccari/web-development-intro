@@ -1,7 +1,7 @@
 body {
   background-color: #f1f1f1;
   font-family: Georgia, Arial, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   margin: 0;
 }
 
@@ -63,26 +63,29 @@ body {
   padding-right: 60px;
 }
 
-/* Article Title */
-.article {
-  background-color: white;
-  width: 50%;
+/* Articles Section */
+
+.article-list {
   margin: auto;
-  padding: 20px;
-  margin-top: 40px;
+  max-width: 900px;
+  margin-top: 80px;
+  padding: 0 40px;
 }
 
-.article-title {
-  font-size: 24px;
+article {
+  background-color: white;
+  margin-bottom: 60px;
+  padding: 20px;
+}
+
+article h2 {
+  font-size: 20px;
   font-weight: bold;
 }
 
-.article img {
-  width: 100%;
-}
-
 /* Media Queries */
-@media only screen and (max-width: 60em) {
+
+@media only screen and (max-width: 800px) {
   .split-layout-container {
     height: 500px;
   }
@@ -95,9 +98,5 @@ body {
     background-color: #828170;
     height: 500px;
     width: 100%;
-  }
-
-  .article {
-    width: 80%;
   }
 }

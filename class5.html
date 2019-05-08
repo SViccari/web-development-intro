@@ -47,30 +47,14 @@
         <section>
           <h2>Today</h2>
           <ul>
-            <li>Review</li>
-            <li>Build and Publish a website</li>
-            <li>Next Steps</li>
-            <li>Q&A</li>
+            <li>Add blog posts</li>
+            <li>Style our website to be responsive</li>
+            <li>Discuss Next Steps</li>
           </ul>
         </section>
 
         <section>
-          <h2>Let's Review...</h2>
-        </section>
-
-        <section>
-          <h2>Applying New Skills</h2>
-          <p>We re-created the following section from the turing website.</p>
-
-          <img
-            src="images/css-box-model/exercise.png"
-            alt="two paragraphs with a button"
-          />
-          <p class="footnote">Image from turing.io</p>
-        </section>
-
-        <section>
-          <h2>Using the Inspector</h2>
+          <h2>The Inspector</h2>
           <p>
             To open the <strong>inspector</strong>, right-click on the website
             and select "inspect".
@@ -83,402 +67,125 @@
         </section>
 
         <section>
-          <h2>&lt;div&gt; is for Division</h2>
-          <p>
-            The &lt;div&gt; HTML container element is used to group other HTML
-            elements together.
-          </p>
+          <h2>Display Options</h2>
 
-          <p></p>
-
-          <pre>
-            <code class="html" data-trim contenteditable>
-              <div class="container">
-                <p class="header">Header</p>
-
-                <p class="content">Some content for our site...</p>
-
-                <a href="#" target="_blank">
-                  Link to Somewhere
-                </a>
-              </div>
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Coding Environment Setup</h2>
           <ul>
-            <li>A text editor used to write code (Atom)</li>
-            <li>A browser to render the website (Chrome)</li>
-            <li>A project folder</li>
-            <li>An HTML file</li>
-            <li>A CSS file</li>
+            <li>block layout - takes up the full line</li>
+            <li>inline layout - size is based on content</li>
+            <li>flexbox - display multiple elements in a row or column</li>
           </ul>
-        </section>
-
-        <section>
-          <h2>Final Project - Let's Dive In!</h2>
-          <ol>
-            <li>Nav</li>
-            <li>Header</li>
-            <li>Image</li>
-            <li>Blog Posts</li>
-            <li>Responsive</li>
-          </ol>
-        </section>
-
-        <section>
-          <h2>List items - remove browser style</h2>
-          <p>
-            Goal: remove the style that is being applied by the browser to the
-            list items or &lt;li&gt; tags.
-          </p>
-
-          <p>Add the class "nav-list" to the &lt;ul&gt; tag</p>
 
           <pre>
             <code class="css" data-trim contenteditable>
-              .nav-list {
-                list-style-type: none;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Links - remove browser style</h2>
-          <p>
-            Goal: remove the style that is being applied by the browser to the
-            links or &lt;a&gt;s tags.
-          </p>
-
-          <p>
-            Here, we are remove the browser default style for links that appear
-            within the nav.
-          </p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .nav-list a {
-                color: black;
-                text-decoration: none;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Horizontal Nav Bar</h2>
-          <p>
-            We live in the golden age of <strong>Flexbox</strong>. Flexbox
-            replaces a number of CSS practices that were used to adjust where
-            elements are positioned on a page.
-          </p>
-
-          <p>
-            Flexbox helps us create complex layouts with relatively little code.
-          </p>
-        </section>
-
-        <section>
-          <h2>Horizontal Nav Bar</h2>
-
-          <p>To change the links to read left to right...</p>
-          <p>Add the following CSS:</p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .nav-list {
-                display: flex; /* new */
-                flex-direction: row; /* new */
-                list-style-type: none;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Horizontal Nav Bar</h2>
-          <p>Goal: Add space between the links.</p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .nav-list li {
-                padding-right: 40px;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Nav - Background color</h2>
-          <p>Goal: Apply a background color to the nav section.</p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .nav-list {
-                list-style-type: none;
+              .container {
                 display: flex;
-                flex-direction: row;
-                background-color: #C8DCDE; /* new */
               }
             </code>
           </pre>
         </section>
 
         <section>
-          <h2>Nav - Padding</h2>
-          <p>Goal: Increase the height of the nav.</p>
+          <h2>Lorem Ipsum</h2>
 
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .nav-list {
-                list-style-type: none;
-                display: flex;
-                flex-direction: row;
-                background-color: #C8DCDE;
-                padding-top: 20px; /* new */
-                padding-bottom: 20px; /* new */
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Nav - Margin</h2>
-          <p>Goal: Remove unwanted white space.</p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              body {
-                margin: 0;
-              }
-
-              .nav-list {
-                /* above properties collapsed */
-                margin: 0;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Set the font</h2>
-          <p>Goal: Set the font type for all text.</p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              body {
-                margin: 0;
-                font-family: Helvetica, Arial, sans-serif;
-              }
-            </code>
-          </pre>
-
-          <aside class="notes">
-            Nav complete!
-          </aside>
-        </section>
-
-        <section>
-          <h2>Add Intro Content</h2>
           <p>
-            In the HTML file, below the nav section, add the following:
+            Referred to as "dummy" or "filler" text. Lorem Ipsum is used as a
+            placeholder when styling a layout with text. Visit
+            <a href="https://www.lipsum.com">lipsum.com</a> to generate Lorem
+            Ipsum.
+          </p>
+        </section>
+
+        <section>
+          <h2>List of Articles (html)</h2>
+
+          <p>Below the intro section, add the following container:</p>
+
+          <pre>
+            <code class="html" data-trim contenteditable>
+              &lt;section class="article-list"&gt;&lt;/section&gt;
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Center the List of Articles (css)</h2>
+
+          <p>Let's make the container visible and center it on the page.</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              .article-list {
+                background-color: pink;
+                height: 800px;
+                width: 500px;
+                margin: auto;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Add an Article (html)</h2>
+          <p>
+            Visit <a href="https://www.lipsum.com">https://www.lipsum.com</a>
           </p>
 
           <pre>
             <code class="html" data-trim contenteditable>
-              <p>Welcome!</p>
-              <h1>Somewhere on a Beach</h1>
+              <article>
+                <h2>Best Florida Beaches</h2>
+                <p>June 4, 2018</p>
+                <hr>
+                <p>Generated Lorem Ipsum...</p>
+              </article>
             </code>
           </pre>
         </section>
 
         <section>
-          <h2>Styling the Intro</h2>
-          <p>Add a class to the &lt;p&gt; and &lt;h1&gt; tags:</p>
-
-          <pre>
-            <code class="html" data-trim contenteditable>
-              <p class="intro">Welcome!</p>
-              <h1 class="intro-about">Somewhere on a Beach</h1>
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Styling the Intro</h2>
-          <p>Goal: Reduce the space between the lines of content</p>
-          <p>Goal: Increase the font size</p>
+          <h2>Style the Article (css)</h2>
+          <p>
+            Remove the temporary background color and add a background color to
+            each article.
+          </p>
 
           <pre>
             <code class="css" data-trim contenteditable>
-              .intro {
-                margin-bottom: 5px;
+              .article-list {
+                height: 800px;
+                width: 500px;
+                margin: auto;
+              }
+
+              article {
+                background-color: white;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style the Article (css)</h2>
+          <p>Add whitespace around the article text.</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              article {
+                background-color: white;
+                padding: 20px;
+              }
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <h2>Style the Article Title (css)</h2>
+          <p>Style the article title to be larger and bold.</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              article h2 {
                 font-size: 20px;
-              }
-
-              .intro-about {
-                margin: 0;
-                font-size: 28px;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style the Intro</h2>
-          <p>Goal: Center the text.</p>
-
-          <p>Wrap the &lt;p&gt; and &lt;h1&gt; tags in a &lt;div&gt;.</p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              <div class="intro-section">
-                <p class="intro">Welcome!</p>
-                <h1 class="intro-about">Somewhere on a Beach</h1>
-              </div>
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style the Intro</h2>
-          <p>Goal: Center the text.</p>
-          <p>
-            Hint: Use the recently added class to set the text-align property.
-          </p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .intro-section {
-                text-align: center;
-               }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style the Intro</h2>
-          <p>Goal: Increase the size of the Intro section.</p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .intro-section {
-                padding-top: 50px;
-                padding-bottom: 50px;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style the Intro</h2>
-          <p>Goal: Set the background color</p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              body {
-                background-color: #F1F1F1;
-              }
-            </code>
-          </pre>
-
-          <aside class="notes">
-            Header section complete!
-          </aside>
-        </section>
-
-        <section>
-          <h2>Add an Image</h2>
-          <p>
-            To add an image, we'll use the background-image CSS property but
-            we'll need some HTML so the CSS has HTML to target.
-          </p>
-
-          <pre>
-            <code class="html" data-trim contenteditable>
-              <div class="hero"></div>
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Select an Image</h2>
-          <a href="final_project_images.html" target="_blank">Image Options</a>
-        </section>
-
-        <section>
-          <h2>Add an Image</h2>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .hero {
-                background-image: url("watermelon.jpg");
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                border-top: 1px solid #d6d6d6;
-                height: 700px;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Create a Blog Post</h2>
-          <p>
-            Use Lorem Ipsum, also known as "dummy text", to simulate content.
-            Visit <a href="https://www.lipsum.com">https://www.lipsum.com</a> to
-            generate Lorem Ipsum.
-          </p>
-
-          <pre>
-            <code class="html" data-trim contenteditable>
-              <p>Best Florida Beaches</p>
-              <p>June 1, 2017</p>
-              <hr>
-              <p>Generated Lorem Ipsum...</p>
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Add a Link to the Blog Post</h2>
-
-          <pre>
-            <code class="html" data-trim contenteditable>
-              <p>Best Florida Beaches</p>
-              <p>June 1, 2017</p>
-              <hr>
-              <p>Generated Lorem Ipsum...</p>
-              <p>
-                Read more about Florida Beaches
-                <a href="#">here</a>.
-              </p>
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style the Blog Post Title</h2>
-          <p>Add a class to the blog post title.</p>
-
-          <pre>
-            <code class="html" data-trim contenteditable>
-              <p class="article-title">Best Florida Beaches</p>
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style the Blog Post Title</h2>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .article-title {
-                font-size: 24px;
                 font-weight: bold;
               }
             </code>
@@ -486,73 +193,38 @@
         </section>
 
         <section>
-          <h2>Apply a Background</h2>
-          <p>
-            Goal: Apply a background color to help the blog post stand out from
-            the rest of the page.
-          </p>
+          <h2>Style the Article (css)</h2>
 
-          <p>
-            Hint: wrap all the article-related elements in a &lt;div&gt;.
-          </p>
-
-          <pre>
-            <code class="html" data-trim contenteditable>
-              <div class="article">
-                <p>Best Florida Beaches</p>
-                <p>June 1, 2017</p>
-                <hr>
-                <p>Generated Lorem Ipsum...</p>
-                <p>
-                  Read more about Florida Beaches
-                  <a href="#" target="_blank">here</a>.
-                </p>
-              </div>
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Apply a Background</h2>
+          <p>Add whitespace above the list of articles.</p>
+          <p>Add whitespace around the list of articles.</p>
 
           <pre>
             <code class="css" data-trim contenteditable>
-              .article {
-                background-color: white;
+              .article-list {
+                width: 800px;
+                height: 800px;
+                margin: auto;
+                margin-top: 80px;
+                padding: 0 40px.
               }
             </code>
           </pre>
         </section>
 
         <section>
-          <h2>Reduce the article width</h2>
-          <p>Goal: Limit the space the blog post takes up on the page.</p>
-          <p>Goal: Center the blog post on the page.</p>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .article {
-                background-color: white;
-                width: 50%;
-                margin: auto;
-              }
-            </code>
-          </pre>
+          <h2>Add Another Article (html)</h2>
         </section>
 
         <section>
-          <h2>Padding</h2>
-          <p>
-            Goal: Increase the space between the article text and the edge of
-            the "box".
-          </p>
+          <h2>Separate the Articles (css)</h2>
+          <p>Add space between each article.</p>
+          <p>Add space around the article.</p>
 
           <pre>
             <code class="css" data-trim contenteditable>
-              .article {
+              article {
                 background-color: white;
-                width: 50%;
-                margin: auto;
+                margin-bottom: 60px;
                 padding: 20px;
               }
             </code>
@@ -560,84 +232,68 @@
         </section>
 
         <section>
-          <h2>Margin-top</h2>
-          <p>Goal: Add space between the image and the blog post.</p>
+          <h2>Responsive Articles (css)</h2>
+          <p>Remove the set width and height</p>
+          <p>Limit the article's max-width</p>
 
           <pre>
             <code class="css" data-trim contenteditable>
-              .article {
-                background-color: white;
-                width: 50%;
+              .article-list {
                 margin: auto;
-                padding: 20px;
-                margin-top: 40px;
+                margin-top: 80px;
+                padding: 0 40px;
+                max-width: 900px;
               }
             </code>
           </pre>
         </section>
 
         <section>
-          <h2>How to add another Blog Post</h2>
-          <p>
-            Starting with the &lt;div&gt; that wraps the article-related
-            elements and content, copy all the HTML and paste it below the
-            existing article HTML.
-          </p>
+          <h2>Link "Posts" to Articles (html)</h2>
         </section>
 
         <section>
-          <h2>Blog Post with an Image</h2>
-          <p>
-            To add an article with an image, copy the existing HTML for an
-            article.
-          </p>
-          <p>Add an image</p>
-
-          <pre>
-            <code class="html" data-trim contenteditable>
-              <div class="article">
-                ... existing HTML for the article...
-                <img src="my-photo.jpg" alt="description">
-              </div>
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Style the Image</h2>
-
-          <pre>
-            <code class="css" data-trim contenteditable>
-              .article img {
-                width: 100%;
-              }
-            </code>
-          </pre>
-        </section>
-
-        <section>
-          <h2>Making our site Responsive</h2>
+          <h2>Responsive Websites</h2>
 
           <p>Media queries set specific CSS rules based on the screen size.</p>
 
           <p>
-            For example, the following code says "<em
-              >For any screen that is 800px wide, or less, apply these
-              styles"</em
-            >.
+            For example, the following code says "For any screen that is 800px
+            wide, or less, apply these styles".
           </p>
-
-          <p>800px is a width that covers most tablets and smart phones.</p>
 
           <pre>
             <code class="css" data-trim contenteditable>
               @media only screen and (max-width: 800px) {
-                .hero {
-                  height: 300px;
+                p {
+                  color: red;
+                }
+              }
+            </code>
+          </pre>
+
+          <p>(800px is a width that covers most tablets and smart phones.)</p>
+        </section>
+
+        <section>
+          <h2>Responsive Intro</h2>
+          <p>Don't show the image on browsers of a certain width.</p>
+
+          <pre>
+            <code class="css" data-trim contenteditable>
+              @media only screen and (max-width: 800px) {
+                .split-layout-container {
+                  height: 500px;
                 }
 
-                .article {
-                  width: 80%;
+                .split-layout-media {
+                  display: none;
+                }
+
+                .split-layout-content {
+                  background-color: #828170;
+                  height: 500px;
+                  width: 100%;
                 }
               }
             </code>
@@ -669,46 +325,12 @@
         </section>
 
         <section>
-          <h2>Careers in Coding</h2>
-        </section>
-
-        <section>
           <h2>Next Steps</h2>
-          <p>How do you decide what to learn next?</p>
-        </section>
-
-        <section>
-          <h2>What NOT to do</h2>
-          <p>Don't chase trends</p>
-          <p>Don't guess</p>
-          <p>Don't try many things at once</p>
-
-          <aside class="notes">
-            Don't focus on trends. Similar to fashion, today's hottest
-            technology may be out-of-style in 6-months. Chasing trends can lead
-            to feeling exhausted and burned out. Choose with purpose. Is there a
-            company you'd like to work for? Find out what skills you need to be
-            hired. What are your goals? Which programming skills align with your
-            goals? Trying to learn too many skills at once can dilute the
-            feeling of progress. You want to feel encouraged from your progress
-            and confident that you're mastering a particular set of skills.
-          </aside>
-        </section>
-
-        <section>
-          <h2>What to do</h2>
-          <p>Listen to the market.</p>
-          <p>Learn metacognitive skills</p>
-          <p>Learn by doing</p>
-
-          <aside class="notes">
-            Talk to companies. Talk to individuals that you admire and want to
-            follow in their footsteps. Talk to recruiters, ask what skills
-            companies are looking for when hiring. Learn how to learn. Know your
-            resources and how to search online to find answers to code related
-            questions. Find someone that will act as a mentor. Practice. Create
-            a personal project to work on. Experiment.
-          </aside>
+          <p>What would you like to learn next?</p>
+          <p>
+            Visit the <a href="/resources.html">Resources page</a> for
+            inspiration.
+          </p>
         </section>
       </div>
     </div>
